@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexAppletProvider</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch05.html" title="Plugin-specific interfaces">
+<link rel="prev" href="mex-MexActionProvider.html" title="MexActionProvider">
+<link rel="next" href="mex-MexLogoProvider.html" title="MexLogoProvider">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="mex-MexActionProvider.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch05.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="mex-MexLogoProvider.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-MexAppletProvider.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-MexAppletProvider.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-MexAppletProvider"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-MexAppletProvider.top_of_page"></a>MexAppletProvider</span></h2>
+<p>MexAppletProvider — Interface for sources of applets</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-MexAppletProvider.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">#define             <a class="link" href="mex-MexAppletProvider.html#MEX-APPLET-PROVIDER-IFACE:CAPS" title="MEX_APPLET_PROVIDER_IFACE()">MEX_APPLET_PROVIDER_IFACE</a>           (iface)
+#define             <a class="link" href="mex-MexAppletProvider.html#MEX-IS-APPLET-PROVIDER-IFACE:CAPS" title="MEX_IS_APPLET_PROVIDER_IFACE()">MEX_IS_APPLET_PROVIDER_IFACE</a>        (iface)
+struct              <a class="link" href="mex-MexAppletProvider.html#MexAppletProviderInterface" title="struct MexAppletProviderInterface">MexAppletProviderInterface</a>;
+const <span class="returnvalue">GList</span> *       <a class="link" href="mex-MexAppletProvider.html#mex-applet-provider-get-applets" title="mex_applet_provider_get_applets ()">mex_applet_provider_get_applets</a>     (<em class="parameter"><code><span class="type">MexAppletProvider</span> *provider</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-MexAppletProvider.description"></a><h2>Description</h2>
+<p>
+Implementing <span class="type">MexAppletProvider</span> means that the class can provide a list
+of applets.
+</p>
+</div>
+<div class="refsect1">
+<a name="mex-MexAppletProvider.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MEX-APPLET-PROVIDER-IFACE:CAPS"></a><h3>MEX_APPLET_PROVIDER_IFACE()</h3>
+<pre class="programlisting">#define             MEX_APPLET_PROVIDER_IFACE(iface)</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MEX-IS-APPLET-PROVIDER-IFACE:CAPS"></a><h3>MEX_IS_APPLET_PROVIDER_IFACE()</h3>
+<pre class="programlisting">#define             MEX_IS_APPLET_PROVIDER_IFACE(iface)</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexAppletProviderInterface"></a><h3>struct MexAppletProviderInterface</h3>
+<pre class="programlisting">struct MexAppletProviderInterface {
+  GTypeInterface g_iface;
+
+  /* virtual functions */
+  const GList * (*get_applets)   (MexAppletProvider *provider);
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-applet-provider-get-applets"></a><h3>mex_applet_provider_get_applets ()</h3>
+<pre class="programlisting">const <span class="returnvalue">GList</span> *       mex_applet_provider_get_applets     (<em class="parameter"><code><span class="type">MexAppletProvider</span> *provider</code></em>);</pre>
+<p>
+Retrieves the list of applets from a <span class="type">MexAppletProvider</span>. This is a list of
+<a class="link" href="MexApplet.html" title="MexApplet"><span class="type">MexApplet</span></a>##s.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>provider</code></em> :</span></p></td>
+<td>a <span class="type">MexAppletProvider</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The applets of <em class="parameter"><code>provider</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

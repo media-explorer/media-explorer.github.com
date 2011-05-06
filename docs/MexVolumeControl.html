@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexVolumeControl</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch09.html" title="Basic widgets">
+<link rel="prev" href="MexTile.html" title="MexTile">
+<link rel="next" href="ch10.html" title="Widget feeders">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="MexTile.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch09.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="ch10.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#MexVolumeControl.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#MexVolumeControl.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#MexVolumeControl.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#MexVolumeControl.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#MexVolumeControl.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="MexVolumeControl"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="MexVolumeControl.top_of_page"></a>MexVolumeControl</span></h2>
+<p>MexVolumeControl</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="MexVolumeControl.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="MexVolumeControl.html#MexVolumeControl-struct" title="struct MexVolumeControl">MexVolumeControl</a>;
+struct              <a class="link" href="MexVolumeControl.html#MexVolumeControlClass" title="struct MexVolumeControlClass">MexVolumeControlClass</a>;
+<span class="returnvalue">ClutterActor</span> *      <a class="link" href="MexVolumeControl.html#mex-volume-control-new" title="mex_volume_control_new ()">mex_volume_control_new</a>              (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexVolumeControl.html#mex-volume-control-volume-up" title="mex_volume_control_volume_up ()">mex_volume_control_volume_up</a>        (<em class="parameter"><code><a class="link" href="MexVolumeControl.html" title="MexVolumeControl"><span class="type">MexVolumeControl</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexVolumeControl.html#mex-volume-control-volume-down" title="mex_volume_control_volume_down ()">mex_volume_control_volume_down</a>      (<em class="parameter"><code><a class="link" href="MexVolumeControl.html" title="MexVolumeControl"><span class="type">MexVolumeControl</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexVolumeControl.html#mex-volume-control-volume-mute" title="mex_volume_control_volume_mute ()">mex_volume_control_volume_mute</a>      (<em class="parameter"><code><a class="link" href="MexVolumeControl.html" title="MexVolumeControl"><span class="type">MexVolumeControl</span></a> *self</code></em>);
+                    <a class="link" href="MexVolumeControl.html#MexVolumeControlPrivate" title="MexVolumeControlPrivate">MexVolumeControlPrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexVolumeControl.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GObject
+   +----GInitiallyUnowned
+         +----ClutterActor
+               +----MxWidget
+                     +----MxBin
+                           +----MxFrame
+                                 +----MexVolumeControl
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexVolumeControl.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+MexVolumeControl implements
+ ClutterScriptable,  ClutterAnimatable,  AtkImplementorIface,  MxStylable,  ClutterContainer and  MxFocusable.</p>
+</div>
+<div class="refsect1">
+<a name="MexVolumeControl.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="MexVolumeControl.html#MexVolumeControl--volume" title='The "volume" property'>volume</a>"                   <span class="type">gdouble</span>               : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexVolumeControl.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="MexVolumeControl.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexVolumeControl-struct"></a><h3>struct MexVolumeControl</h3>
+<pre class="programlisting">struct MexVolumeControl;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexVolumeControlClass"></a><h3>struct MexVolumeControlClass</h3>
+<pre class="programlisting">struct MexVolumeControlClass {
+  MxFrameClass parent_class;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-volume-control-new"></a><h3>mex_volume_control_new ()</h3>
+<pre class="programlisting"><span class="returnvalue">ClutterActor</span> *      mex_volume_control_new              (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-volume-control-volume-up"></a><h3>mex_volume_control_volume_up ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_volume_control_volume_up        (<em class="parameter"><code><a class="link" href="MexVolumeControl.html" title="MexVolumeControl"><span class="type">MexVolumeControl</span></a> *self</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-volume-control-volume-down"></a><h3>mex_volume_control_volume_down ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_volume_control_volume_down      (<em class="parameter"><code><a class="link" href="MexVolumeControl.html" title="MexVolumeControl"><span class="type">MexVolumeControl</span></a> *self</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-volume-control-volume-mute"></a><h3>mex_volume_control_volume_mute ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_volume_control_volume_mute      (<em class="parameter"><code><a class="link" href="MexVolumeControl.html" title="MexVolumeControl"><span class="type">MexVolumeControl</span></a> *self</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexVolumeControlPrivate"></a><h3>MexVolumeControlPrivate</h3>
+<pre class="programlisting">typedef struct _MexVolumeControlPrivate MexVolumeControlPrivate;</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="MexVolumeControl.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="MexVolumeControl--volume"></a><h3>The <code class="literal">"volume"</code> property</h3>
+<pre class="programlisting">  "volume"                   <span class="type">gdouble</span>               : Read / Write</pre>
+<p>Audio volume.</p>
+<p>Allowed values: [0,1]</p>
+<p>Default value: 1</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

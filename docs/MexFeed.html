@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexFeed</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch07.html" title="Model classes">
+<link rel="prev" href="MexAggregateModel.html" title="MexAggregateModel">
+<link rel="next" href="MexGriloFeed.html" title="MexGriloFeed">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="MexAggregateModel.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch07.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="MexGriloFeed.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#MexFeed.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#MexFeed.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#MexFeed.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#MexFeed.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#MexFeed.properties" class="shortcut">Properties</a>
+                   | 
+                  <a href="#MexFeed.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="MexFeed"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="MexFeed.top_of_page"></a>MexFeed</span></h2>
+<p>MexFeed</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="MexFeed.synopsis"></a><h2>Synopsis</h2>
+<a name="MexFeedSearchMode"></a><a name="MexProgram"></a><pre class="synopsis">enum                <a class="link" href="MexFeed.html#MexFeedSearchMode">MexFeedSearchMode</a>;
+struct              <a class="link" href="MexFeed.html#MexFeed-struct" title="struct MexFeed">MexFeed</a>;
+struct              <a class="link" href="MexFeed.html#MexFeedClass" title="struct MexFeedClass">MexFeedClass</a>;
+<a class="link" href="MexFeed.html" title="MexFeed"><span class="returnvalue">MexFeed</span></a> *           <a class="link" href="MexFeed.html#mex-feed-new" title="mex_feed_new ()">mex_feed_new</a>                        (<em class="parameter"><code>const <span class="type">char</span> *title</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *source</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexFeed.html#mex-feed-search" title="mex_feed_search ()">mex_feed_search</a>                     (<em class="parameter"><code><a class="link" href="MexFeed.html" title="MexFeed"><span class="type">MexFeed</span></a> *feed</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> **search</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="MexFeed.html#MexFeedSearchMode"><span class="type">MexFeedSearchMode</span></a> mode</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *results_model</code></em>);
+<a class="link" href="MexFeed.html#MexProgram"><span class="returnvalue">MexProgram</span></a> *        <a class="link" href="MexFeed.html#mex-feed-lookup" title="mex_feed_lookup ()">mex_feed_lookup</a>                     (<em class="parameter"><code><a class="link" href="MexFeed.html" title="MexFeed"><span class="type">MexFeed</span></a> *feed</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *id</code></em>);
+                    <a class="link" href="MexFeed.html#MexProgram-struct" title="MexProgram">MexProgram</a>;
+                    <a class="link" href="MexFeed.html#MexFeedPrivate" title="MexFeedPrivate">MexFeedPrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexFeed.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GEnum
+   +----MexFeedSearchMode
+</pre>
+<pre class="synopsis">
+  GObject
+   +----<a class="link" href="MexGenericModel.html" title="MexGenericModel">MexGenericModel</a>
+         +----MexFeed
+               +----<a class="link" href="MexGriloFeed.html" title="MexGriloFeed">MexGriloFeed</a>
+</pre>
+<pre class="synopsis">
+  GObject
+   +----GInitiallyUnowned
+         +----<a class="link" href="MexGenericContent.html" title="MexGenericContent">MexGenericContent</a>
+               +----MexProgram
+                     +----<a class="link" href="MexGriloProgram.html" title="MexGriloProgram">MexGriloProgram</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexFeed.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+MexFeed implements
+ MexModel.</p>
+<p>
+MexProgram implements
+ MexContent.</p>
+</div>
+<div class="refsect1">
+<a name="MexFeed.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="MexFeed.html#MexFeed--source" title='The "source" property'>source</a>"                   <span class="type">gchar</span>*                : Read / Write
+  "<a class="link" href="MexFeed.html#MexProgram--feed" title='The "feed" property'>feed</a>"                     <a class="link" href="MexFeed.html" title="MexFeed"><span class="type">MexFeed</span></a>*              : Read / Write / Construct Only
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexFeed.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="MexFeed.html#MexProgram-changed" title='The "changed" signal'>changed</a>"                                        : <code class="literal">No Recursion</code>
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexFeed.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="MexFeed.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexFeedSearchMode"></a><h3>enum MexFeedSearchMode</h3>
+<pre class="programlisting">typedef enum
+{
+  MEX_FEED_SEARCH_MODE_OR,
+  MEX_FEED_SEARCH_MODE_AND
+} MexFeedSearchMode;
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexFeed-struct"></a><h3>struct MexFeed</h3>
+<pre class="programlisting">struct MexFeed;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexFeedClass"></a><h3>struct MexFeedClass</h3>
+<pre class="programlisting">struct MexFeedClass {
+  MexGenericModelClass parent_class;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-feed-new"></a><h3>mex_feed_new ()</h3>
+<pre class="programlisting"><a class="link" href="MexFeed.html" title="MexFeed"><span class="returnvalue">MexFeed</span></a> *           mex_feed_new                        (<em class="parameter"><code>const <span class="type">char</span> *title</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *source</code></em>);</pre>
+<p>
+Creates an empty <a class="link" href="MexFeed.html" title="MexFeed"><span class="type">MexFeed</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>title</code></em> :</span></p></td>
+<td>String containing the title.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>source</code></em> :</span></p></td>
+<td>String containing the source.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="MexFeed.html" title="MexFeed"><span class="type">MexFeed</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-feed-search"></a><h3>mex_feed_search ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_feed_search                     (<em class="parameter"><code><a class="link" href="MexFeed.html" title="MexFeed"><span class="type">MexFeed</span></a> *feed</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> **search</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="MexFeed.html#MexFeedSearchMode"><span class="type">MexFeedSearchMode</span></a> mode</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *results_model</code></em>);</pre>
+<p>
+Searches <em class="parameter"><code>feed</code></em> for the terms found in <em class="parameter"><code>search</code></em> and puts the results
+into <em class="parameter"><code>results_feed</code></em>;
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>feed</code></em> :</span></p></td>
+<td>A <a class="link" href="MexFeed.html" title="MexFeed"><span class="type">MexFeed</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>search</code></em> :</span></p></td>
+<td>A string array</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mode</code></em> :</span></p></td>
+<td>The <a class="link" href="MexFeed.html#MexFeedSearchMode"><span class="type">MexFeedSearchMode</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>results_feed</code></em> :</span></p></td>
+<td>A <a class="link" href="MexFeed.html" title="MexFeed"><span class="type">MexFeed</span></a> to store the results of the search.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-feed-lookup"></a><h3>mex_feed_lookup ()</h3>
+<pre class="programlisting"><a class="link" href="MexFeed.html#MexProgram"><span class="returnvalue">MexProgram</span></a> *        mex_feed_lookup                     (<em class="parameter"><code><a class="link" href="MexFeed.html" title="MexFeed"><span class="type">MexFeed</span></a> *feed</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *id</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexProgram-struct"></a><h3>MexProgram</h3>
+<pre class="programlisting">typedef struct _MexProgram MexProgram;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexFeedPrivate"></a><h3>MexFeedPrivate</h3>
+<pre class="programlisting">typedef struct _MexFeedPrivate MexFeedPrivate;</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="MexFeed.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="MexFeed--source"></a><h3>The <code class="literal">"source"</code> property</h3>
+<pre class="programlisting">  "source"                   <span class="type">gchar</span>*                : Read / Write</pre>
+<p>The source of the feed.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexProgram--feed"></a><h3>The <code class="literal">"feed"</code> property</h3>
+<pre class="programlisting">  "feed"                     <a class="link" href="MexFeed.html" title="MexFeed"><span class="type">MexFeed</span></a>*              : Read / Write / Construct Only</pre>
+<p>The MexFeed that created this program.</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="MexFeed.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="MexProgram-changed"></a><h3>The <code class="literal">"changed"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="MexFeed.html#MexProgram"><span class="type">MexProgram</span></a> *mexprogram,
+                                                        <span class="type">gpointer</span>    user_data)       : <code class="literal">No Recursion</code></pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

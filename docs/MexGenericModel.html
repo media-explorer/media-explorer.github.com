@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexGenericModel</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch04.html" title="Abstract classes and interfaces">
+<link rel="prev" href="MexGenericContent.html" title="MexGenericContent">
+<link rel="next" href="MexGenericProxy.html" title="MexGenericProxy">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="MexGenericContent.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch04.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="MexGenericProxy.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#MexGenericModel.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#MexGenericModel.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#MexGenericModel.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#MexGenericModel.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#MexGenericModel.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="MexGenericModel"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="MexGenericModel.top_of_page"></a>MexGenericModel</span></h2>
+<p>MexGenericModel</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="MexGenericModel.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">#define             <a class="link" href="MexGenericModel.html#MEX-TYPE-GENERIC-MODEL:CAPS" title="MEX_TYPE_GENERIC_MODEL">MEX_TYPE_GENERIC_MODEL</a>
+#define             <a class="link" href="MexGenericModel.html#MEX-GENERIC-MODEL:CAPS" title="MEX_GENERIC_MODEL()">MEX_GENERIC_MODEL</a>                   (obj)
+#define             <a class="link" href="MexGenericModel.html#MEX-GENERIC-MODEL-CLASS:CAPS" title="MEX_GENERIC_MODEL_CLASS()">MEX_GENERIC_MODEL_CLASS</a>             (klass)
+#define             <a class="link" href="MexGenericModel.html#IS-MEX-GENERIC-MODEL:CAPS" title="IS_MEX_GENERIC_MODEL()">IS_MEX_GENERIC_MODEL</a>                (obj)
+#define             <a class="link" href="MexGenericModel.html#IS-MEX-GENERIC-MODEL-CLASS:CAPS" title="IS_MEX_GENERIC_MODEL_CLASS()">IS_MEX_GENERIC_MODEL_CLASS</a>          (klass)
+#define             <a class="link" href="MexGenericModel.html#MEX-GENERIC-MODEL-GET-CLASS:CAPS" title="MEX_GENERIC_MODEL_GET_CLASS()">MEX_GENERIC_MODEL_GET_CLASS</a>         (obj)
+struct              <a class="link" href="MexGenericModel.html#MexGenericModel-struct" title="struct MexGenericModel">MexGenericModel</a>;
+struct              <a class="link" href="MexGenericModel.html#MexGenericModelClass" title="struct MexGenericModelClass">MexGenericModelClass</a>;
+<span class="returnvalue">GType</span>               <a class="link" href="MexGenericModel.html#mex-generic-model-get-type" title="mex_generic_model_get_type ()">mex_generic_model_get_type</a>          (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">MexModel</span> *          <a class="link" href="MexGenericModel.html#mex-generic-model-new" title="mex_generic_model_new ()">mex_generic_model_new</a>               (<em class="parameter"><code>const <span class="type">gchar</span> *title</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *icon_name</code></em>);
+                    <a class="link" href="MexGenericModel.html#MexGenericModelPrivate" title="MexGenericModelPrivate">MexGenericModelPrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexGenericModel.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GObject
+   +----MexGenericModel
+         +----<a class="link" href="MexAggregateModel.html" title="MexAggregateModel">MexAggregateModel</a>
+         +----<a class="link" href="MexFeed.html" title="MexFeed">MexFeed</a>
+         +----MexProxyModel
+         +----<a class="link" href="MexQueueModel.html" title="MexQueueModel">MexQueueModel</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexGenericModel.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+MexGenericModel implements
+ MexModel.</p>
+</div>
+<div class="refsect1">
+<a name="MexGenericModel.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="MexGenericModel.html#MexGenericModel--display-item-count" title='The "display-item-count" property'>display-item-count</a>"       <span class="type">gboolean</span>              : Read / Write
+  "<a class="link" href="MexGenericModel.html#MexGenericModel--icon-name" title='The "icon-name" property'>icon-name</a>"                <span class="type">gchar</span>*                : Read / Write
+  "<a class="link" href="MexGenericModel.html#MexGenericModel--length" title='The "length" property'>length</a>"                   <span class="type">gint</span>                  : Read
+  "<a class="link" href="MexGenericModel.html#MexGenericModel--placeholder-text" title='The "placeholder-text" property'>placeholder-text</a>"         <span class="type">gchar</span>*                : Read / Write
+  "<a class="link" href="MexGenericModel.html#MexGenericModel--title" title='The "title" property'>title</a>"                    <span class="type">gchar</span>*                : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexGenericModel.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="MexGenericModel.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MEX-TYPE-GENERIC-MODEL:CAPS"></a><h3>MEX_TYPE_GENERIC_MODEL</h3>
+<pre class="programlisting">#define             MEX_TYPE_GENERIC_MODEL</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MEX-GENERIC-MODEL:CAPS"></a><h3>MEX_GENERIC_MODEL()</h3>
+<pre class="programlisting">#define             MEX_GENERIC_MODEL(obj)</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MEX-GENERIC-MODEL-CLASS:CAPS"></a><h3>MEX_GENERIC_MODEL_CLASS()</h3>
+<pre class="programlisting">#define             MEX_GENERIC_MODEL_CLASS(klass)</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="IS-MEX-GENERIC-MODEL:CAPS"></a><h3>IS_MEX_GENERIC_MODEL()</h3>
+<pre class="programlisting">#define             IS_MEX_GENERIC_MODEL(obj)</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="IS-MEX-GENERIC-MODEL-CLASS:CAPS"></a><h3>IS_MEX_GENERIC_MODEL_CLASS()</h3>
+<pre class="programlisting">#define             IS_MEX_GENERIC_MODEL_CLASS(klass)</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MEX-GENERIC-MODEL-GET-CLASS:CAPS"></a><h3>MEX_GENERIC_MODEL_GET_CLASS()</h3>
+<pre class="programlisting">#define             MEX_GENERIC_MODEL_GET_CLASS(obj)</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexGenericModel-struct"></a><h3>struct MexGenericModel</h3>
+<pre class="programlisting">struct MexGenericModel;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexGenericModelClass"></a><h3>struct MexGenericModelClass</h3>
+<pre class="programlisting">struct MexGenericModelClass {
+  GObjectClass parent_class;
+
+  void (*add_content) (MexGenericModel *model,
+                       MexContent      *content);
+  void (*remove_content) (MexGenericModel *model,
+                          MexContent      *content);
+  void (*clear) (MexGenericModel *model);
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-generic-model-get-type"></a><h3>mex_generic_model_get_type ()</h3>
+<pre class="programlisting"><span class="returnvalue">GType</span>               mex_generic_model_get_type          (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-generic-model-new"></a><h3>mex_generic_model_new ()</h3>
+<pre class="programlisting"><span class="returnvalue">MexModel</span> *          mex_generic_model_new               (<em class="parameter"><code>const <span class="type">gchar</span> *title</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *icon_name</code></em>);</pre>
+<p>
+Creates an empty <a class="link" href="MexGenericModel.html" title="MexGenericModel"><span class="type">MexGenericModel</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>title</code></em> :</span></p></td>
+<td>String containing the title.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>icon_name</code></em> :</span></p></td>
+<td>String containing the icon name.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="MexGenericModel.html" title="MexGenericModel"><span class="type">MexGenericModel</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexGenericModelPrivate"></a><h3>MexGenericModelPrivate</h3>
+<pre class="programlisting">typedef struct _MexGenericModelPrivate MexGenericModelPrivate;</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="MexGenericModel.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="MexGenericModel--display-item-count"></a><h3>The <code class="literal">"display-item-count"</code> property</h3>
+<pre class="programlisting">  "display-item-count"       <span class="type">gboolean</span>              : Read / Write</pre>
+<p>Whether to display the number of items.</p>
+<p>Default value: TRUE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexGenericModel--icon-name"></a><h3>The <code class="literal">"icon-name"</code> property</h3>
+<pre class="programlisting">  "icon-name"                <span class="type">gchar</span>*                : Read / Write</pre>
+<p>The icon name of the feed.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexGenericModel--length"></a><h3>The <code class="literal">"length"</code> property</h3>
+<pre class="programlisting">  "length"                   <span class="type">gint</span>                  : Read</pre>
+<p>The number of items in the feed.</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexGenericModel--placeholder-text"></a><h3>The <code class="literal">"placeholder-text"</code> property</h3>
+<pre class="programlisting">  "placeholder-text"         <span class="type">gchar</span>*                : Read / Write</pre>
+<p>Text to use when the model is empty.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexGenericModel--title"></a><h3>The <code class="literal">"title"</code> property</h3>
+<pre class="programlisting">  "title"                    <span class="type">gchar</span>*                : Read / Write</pre>
+<p>The title of the feed.</p>
+<p>Default value: ""</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexExplorer</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch08.html" title="Container widgets">
+<link rel="prev" href="MexExpanderBox.html" title="MexExpanderBox">
+<link rel="next" href="MexGrid.html" title="MexGrid">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="MexExpanderBox.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch08.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="MexGrid.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#MexExplorer.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#MexExplorer.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#MexExplorer.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#MexExplorer.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#MexExplorer.properties" class="shortcut">Properties</a>
+                   | 
+                  <a href="#MexExplorer.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="MexExplorer"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="MexExplorer.top_of_page"></a>MexExplorer</span></h2>
+<p>MexExplorer</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="MexExplorer.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="MexExplorer.html#MexExplorer-struct" title="struct MexExplorer">MexExplorer</a>;
+struct              <a class="link" href="MexExplorer.html#MexExplorerClass" title="struct MexExplorerClass">MexExplorerClass</a>;
+<span class="returnvalue">ClutterActor</span> *      <a class="link" href="MexExplorer.html#mex-explorer-new" title="mex_explorer_new ()">mex_explorer_new</a>                    (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexExplorer.html#mex-explorer-set-root-model" title="mex_explorer_set_root_model ()">mex_explorer_set_root_model</a>         (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *model</code></em>);
+<span class="returnvalue">MexModel</span> *          <a class="link" href="MexExplorer.html#mex-explorer-get-root-model" title="mex_explorer_get_root_model ()">mex_explorer_get_root_model</a>         (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexExplorer.html#mex-explorer-push-model" title="mex_explorer_push_model ()">mex_explorer_push_model</a>             (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *model</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexExplorer.html#mex-explorer-replace-model" title="mex_explorer_replace_model ()">mex_explorer_replace_model</a>          (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *model</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexExplorer.html#mex-explorer-pop-model" title="mex_explorer_pop_model ()">mex_explorer_pop_model</a>              (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexExplorer.html#mex-explorer-pop-to-root" title="mex_explorer_pop_to_root ()">mex_explorer_pop_to_root</a>            (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>);
+<span class="returnvalue">GList</span> *             <a class="link" href="MexExplorer.html#mex-explorer-get-models" title="mex_explorer_get_models ()">mex_explorer_get_models</a>             (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexExplorer.html#mex-explorer-remove-model" title="mex_explorer_remove_model ()">mex_explorer_remove_model</a>           (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *model</code></em>);
+<span class="returnvalue">guint</span>               <a class="link" href="MexExplorer.html#mex-explorer-get-depth" title="mex_explorer_get_depth ()">mex_explorer_get_depth</a>              (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>);
+<span class="returnvalue">MexModel</span> *          <a class="link" href="MexExplorer.html#mex-explorer-get-model" title="mex_explorer_get_model ()">mex_explorer_get_model</a>              (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>);
+<span class="returnvalue">MexModel</span> *          <a class="link" href="MexExplorer.html#mex-explorer-get-focused-model" title="mex_explorer_get_focused_model ()">mex_explorer_get_focused_model</a>      (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexExplorer.html#mex-explorer-set-focused-model" title="mex_explorer_set_focused_model ()">mex_explorer_set_focused_model</a>      (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *model</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexExplorer.html#mex-explorer-focus-content" title="mex_explorer_focus_content ()">mex_explorer_focus_content</a>          (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">MexContent</span> *content</code></em>);
+<span class="returnvalue">ClutterContainer</span> *  <a class="link" href="MexExplorer.html#mex-explorer-get-container-for-model" title="mex_explorer_get_container_for_model ()">mex_explorer_get_container_for_model</a>
+                                                        (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *model</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexExplorer.html#mex-explorer-set-n-preview-items" title="mex_explorer_set_n_preview_items ()">mex_explorer_set_n_preview_items</a>    (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>,
+                                                         <em class="parameter"><code><span class="type">gint</span> n_preview_items</code></em>);
+<span class="returnvalue">gint</span>                <a class="link" href="MexExplorer.html#mex-explorer-get-n-preview-items" title="mex_explorer_get_n_preview_items ()">mex_explorer_get_n_preview_items</a>    (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>);
+                    <a class="link" href="MexExplorer.html#MexExplorerPrivate" title="MexExplorerPrivate">MexExplorerPrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexExplorer.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GObject
+   +----GInitiallyUnowned
+         +----ClutterActor
+               +----MxWidget
+                     +----<a class="link" href="MexShell.html" title="MexShell">MexShell</a>
+                           +----MexExplorer
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexExplorer.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+MexExplorer implements
+ ClutterScriptable,  ClutterAnimatable,  AtkImplementorIface,  MxStylable,  ClutterContainer and  MxFocusable.</p>
+</div>
+<div class="refsect1">
+<a name="MexExplorer.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="MexExplorer.html#MexExplorer--depth" title='The "depth" property'>depth</a>"                    <span class="type">guint</span>                 : Read
+  "<a class="link" href="MexExplorer.html#MexExplorer--model" title='The "model" property'>model</a>"                    <span class="type">GObject</span>*              : Read
+  "<a class="link" href="MexExplorer.html#MexExplorer--n-preview-items" title='The "n-preview-items" property'>n-preview-items</a>"          <span class="type">gint</span>                  : Read
+  "<a class="link" href="MexExplorer.html#MexExplorer--root-model" title='The "root-model" property'>root-model</a>"               <span class="type">GObject</span>*              : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexExplorer.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="MexExplorer.html#MexExplorer-header-activated" title='The "header-activated" signal'>header-activated</a>"                               : <code class="literal">Run Last</code>
+  "<a class="link" href="MexExplorer.html#MexExplorer-page-created" title='The "page-created" signal'>page-created</a>"                                   : <code class="literal">Run Last</code>
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexExplorer.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="MexExplorer.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexExplorer-struct"></a><h3>struct MexExplorer</h3>
+<pre class="programlisting">struct MexExplorer;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexExplorerClass"></a><h3>struct MexExplorerClass</h3>
+<pre class="programlisting">struct MexExplorerClass {
+  MexShellClass parent_class;
+
+  void (*page_created)      (MexExplorer      *explorer,
+                             MexModel         *model,
+                             ClutterActor    **page);
+  void (*object_created)    (MexExplorer      *explorer,
+                             MexContent       *content,
+                             GObject          *object,
+                             ClutterContainer *container);
+  void (*header_activated)  (MexExplorer      *explorer,
+                             MexModel         *model);
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-explorer-new"></a><h3>mex_explorer_new ()</h3>
+<pre class="programlisting"><span class="returnvalue">ClutterActor</span> *      mex_explorer_new                    (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-explorer-set-root-model"></a><h3>mex_explorer_set_root_model ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_explorer_set_root_model         (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *model</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-explorer-get-root-model"></a><h3>mex_explorer_get_root_model ()</h3>
+<pre class="programlisting"><span class="returnvalue">MexModel</span> *          mex_explorer_get_root_model         (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-explorer-push-model"></a><h3>mex_explorer_push_model ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_explorer_push_model             (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *model</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-explorer-replace-model"></a><h3>mex_explorer_replace_model ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_explorer_replace_model          (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *model</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-explorer-pop-model"></a><h3>mex_explorer_pop_model ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_explorer_pop_model              (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-explorer-pop-to-root"></a><h3>mex_explorer_pop_to_root ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_explorer_pop_to_root            (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-explorer-get-models"></a><h3>mex_explorer_get_models ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *             mex_explorer_get_models             (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-explorer-remove-model"></a><h3>mex_explorer_remove_model ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_explorer_remove_model           (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *model</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-explorer-get-depth"></a><h3>mex_explorer_get_depth ()</h3>
+<pre class="programlisting"><span class="returnvalue">guint</span>               mex_explorer_get_depth              (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-explorer-get-model"></a><h3>mex_explorer_get_model ()</h3>
+<pre class="programlisting"><span class="returnvalue">MexModel</span> *          mex_explorer_get_model              (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-explorer-get-focused-model"></a><h3>mex_explorer_get_focused_model ()</h3>
+<pre class="programlisting"><span class="returnvalue">MexModel</span> *          mex_explorer_get_focused_model      (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-explorer-set-focused-model"></a><h3>mex_explorer_set_focused_model ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_explorer_set_focused_model      (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *model</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-explorer-focus-content"></a><h3>mex_explorer_focus_content ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_explorer_focus_content          (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">MexContent</span> *content</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-explorer-get-container-for-model"></a><h3>mex_explorer_get_container_for_model ()</h3>
+<pre class="programlisting"><span class="returnvalue">ClutterContainer</span> *  mex_explorer_get_container_for_model
+                                                        (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *model</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-explorer-set-n-preview-items"></a><h3>mex_explorer_set_n_preview_items ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_explorer_set_n_preview_items    (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>,
+                                                         <em class="parameter"><code><span class="type">gint</span> n_preview_items</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-explorer-get-n-preview-items"></a><h3>mex_explorer_get_n_preview_items ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>                mex_explorer_get_n_preview_items    (<em class="parameter"><code><a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *explorer</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexExplorerPrivate"></a><h3>MexExplorerPrivate</h3>
+<pre class="programlisting">typedef struct _MexExplorerPrivate MexExplorerPrivate;</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="MexExplorer.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="MexExplorer--depth"></a><h3>The <code class="literal">"depth"</code> property</h3>
+<pre class="programlisting">  "depth"                    <span class="type">guint</span>                 : Read</pre>
+<p>The number of models currently in the explorer.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexExplorer--model"></a><h3>The <code class="literal">"model"</code> property</h3>
+<pre class="programlisting">  "model"                    <span class="type">GObject</span>*              : Read</pre>
+<p>The MexModel currently being shown.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexExplorer--n-preview-items"></a><h3>The <code class="literal">"n-preview-items"</code> property</h3>
+<pre class="programlisting">  "n-preview-items"          <span class="type">gint</span>                  : Read</pre>
+<p>The number of preview items to show for aggregate models. -1 for no limit.</p>
+<p>Allowed values: &gt;= -1</p>
+<p>Default value: 8</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexExplorer--root-model"></a><h3>The <code class="literal">"root-model"</code> property</h3>
+<pre class="programlisting">  "root-model"               <span class="type">GObject</span>*              : Read / Write</pre>
+<p>The Mex(Aggregate)Model that represents the root node of the model hierarchy.</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="MexExplorer.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="MexExplorer-header-activated"></a><h3>The <code class="literal">"header-activated"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *mexexplorer,
+                                                        <span class="type">GObject</span>     *arg1,
+                                                        <span class="type">gpointer</span>     user_data)        : <code class="literal">Run Last</code></pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexExplorer-page-created"></a><h3>The <code class="literal">"page-created"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="MexExplorer.html" title="MexExplorer"><span class="type">MexExplorer</span></a> *mexexplorer,
+                                                        <span class="type">GObject</span>     *arg1,
+                                                        <span class="type">gpointer</span>     arg2,
+                                                        <span class="type">gpointer</span>     user_data)        : <code class="literal">Run Last</code></pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

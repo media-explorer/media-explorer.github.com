@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexContentTile</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch09.html" title="Basic widgets">
+<link rel="prev" href="MexContentBox.html" title="MexContentBox">
+<link rel="next" href="MexContentButton.html" title="MexContentButton">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="MexContentBox.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch09.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="MexContentButton.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#MexContentTile.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#MexContentTile.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#MexContentTile.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#MexContentTile.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#MexContentTile.properties" class="shortcut">Properties</a>
+                   | 
+                  <a href="#MexContentTile.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="MexContentTile"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="MexContentTile.top_of_page"></a>MexContentTile</span></h2>
+<p>MexContentTile</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="MexContentTile.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="MexContentTile.html#MexContentTile-struct" title="struct MexContentTile">MexContentTile</a>;
+struct              <a class="link" href="MexContentTile.html#MexContentTileClass" title="struct MexContentTileClass">MexContentTileClass</a>;
+<span class="returnvalue">ClutterActor</span> *      <a class="link" href="MexContentTile.html#mex-content-tile-new" title="mex_content_tile_new ()">mex_content_tile_new</a>                (<em class="parameter"><code><span class="type">void</span></code></em>);
+                    <a class="link" href="MexContentTile.html#MexContentTilePrivate" title="MexContentTilePrivate">MexContentTilePrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexContentTile.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GObject
+   +----GInitiallyUnowned
+         +----ClutterActor
+               +----MxWidget
+                     +----MxBin
+                           +----<a class="link" href="MexTile.html" title="MexTile">MexTile</a>
+                                 +----MexContentTile
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexContentTile.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+MexContentTile implements
+ ClutterScriptable,  ClutterAnimatable,  AtkImplementorIface,  MxStylable,  ClutterContainer,  MxFocusable and  MexContentView.</p>
+</div>
+<div class="refsect1">
+<a name="MexContentTile.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="MexContentTile.html#MexContentTile--thumb-height" title='The "thumb-height" property'>thumb-height</a>"             <span class="type">gint</span>                  : Read / Write
+  "<a class="link" href="MexContentTile.html#MexContentTile--thumb-width" title='The "thumb-width" property'>thumb-width</a>"              <span class="type">gint</span>                  : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexContentTile.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="MexContentTile.html#MexContentTile-focus-in" title='The "focus-in" signal'>focus-in</a>"                                       : <code class="literal">Run First</code>
+  "<a class="link" href="MexContentTile.html#MexContentTile-focus-out" title='The "focus-out" signal'>focus-out</a>"                                      : <code class="literal">Run First</code>
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexContentTile.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="MexContentTile.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexContentTile-struct"></a><h3>struct MexContentTile</h3>
+<pre class="programlisting">struct MexContentTile;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexContentTileClass"></a><h3>struct MexContentTileClass</h3>
+<pre class="programlisting">struct MexContentTileClass {
+  MexTileClass parent_class;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-content-tile-new"></a><h3>mex_content_tile_new ()</h3>
+<pre class="programlisting"><span class="returnvalue">ClutterActor</span> *      mex_content_tile_new                (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexContentTilePrivate"></a><h3>MexContentTilePrivate</h3>
+<pre class="programlisting">typedef struct _MexContentTilePrivate MexContentTilePrivate;</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="MexContentTile.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="MexContentTile--thumb-height"></a><h3>The <code class="literal">"thumb-height"</code> property</h3>
+<pre class="programlisting">  "thumb-height"             <span class="type">gint</span>                  : Read / Write</pre>
+<p>Scale the height of the thumbnail while loading.</p>
+<p>Allowed values: &gt;= -1</p>
+<p>Default value: -1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexContentTile--thumb-width"></a><h3>The <code class="literal">"thumb-width"</code> property</h3>
+<pre class="programlisting">  "thumb-width"              <span class="type">gint</span>                  : Read / Write</pre>
+<p>Scale the width of the thumbnail while loading.</p>
+<p>Allowed values: &gt;= -1</p>
+<p>Default value: -1</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="MexContentTile.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="MexContentTile-focus-in"></a><h3>The <code class="literal">"focus-in"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="MexContentTile.html" title="MexContentTile"><span class="type">MexContentTile</span></a> *mexcontenttile,
+                                                        <span class="type">gpointer</span>        user_data)           : <code class="literal">Run First</code></pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexContentTile-focus-out"></a><h3>The <code class="literal">"focus-out"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="MexContentTile.html" title="MexContentTile"><span class="type">MexContentTile</span></a> *mexcontenttile,
+                                                        <span class="type">gpointer</span>        user_data)           : <code class="literal">Run First</code></pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

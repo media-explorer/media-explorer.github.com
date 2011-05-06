@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexGenericProxy</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch04.html" title="Abstract classes and interfaces">
+<link rel="prev" href="MexGenericModel.html" title="MexGenericModel">
+<link rel="next" href="mex-mex-media-player-ginterface.html" title="mex-media-player-ginterface">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="MexGenericModel.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch04.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="mex-mex-media-player-ginterface.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#MexGenericProxy.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#MexGenericProxy.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#MexGenericProxy.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="MexGenericProxy"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="MexGenericProxy.top_of_page"></a>MexGenericProxy</span></h2>
+<p>MexGenericProxy</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="MexGenericProxy.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis"><span class="returnvalue">gboolean</span>            (<a class="link" href="MexGenericProxy.html#MexGenericProxyTransformFunc" title="MexGenericProxyTransformFunc ()">*MexGenericProxyTransformFunc</a>)     (<em class="parameter"><code><span class="type">gpointer</span> binding</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">GValue</span> *source_value</code></em>,
+                                                         <em class="parameter"><code><span class="type">GValue</span> *target_value</code></em>,
+                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);
+struct              <a class="link" href="MexGenericProxy.html#MexGenericProxy-struct" title="struct MexGenericProxy">MexGenericProxy</a>;
+struct              <a class="link" href="MexGenericProxy.html#MexGenericProxyClass" title="struct MexGenericProxyClass">MexGenericProxyClass</a>;
+<a class="link" href="MexProxy.html" title="MexProxy"><span class="returnvalue">MexProxy</span></a> *          <a class="link" href="MexGenericProxy.html#mex-generic-proxy-new" title="mex_generic_proxy_new ()">mex_generic_proxy_new</a>               (<em class="parameter"><code><span class="type">MexModel</span> *list</code></em>,
+                                                         <em class="parameter"><code><span class="type">GType</span> object_type</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexGenericProxy.html#mex-generic-proxy-bind" title="mex_generic_proxy_bind ()">mex_generic_proxy_bind</a>              (<em class="parameter"><code><a class="link" href="MexGenericProxy.html" title="MexGenericProxy"><span class="type">MexGenericProxy</span></a> *generic_proxy</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *program_property</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *object_property</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexGenericProxy.html#mex-generic-proxy-bind-full" title="mex_generic_proxy_bind_full ()">mex_generic_proxy_bind_full</a>         (<em class="parameter"><code><a class="link" href="MexGenericProxy.html" title="MexGenericProxy"><span class="type">MexGenericProxy</span></a> *generic_proxy</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *program_property</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *object_property</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="MexGenericProxy.html#MexGenericProxyTransformFunc" title="MexGenericProxyTransformFunc ()"><span class="type">MexGenericProxyTransformFunc</span></a> transform_to</code></em>,
+                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>,
+                                                         <em class="parameter"><code><span class="type">GDestroyNotify</span> notify</code></em>);
+                    <a class="link" href="MexGenericProxy.html#MexGenericProxyPrivate" title="MexGenericProxyPrivate">MexGenericProxyPrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexGenericProxy.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GObject
+   +----<a class="link" href="MexProxy.html" title="MexProxy">MexProxy</a>
+         +----MexGenericProxy
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexGenericProxy.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="MexGenericProxy.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexGenericProxyTransformFunc"></a><h3>MexGenericProxyTransformFunc ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            (*MexGenericProxyTransformFunc)     (<em class="parameter"><code><span class="type">gpointer</span> binding</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">GValue</span> *source_value</code></em>,
+                                                         <em class="parameter"><code><span class="type">GValue</span> *target_value</code></em>,
+                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexGenericProxy-struct"></a><h3>struct MexGenericProxy</h3>
+<pre class="programlisting">struct MexGenericProxy;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexGenericProxyClass"></a><h3>struct MexGenericProxyClass</h3>
+<pre class="programlisting">struct MexGenericProxyClass {
+  MexProxyClass parent_class;
+
+  void (*object_created) (MexGenericProxy *generic_proxy,
+                          MexContent      *content,
+                          GObject         *object);
+  void (*object_removed) (MexGenericProxy *generic_proxy,
+                          MexContent      *content,
+                          GObject         *object);
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-generic-proxy-new"></a><h3>mex_generic_proxy_new ()</h3>
+<pre class="programlisting"><a class="link" href="MexProxy.html" title="MexProxy"><span class="returnvalue">MexProxy</span></a> *          mex_generic_proxy_new               (<em class="parameter"><code><span class="type">MexModel</span> *list</code></em>,
+                                                         <em class="parameter"><code><span class="type">GType</span> object_type</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-generic-proxy-bind"></a><h3>mex_generic_proxy_bind ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_generic_proxy_bind              (<em class="parameter"><code><a class="link" href="MexGenericProxy.html" title="MexGenericProxy"><span class="type">MexGenericProxy</span></a> *generic_proxy</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *program_property</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *object_property</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-generic-proxy-bind-full"></a><h3>mex_generic_proxy_bind_full ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_generic_proxy_bind_full         (<em class="parameter"><code><a class="link" href="MexGenericProxy.html" title="MexGenericProxy"><span class="type">MexGenericProxy</span></a> *generic_proxy</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *program_property</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *object_property</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="MexGenericProxy.html#MexGenericProxyTransformFunc" title="MexGenericProxyTransformFunc ()"><span class="type">MexGenericProxyTransformFunc</span></a> transform_to</code></em>,
+                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>,
+                                                         <em class="parameter"><code><span class="type">GDestroyNotify</span> notify</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexGenericProxyPrivate"></a><h3>MexGenericProxyPrivate</h3>
+<pre class="programlisting">typedef struct _MexGenericProxyPrivate MexGenericProxyPrivate;</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

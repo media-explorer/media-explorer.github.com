@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Mex Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="next" href="mex-overview.html" title="Part I. Mex Overview">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="book">
+<div class="titlepage">
+<div>
+<div><table class="navigation" id="top" width="100%" cellpadding="2" cellspacing="0"><tr><th valign="middle"><p class="title">Mex Reference Manual</p></th></tr></table></div>
+<div><p class="releaseinfo">for Mex 0.1.1</p></div>
+<div><p class="copyright">Copyright © 2010 Intel Corporation</p></div>
+<div><div class="legalnotice">
+<a name="id2879266"></a><p>
+        Permission is granted to copy, distribute and/or modify this
+        document under the terms of the <em class="citetitle">GNU Free
+        Documentation License</em>, Version 1.1 or any later
+        version published by the Free Software Foundation with no
+        Invariant Sections, no Front-Cover Texts, and no Back-Cover
+        Texts. You may obtain a copy of the <em class="citetitle">GNU Free
+        Documentation License</em> from the Free Software
+        Foundation by visiting <a class="ulink" href="http://www.fsf.org" target="_top">their Web site</a> or by writing
+        to:
+
+        </p>
+<div class="address"><p><br>
+          The Free Software Foundation, Inc.,<br>
+          <span class="street">59 Temple Place</span> - Suite 330,<br>
+          <span class="city">Boston</span>, <span class="state">MA</span> <span class="postcode">02111-1307</span>,<br>
+          <span class="country">USA</span><br>
+        </p></div>
+<p>
+      </p>
+</div></div>
+</div>
+<hr>
+</div>
+<div class="toc"><dl>
+<dt><span class="part"><a href="mex-overview.html">I. Mex Overview</a></span></dt>
+<dd><dl>
+<dt><span class="chapter"><a href="introduction.html">Introduction</a></span></dt>
+<dt><span class="chapter"><a href="users.html">Media Explorer for users</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="users.html#users-installing">Installing Media Explorer</a></span></dt>
+<dt><span class="section"><a href="users-running.html">Running Media Explorer</a></span></dt>
+<dt><span class="section"><a href="users-configuring.html">Configuring the default content sources</a></span></dt>
+<dt><span class="section"><a href="users-content-sources.html">Configuring extra content sources</a></span></dt>
+</dl></dd>
+<dt><span class="chapter"><a href="developers.html">Media Explorer for developers</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="developers.html#developers-architecture">Architecture</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="developers.html#developers-architecture-integration">Integration points with other libraries and services</a></span></dt>
+<dt><span class="section"><a href="developers.html#developers-ux">User experience design</a></span></dt>
+</dl></dd>
+<dt><span class="section"><a href="developers-works.html">How it works</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="developers-works.html#developers-works-mvc">MVC</a></span></dt>
+<dt><span class="section"><a href="developers-works.html#developers-works-classes">Class hierarchy</a></span></dt>
+<dt><span class="section"><a href="developers-works.html#developers-works-content">Content discovery</a></span></dt>
+<dt><span class="section"><a href="developers-works.html#developers-works-events">Binding keys to actions</a></span></dt>
+<dt><span class="section"><a href="developers-works.html#developers-works-plugins">Plugin management and configuration</a></span></dt>
+</dl></dd>
+<dt><span class="section"><a href="developers-extending.html">Extending Media Explorer</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="developers-extending.html#developers-extending-need-to-know">What you need to know</a></span></dt>
+<dt><span class="section"><a href="developers-extending.html#developers-extending-environment">Setting up a development environment</a></span></dt>
+<dt><span class="section"><a href="developers-extending.html#developers-extending-building">Enabling and configuring content sources</a></span></dt>
+</dl></dd>
+</dl></dd>
+</dl></dd>
+<dt><span class="part"><a href="mex-base.html">II. Mex Core Reference</a></span></dt>
+<dd><dl>
+<dt><span class="chapter"><a href="ch04.html">Abstract classes and interfaces</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="MexApplet.html">MexApplet</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="mex-MexContent.html">MexContent</a></span><span class="refpurpose"> — Objects that can be put in <a class="link" href="MexContentBox.html" title="MexContentBox"><span class="type">MexContentBox</span></a></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="mex-MexContentView.html">MexContentView</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexGenericContent.html">MexGenericContent</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexGenericModel.html">MexGenericModel</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexGenericProxy.html">MexGenericProxy</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="mex-mex-media-player-ginterface.html">mex-media-player-ginterface</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="mex-MexModel.html">MexModel</a></span><span class="refpurpose"> — Interface for collections of <span class="type">MexContent</span></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexProxy.html">MexProxy</a></span><span class="refpurpose"> — An abstract proxy for mapping <span class="type">MexModel</span>
+content items to arbitrary <span class="type">GObjects</span>.</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ch05.html">Plugin-specific interfaces</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="mex-MexActionProvider.html">MexActionProvider</a></span><span class="refpurpose"> — Interface for sources of actions</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="mex-MexAppletProvider.html">MexAppletProvider</a></span><span class="refpurpose"> — Interface for sources of applets</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="mex-MexLogoProvider.html">MexLogoProvider</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="mex-MexModelProvider.html">MexModelProvider</a></span><span class="refpurpose"> — Interface for sources of models</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="mex-MexToolProvider.html">MexToolProvider</a></span><span class="refpurpose"> — Interface for sources of tools</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ch06.html">Managers</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="MexActionManager.html">MexActionManager</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexAppletManager.html">MexAppletManager</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexPluginManager.html">MexPluginManager</a></span><span class="refpurpose"></span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ch07.html">Model classes</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="MexAggregateModel.html">MexAggregateModel</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexFeed.html">MexFeed</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexGriloFeed.html">MexGriloFeed</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexGriloProgram.html">MexGriloProgram</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexGriloTrackerFeed.html">MexGriloTrackerFeed</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexModelManager.html">MexModelManager</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexProgram.html">MexProgram</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexQueueModel.html">MexQueueModel</a></span><span class="refpurpose"></span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ch08.html">Container widgets</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="MexAspectFrame.html">MexAspectFrame</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexColumn.html">MexColumn</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexExpanderBox.html">MexExpanderBox</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexExplorer.html">MexExplorer</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexGrid.html">MexGrid</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexNotificationArea.html">MexNotificationArea</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexResizingHBox.html">MexResizingHBox</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexScrollView.html">MexScrollView</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexShell.html">MexShell</a></span><span class="refpurpose"></span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ch09.html">Basic widgets</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="MexActionButton.html">MexActionButton</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexClockBin.html">MexClockBin</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexContentBox.html">MexContentBox</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexContentTile.html">MexContentTile</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexContentButton.html">MexContentButton</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexInfoBar.html">MexInfoBar</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexInfoPanel.html">MexInfoPanel</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexMediaControls.html">MexMediaControls</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexMenu.html">MexMenu</a></span><span class="refpurpose"> — A hierarchical menu widget</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexQueueButton.html">MexQueueButton</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexScrollIndicator.html">MexScrollIndicator</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexShadow.html">MexShadow</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexSlideShow.html">MexSlideShow</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexTile.html">MexTile</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexVolumeControl.html">MexVolumeControl</a></span><span class="refpurpose"></span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ch10.html">Widget feeders</a></span></dt>
+<dd><dl><dt>
+<span class="refentrytitle"><a href="MexContentProxy.html">MexContentProxy</a></span><span class="refpurpose"> — A bridge between a model and user interface elements,
+which creates widgets from model content items.</span>
+</dt></dl></dd>
+<dt><span class="chapter"><a href="ch11.html">Media playback</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="MexPlayer.html">MexPlayer</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexPlayerClient.html">MexPlayerClient</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexMediaDBUSBridge.html">MexMediaDBUSBridge</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexSurfacePlayer.html">MexSurfacePlayer</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="mex-mex-media-player-bindings.html">mex-media-player-bindings</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="mex-mex-player-common.html">mex-player-common</a></span><span class="refpurpose"></span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ch12.html">Notifications</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="MexNotificationSource.html">MexNotificationSource</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexDummyNotificationSource.html">MexDummyNotificationSource</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexGIONotificationSource.html">MexGIONotificationSource</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexNetworkNotificationSource.html">MexNetworkNotificationSource</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="mex-mex-online.html">mex-online</a></span><span class="refpurpose"></span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ch13.html">Utility classes</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="MexApplication.html">MexApplication</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexApplicationCategory.html">MexApplicationCategory</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexDownloadQueue.html">MexDownloadQueue</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="MexSettings.html">MexSettings</a></span><span class="refpurpose"></span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ch14.html">Utility functions</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="mex-mex-metadata-utils.html">mex-metadata-utils</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="mex-mex-thumbnailer.html">mex-thumbnailer</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="mex-mex-utils.html">mex-utils</a></span><span class="refpurpose"></span>
+</dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="part"><a href="mex-objects.html">III. Mex actors and objects</a></span></dt>
+<dd><dl>
+<dt><span class="chapter"><a href="mex-objecthierarchy.html">Object hierarchy</a></span></dt>
+<dt><span class="chapter"><a href="mex-objectindex.html">Object index</a></span></dt>
+</dl></dd>
+<dt><span class="part"><a href="mex-glossary.html">IV. Glossaries</a></span></dt>
+<dd><dl><dt><span class="glossary"><a href="annotation-glossary.html">Annotation Glossary</a></span></dt></dl></dd>
+<dt><span class="index"><a href="ix01.html">Index of all symbols</a></span></dt>
+<dt><span class="index"><a href="ix02.html">Index of new symbols in 0.2</a></span></dt>
+<dt><span class="appendix"><a href="license.html">A. License</a></span></dt>
+</dl></div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

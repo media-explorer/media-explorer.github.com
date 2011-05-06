@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexGrid</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch08.html" title="Container widgets">
+<link rel="prev" href="MexExplorer.html" title="MexExplorer">
+<link rel="next" href="MexNotificationArea.html" title="MexNotificationArea">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="MexExplorer.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch08.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="MexNotificationArea.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#MexGrid.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#MexGrid.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#MexGrid.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#MexGrid.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#MexGrid.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="MexGrid"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="MexGrid.top_of_page"></a>MexGrid</span></h2>
+<p>MexGrid</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="MexGrid.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="MexGrid.html#MexGrid-struct" title="struct MexGrid">MexGrid</a>;
+struct              <a class="link" href="MexGrid.html#MexGridClass" title="struct MexGridClass">MexGridClass</a>;
+<span class="returnvalue">ClutterActor</span> *      <a class="link" href="MexGrid.html#mex-grid-new" title="mex_grid_new ()">mex_grid_new</a>                        (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">gint</span>                <a class="link" href="MexGrid.html#mex-grid-get-stride" title="mex_grid_get_stride ()">mex_grid_get_stride</a>                 (<em class="parameter"><code><a class="link" href="MexGrid.html" title="MexGrid"><span class="type">MexGrid</span></a> *grid</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexGrid.html#mex-grid-set-stride" title="mex_grid_set_stride ()">mex_grid_set_stride</a>                 (<em class="parameter"><code><a class="link" href="MexGrid.html" title="MexGrid"><span class="type">MexGrid</span></a> *grid</code></em>,
+                                                         <em class="parameter"><code><span class="type">gint</span> stride</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexGrid.html#mex-grid-get-tile-size" title="mex_grid_get_tile_size ()">mex_grid_get_tile_size</a>              (<em class="parameter"><code><a class="link" href="MexGrid.html" title="MexGrid"><span class="type">MexGrid</span></a> *grid</code></em>,
+                                                         <em class="parameter"><code><span class="type">gfloat</span> *width</code></em>,
+                                                         <em class="parameter"><code><span class="type">gfloat</span> *height</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexGrid.html#mex-grid-set-tile-size" title="mex_grid_set_tile_size ()">mex_grid_set_tile_size</a>              (<em class="parameter"><code><a class="link" href="MexGrid.html" title="MexGrid"><span class="type">MexGrid</span></a> *grid</code></em>,
+                                                         <em class="parameter"><code><span class="type">gfloat</span> width</code></em>,
+                                                         <em class="parameter"><code><span class="type">gfloat</span> height</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexGrid.html#mex-grid-set-sort-func" title="mex_grid_set_sort_func ()">mex_grid_set_sort_func</a>              (<em class="parameter"><code><a class="link" href="MexGrid.html" title="MexGrid"><span class="type">MexGrid</span></a> *grid</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-mex-utils.html#MexActorSortFunc" title="MexActorSortFunc ()"><span class="type">MexActorSortFunc</span></a> func</code></em>,
+                                                         <em class="parameter"><code><span class="type">gpointer</span> userdata</code></em>);
+<a class="link" href="mex-mex-utils.html#MexActorSortFunc" title="MexActorSortFunc ()"><span class="returnvalue">MexActorSortFunc</span></a>    <a class="link" href="MexGrid.html#mex-grid-get-sort-func" title="mex_grid_get_sort_func ()">mex_grid_get_sort_func</a>              (<em class="parameter"><code><a class="link" href="MexGrid.html" title="MexGrid"><span class="type">MexGrid</span></a> *grid</code></em>,
+                                                         <em class="parameter"><code><span class="type">gpointer</span> *userdata</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexGrid.html#mex-grid-resort" title="mex_grid_resort ()">mex_grid_resort</a>                     (<em class="parameter"><code><a class="link" href="MexGrid.html" title="MexGrid"><span class="type">MexGrid</span></a> *grid</code></em>,
+                                                         <em class="parameter"><code><span class="type">ClutterActor</span> *child</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexGrid.html#mex-grid-resort-all" title="mex_grid_resort_all ()">mex_grid_resort_all</a>                 (<em class="parameter"><code><a class="link" href="MexGrid.html" title="MexGrid"><span class="type">MexGrid</span></a> *grid</code></em>,
+                                                         <em class="parameter"><code><span class="type">ClutterActor</span> *child</code></em>);
+                    <a class="link" href="MexGrid.html#MexGridPrivate" title="MexGridPrivate">MexGridPrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexGrid.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GObject
+   +----GInitiallyUnowned
+         +----ClutterActor
+               +----MxWidget
+                     +----MexGrid
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexGrid.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+MexGrid implements
+ ClutterScriptable,  ClutterAnimatable,  AtkImplementorIface,  MxStylable,  ClutterContainer,  MxScrollable and  MxFocusable.</p>
+</div>
+<div class="refsect1">
+<a name="MexGrid.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="MexGrid.html#MexGrid--stride" title='The "stride" property'>stride</a>"                   <span class="type">gint</span>                  : Read / Write
+  "<a class="link" href="MexGrid.html#MexGrid--tile-height" title='The "tile-height" property'>tile-height</a>"              <span class="type">gfloat</span>                : Read / Write
+  "<a class="link" href="MexGrid.html#MexGrid--tile-width" title='The "tile-width" property'>tile-width</a>"               <span class="type">gfloat</span>                : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexGrid.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="MexGrid.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexGrid-struct"></a><h3>struct MexGrid</h3>
+<pre class="programlisting">struct MexGrid;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexGridClass"></a><h3>struct MexGridClass</h3>
+<pre class="programlisting">struct MexGridClass {
+  MxWidgetClass parent_class;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-grid-new"></a><h3>mex_grid_new ()</h3>
+<pre class="programlisting"><span class="returnvalue">ClutterActor</span> *      mex_grid_new                        (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-grid-get-stride"></a><h3>mex_grid_get_stride ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint</span>                mex_grid_get_stride                 (<em class="parameter"><code><a class="link" href="MexGrid.html" title="MexGrid"><span class="type">MexGrid</span></a> *grid</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-grid-set-stride"></a><h3>mex_grid_set_stride ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_grid_set_stride                 (<em class="parameter"><code><a class="link" href="MexGrid.html" title="MexGrid"><span class="type">MexGrid</span></a> *grid</code></em>,
+                                                         <em class="parameter"><code><span class="type">gint</span> stride</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-grid-get-tile-size"></a><h3>mex_grid_get_tile_size ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_grid_get_tile_size              (<em class="parameter"><code><a class="link" href="MexGrid.html" title="MexGrid"><span class="type">MexGrid</span></a> *grid</code></em>,
+                                                         <em class="parameter"><code><span class="type">gfloat</span> *width</code></em>,
+                                                         <em class="parameter"><code><span class="type">gfloat</span> *height</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-grid-set-tile-size"></a><h3>mex_grid_set_tile_size ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_grid_set_tile_size              (<em class="parameter"><code><a class="link" href="MexGrid.html" title="MexGrid"><span class="type">MexGrid</span></a> *grid</code></em>,
+                                                         <em class="parameter"><code><span class="type">gfloat</span> width</code></em>,
+                                                         <em class="parameter"><code><span class="type">gfloat</span> height</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-grid-set-sort-func"></a><h3>mex_grid_set_sort_func ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_grid_set_sort_func              (<em class="parameter"><code><a class="link" href="MexGrid.html" title="MexGrid"><span class="type">MexGrid</span></a> *grid</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-mex-utils.html#MexActorSortFunc" title="MexActorSortFunc ()"><span class="type">MexActorSortFunc</span></a> func</code></em>,
+                                                         <em class="parameter"><code><span class="type">gpointer</span> userdata</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-grid-get-sort-func"></a><h3>mex_grid_get_sort_func ()</h3>
+<pre class="programlisting"><a class="link" href="mex-mex-utils.html#MexActorSortFunc" title="MexActorSortFunc ()"><span class="returnvalue">MexActorSortFunc</span></a>    mex_grid_get_sort_func              (<em class="parameter"><code><a class="link" href="MexGrid.html" title="MexGrid"><span class="type">MexGrid</span></a> *grid</code></em>,
+                                                         <em class="parameter"><code><span class="type">gpointer</span> *userdata</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-grid-resort"></a><h3>mex_grid_resort ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_grid_resort                     (<em class="parameter"><code><a class="link" href="MexGrid.html" title="MexGrid"><span class="type">MexGrid</span></a> *grid</code></em>,
+                                                         <em class="parameter"><code><span class="type">ClutterActor</span> *child</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-grid-resort-all"></a><h3>mex_grid_resort_all ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_grid_resort_all                 (<em class="parameter"><code><a class="link" href="MexGrid.html" title="MexGrid"><span class="type">MexGrid</span></a> *grid</code></em>,
+                                                         <em class="parameter"><code><span class="type">ClutterActor</span> *child</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexGridPrivate"></a><h3>MexGridPrivate</h3>
+<pre class="programlisting">typedef struct _MexGridPrivate MexGridPrivate;</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="MexGrid.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="MexGrid--stride"></a><h3>The <code class="literal">"stride"</code> property</h3>
+<pre class="programlisting">  "stride"                   <span class="type">gint</span>                  : Read / Write</pre>
+<p>Amount of widgets to pack horizontally. 0 = Automatic, based on tile width.</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexGrid--tile-height"></a><h3>The <code class="literal">"tile-height"</code> property</h3>
+<pre class="programlisting">  "tile-height"              <span class="type">gfloat</span>                : Read / Write</pre>
+<p>Minimum height to set on new tiles.</p>
+<p>Allowed values: &gt;= -1</p>
+<p>Default value: 202</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexGrid--tile-width"></a><h3>The <code class="literal">"tile-width"</code> property</h3>
+<pre class="programlisting">  "tile-width"               <span class="type">gfloat</span>                : Read / Write</pre>
+<p>Minimum width to set on new tiles.</p>
+<p>Allowed values: &gt;= -1</p>
+<p>Default value: 360</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>
