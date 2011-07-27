@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexContentBox</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch09.html" title="Basic widgets">
+<link rel="prev" href="mex-MexClockBin.html" title="MexClockBin">
+<link rel="next" href="mex-MexContentTile.html" title="MexContentTile">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="mex-MexClockBin.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch09.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="mex-MexContentTile.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-MexContentBox.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-MexContentBox.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-MexContentBox"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-MexContentBox.top_of_page"></a>MexContentBox</span></h2>
+<p>MexContentBox</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-MexContentBox.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="mex-MexContentBox.html#MexContentBox" title="struct MexContentBox">MexContentBox</a>;
+struct              <a class="link" href="mex-MexContentBox.html#MexContentBoxClass" title="struct MexContentBoxClass">MexContentBoxClass</a>;
+<a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      <a class="link" href="mex-MexContentBox.html#mex-content-box-new" title="mex_content_box_new ()">mex_content_box_new</a>                 (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      <a class="link" href="mex-MexContentBox.html#mex-content-box-get-tile" title="mex_content_box_get_tile ()">mex_content_box_get_tile</a>            (<em class="parameter"><code><a class="link" href="mex-MexContentBox.html#MexContentBox" title="struct MexContentBox"><span class="type">MexContentBox</span></a> *box</code></em>);
+<a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      <a class="link" href="mex-MexContentBox.html#mex-content-box-get-menu" title="mex_content_box_get_menu ()">mex_content_box_get_menu</a>            (<em class="parameter"><code><a class="link" href="mex-MexContentBox.html#MexContentBox" title="struct MexContentBox"><span class="type">MexContentBox</span></a> *box</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexContentBox.html#mex-content-box-set-thumbnail-size" title="mex_content_box_set_thumbnail_size ()">mex_content_box_set_thumbnail_size</a>  (<em class="parameter"><code><a class="link" href="mex-MexContentBox.html#MexContentBox" title="struct MexContentBox"><span class="type">MexContentBox</span></a> *box</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> width</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> height</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexContentBox.html#mex-content-box-get-thumbnail-size" title="mex_content_box_get_thumbnail_size ()">mex_content_box_get_thumbnail_size</a>  (<em class="parameter"><code><a class="link" href="mex-MexContentBox.html#MexContentBox" title="struct MexContentBox"><span class="type">MexContentBox</span></a> *box</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *width</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *height</code></em>);
+                    <a class="link" href="mex-MexContentBox.html#MexContentBoxPrivate" title="MexContentBoxPrivate">MexContentBoxPrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-MexContentBox.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="mex-MexContentBox.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexContentBox"></a><h3>struct MexContentBox</h3>
+<pre class="programlisting">struct MexContentBox {
+  MexExpanderBox parent;
+
+  MexContentBoxPrivate *priv;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexContentBoxClass"></a><h3>struct MexContentBoxClass</h3>
+<pre class="programlisting">struct MexContentBoxClass {
+  MexExpanderBoxClass parent_class;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-content-box-new"></a><h3>mex_content_box_new ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      mex_content_box_new                 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-content-box-get-tile"></a><h3>mex_content_box_get_tile ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      mex_content_box_get_tile            (<em class="parameter"><code><a class="link" href="mex-MexContentBox.html#MexContentBox" title="struct MexContentBox"><span class="type">MexContentBox</span></a> *box</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-content-box-get-menu"></a><h3>mex_content_box_get_menu ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      mex_content_box_get_menu            (<em class="parameter"><code><a class="link" href="mex-MexContentBox.html#MexContentBox" title="struct MexContentBox"><span class="type">MexContentBox</span></a> *box</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-content-box-set-thumbnail-size"></a><h3>mex_content_box_set_thumbnail_size ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_content_box_set_thumbnail_size  (<em class="parameter"><code><a class="link" href="mex-MexContentBox.html#MexContentBox" title="struct MexContentBox"><span class="type">MexContentBox</span></a> *box</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> width</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> height</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-content-box-get-thumbnail-size"></a><h3>mex_content_box_get_thumbnail_size ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_content_box_get_thumbnail_size  (<em class="parameter"><code><a class="link" href="mex-MexContentBox.html#MexContentBox" title="struct MexContentBox"><span class="type">MexContentBox</span></a> *box</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *width</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> *height</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexContentBoxPrivate"></a><h3>MexContentBoxPrivate</h3>
+<pre class="programlisting">typedef struct _MexContentBoxPrivate MexContentBoxPrivate;</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

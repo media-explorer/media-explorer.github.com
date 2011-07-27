@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexApplet</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch04.html" title="Abstract classes and interfaces">
+<link rel="prev" href="ch04.html" title="Abstract classes and interfaces">
+<link rel="next" href="mex-MexContent.html" title="MexContent">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ch04.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch04.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="mex-MexContent.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-MexApplet.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-MexApplet.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-MexApplet"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-MexApplet.top_of_page"></a>MexApplet</span></h2>
+<p>MexApplet</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-MexApplet.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">enum                <a class="link" href="mex-MexApplet.html#MexAppletPresentationFlags" title="enum MexAppletPresentationFlags">MexAppletPresentationFlags</a>;
+                    <a class="link" href="mex-MexApplet.html#MexApplet" title="MexApplet">MexApplet</a>;
+                    <a class="link" href="mex-MexApplet.html#MexAppletClass" title="MexAppletClass">MexAppletClass</a>;
+const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="mex-MexApplet.html#mex-applet-get-id" title="mex_applet_get_id ()">mex_applet_get_id</a>                   (<em class="parameter"><code><a class="link" href="mex-MexApplet.html#MexApplet" title="MexApplet"><span class="type">MexApplet</span></a> *applet</code></em>);
+const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="mex-MexApplet.html#mex-applet-get-name" title="mex_applet_get_name ()">mex_applet_get_name</a>                 (<em class="parameter"><code><a class="link" href="mex-MexApplet.html#MexApplet" title="MexApplet"><span class="type">MexApplet</span></a> *applet</code></em>);
+const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="mex-MexApplet.html#mex-applet-get-description" title="mex_applet_get_description ()">mex_applet_get_description</a>          (<em class="parameter"><code><a class="link" href="mex-MexApplet.html#MexApplet" title="MexApplet"><span class="type">MexApplet</span></a> *applet</code></em>);
+const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="mex-MexApplet.html#mex-applet-get-thumbnail" title="mex_applet_get_thumbnail ()">mex_applet_get_thumbnail</a>            (<em class="parameter"><code><a class="link" href="mex-MexApplet.html#MexApplet" title="MexApplet"><span class="type">MexApplet</span></a> *applet</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexApplet.html#mex-applet-present-actor" title="mex_applet_present_actor ()">mex_applet_present_actor</a>            (<em class="parameter"><code><a class="link" href="mex-MexApplet.html#MexApplet" title="MexApplet"><span class="type">MexApplet</span></a> *applet</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-MexApplet.html#MexAppletPresentationFlags" title="enum MexAppletPresentationFlags"><span class="type">MexAppletPresentationFlags</span></a> flags</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> *actor</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexApplet.html#mex-applet-activate" title="mex_applet_activate ()">mex_applet_activate</a>                 (<em class="parameter"><code><a class="link" href="mex-MexApplet.html#MexApplet" title="MexApplet"><span class="type">MexApplet</span></a> *applet</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexApplet.html#mex-applet-request-close" title="mex_applet_request_close ()">mex_applet_request_close</a>            (<em class="parameter"><code><a class="link" href="mex-MexApplet.html#MexApplet" title="MexApplet"><span class="type">MexApplet</span></a> *applet</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> *actor</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexApplet.html#mex-applet-closed" title="mex_applet_closed ()">mex_applet_closed</a>                   (<em class="parameter"><code><a class="link" href="mex-MexApplet.html#MexApplet" title="MexApplet"><span class="type">MexApplet</span></a> *applet</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> *actor</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-MexApplet.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="mex-MexApplet.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexAppletPresentationFlags"></a><h3>enum MexAppletPresentationFlags</h3>
+<pre class="programlisting">typedef enum
+{
+  MEX_APPLET_PRESENT_NONE   = 0,
+  MEX_APPLET_PRESENT_OPAQUE = 1 &lt;&lt; 0,
+  MEX_APPLET_PRESENT_DIALOG = 2 &lt;&lt; 1,
+} MexAppletPresentationFlags;
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexApplet"></a><h3>MexApplet</h3>
+<pre class="programlisting">typedef struct {
+  MexGenericContent parent;
+} MexApplet;
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexAppletClass"></a><h3>MexAppletClass</h3>
+<pre class="programlisting">typedef struct {
+  MexGenericContentClass parent_class;
+
+  /* vfuncs */
+  const gchar *(*get_id) (MexApplet *applet);
+  const gchar *(*get_name) (MexApplet *applet);
+  const gchar *(*get_description) (MexApplet *applet);
+  const gchar *(*get_thumbnail) (MexApplet *applet);
+
+  /* signals */
+  void (*activated) (MexApplet *applet);
+  void (*request_close) (MexApplet *applet, ClutterActor *actor);
+  void (*closed) (MexApplet *applet, ClutterActor *actor);
+  void (*present_actor) (MexApplet *applet,
+                         MexAppletPresentationFlags flags,
+                         ClutterActor *actor);
+} MexAppletClass;
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-applet-get-id"></a><h3>mex_applet_get_id ()</h3>
+<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       mex_applet_get_id                   (<em class="parameter"><code><a class="link" href="mex-MexApplet.html#MexApplet" title="MexApplet"><span class="type">MexApplet</span></a> *applet</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-applet-get-name"></a><h3>mex_applet_get_name ()</h3>
+<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       mex_applet_get_name                 (<em class="parameter"><code><a class="link" href="mex-MexApplet.html#MexApplet" title="MexApplet"><span class="type">MexApplet</span></a> *applet</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-applet-get-description"></a><h3>mex_applet_get_description ()</h3>
+<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       mex_applet_get_description          (<em class="parameter"><code><a class="link" href="mex-MexApplet.html#MexApplet" title="MexApplet"><span class="type">MexApplet</span></a> *applet</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-applet-get-thumbnail"></a><h3>mex_applet_get_thumbnail ()</h3>
+<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       mex_applet_get_thumbnail            (<em class="parameter"><code><a class="link" href="mex-MexApplet.html#MexApplet" title="MexApplet"><span class="type">MexApplet</span></a> *applet</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-applet-present-actor"></a><h3>mex_applet_present_actor ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_applet_present_actor            (<em class="parameter"><code><a class="link" href="mex-MexApplet.html#MexApplet" title="MexApplet"><span class="type">MexApplet</span></a> *applet</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-MexApplet.html#MexAppletPresentationFlags" title="enum MexAppletPresentationFlags"><span class="type">MexAppletPresentationFlags</span></a> flags</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> *actor</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-applet-activate"></a><h3>mex_applet_activate ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_applet_activate                 (<em class="parameter"><code><a class="link" href="mex-MexApplet.html#MexApplet" title="MexApplet"><span class="type">MexApplet</span></a> *applet</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-applet-request-close"></a><h3>mex_applet_request_close ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_applet_request_close            (<em class="parameter"><code><a class="link" href="mex-MexApplet.html#MexApplet" title="MexApplet"><span class="type">MexApplet</span></a> *applet</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> *actor</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-applet-closed"></a><h3>mex_applet_closed ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_applet_closed                   (<em class="parameter"><code><a class="link" href="mex-MexApplet.html#MexApplet" title="MexApplet"><span class="type">MexApplet</span></a> *applet</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> *actor</code></em>);</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

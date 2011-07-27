@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexClockBin</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch09.html" title="Basic widgets">
+<link rel="prev" href="MexActionButton.html" title="MexActionButton">
+<link rel="next" href="MexContentBox.html" title="MexContentBox">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="MexActionButton.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch09.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="MexContentBox.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#MexClockBin.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#MexClockBin.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#MexClockBin.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#MexClockBin.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#MexClockBin.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="MexClockBin"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="MexClockBin.top_of_page"></a>MexClockBin</span></h2>
+<p>MexClockBin</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="MexClockBin.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="MexClockBin.html#MexClockBin-struct" title="struct MexClockBin">MexClockBin</a>;
+struct              <a class="link" href="MexClockBin.html#MexClockBinClass" title="struct MexClockBinClass">MexClockBinClass</a>;
+<span class="returnvalue">ClutterActor</span> *      <a class="link" href="MexClockBin.html#mex-clock-bin-new" title="mex_clock_bin_new ()">mex_clock_bin_new</a>                   (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">MxIcon</span> *            <a class="link" href="MexClockBin.html#mex-clock-bin-get-icon" title="mex_clock_bin_get_icon ()">mex_clock_bin_get_icon</a>              (<em class="parameter"><code><a class="link" href="MexClockBin.html" title="MexClockBin"><span class="type">MexClockBin</span></a> *bin</code></em>);
+                    <a class="link" href="MexClockBin.html#MexClockBinPrivate" title="MexClockBinPrivate">MexClockBinPrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexClockBin.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GObject
+   +----GInitiallyUnowned
+         +----ClutterActor
+               +----MxWidget
+                     +----MxBin
+                           +----MexClockBin
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexClockBin.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+MexClockBin implements
+ ClutterScriptable,  ClutterAnimatable,  AtkImplementorIface,  MxStylable,  ClutterContainer and  MxFocusable.</p>
+</div>
+<div class="refsect1">
+<a name="MexClockBin.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="MexClockBin.html#MexClockBin--icon" title='The "icon" property'>icon</a>"                     <span class="type">MxIcon</span>*               : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexClockBin.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="MexClockBin.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexClockBin-struct"></a><h3>struct MexClockBin</h3>
+<pre class="programlisting">struct MexClockBin;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexClockBinClass"></a><h3>struct MexClockBinClass</h3>
+<pre class="programlisting">struct MexClockBinClass {
+  MxBinClass parent_class;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-clock-bin-new"></a><h3>mex_clock_bin_new ()</h3>
+<pre class="programlisting"><span class="returnvalue">ClutterActor</span> *      mex_clock_bin_new                   (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-clock-bin-get-icon"></a><h3>mex_clock_bin_get_icon ()</h3>
+<pre class="programlisting"><span class="returnvalue">MxIcon</span> *            mex_clock_bin_get_icon              (<em class="parameter"><code><a class="link" href="MexClockBin.html" title="MexClockBin"><span class="type">MexClockBin</span></a> *bin</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexClockBinPrivate"></a><h3>MexClockBinPrivate</h3>
+<pre class="programlisting">typedef struct _MexClockBinPrivate MexClockBinPrivate;</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="MexClockBin.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="MexClockBin--icon"></a><h3>The <code class="literal">"icon"</code> property</h3>
+<pre class="programlisting">  "icon"                     <span class="type">MxIcon</span>*               : Read</pre>
+<p>The MxIcon displayed to the right of the clock.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

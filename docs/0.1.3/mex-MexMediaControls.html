@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexMediaControls</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch09.html" title="Basic widgets">
+<link rel="prev" href="mex-MexInfoPanel.html" title="MexInfoPanel">
+<link rel="next" href="mex-MexMenu.html" title="MexMenu">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="mex-MexInfoPanel.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch09.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="mex-MexMenu.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-MexMediaControls.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-MexMediaControls.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-MexMediaControls"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-MexMediaControls.top_of_page"></a>MexMediaControls</span></h2>
+<p>MexMediaControls</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-MexMediaControls.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="mex-MexMediaControls.html#MexMediaControls" title="struct MexMediaControls">MexMediaControls</a>;
+struct              <a class="link" href="mex-MexMediaControls.html#MexMediaControlsClass" title="struct MexMediaControlsClass">MexMediaControlsClass</a>;
+<a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      <a class="link" href="mex-MexMediaControls.html#mex-media-controls-new" title="mex_media_controls_new ()">mex_media_controls_new</a>              (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexMediaControls.html#mex-media-controls-set-media" title="mex_media_controls_set_media ()">mex_media_controls_set_media</a>        (<em class="parameter"><code><a class="link" href="mex-MexMediaControls.html#MexMediaControls" title="struct MexMediaControls"><span class="type">MexMediaControls</span></a> *controls</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/ClutterMedia.html"><span class="type">ClutterMedia</span></a> *media</code></em>);
+<a href="/usr/share/gtk-doc/html/clutter/ClutterMedia.html"><span class="returnvalue">ClutterMedia</span></a> *      <a class="link" href="mex-MexMediaControls.html#mex-media-controls-get-media" title="mex_media_controls_get_media ()">mex_media_controls_get_media</a>        (<em class="parameter"><code><a class="link" href="mex-MexMediaControls.html#MexMediaControls" title="struct MexMediaControls"><span class="type">MexMediaControls</span></a> *controls</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexMediaControls.html#mex-media-controls-set-content" title="mex_media_controls_set_content ()">mex_media_controls_set_content</a>      (<em class="parameter"><code><a class="link" href="mex-MexMediaControls.html#MexMediaControls" title="struct MexMediaControls"><span class="type">MexMediaControls</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexContent</span> *content</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *context</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexMediaControls.html#mex-media-controls-focus-content" title="mex_media_controls_focus_content ()">mex_media_controls_focus_content</a>    (<em class="parameter"><code><a class="link" href="mex-MexMediaControls.html#MexMediaControls" title="struct MexMediaControls"><span class="type">MexMediaControls</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexContent</span> *content</code></em>);
+                    <a class="link" href="mex-MexMediaControls.html#MexMediaControlsPrivate" title="MexMediaControlsPrivate">MexMediaControlsPrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-MexMediaControls.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="mex-MexMediaControls.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexMediaControls"></a><h3>struct MexMediaControls</h3>
+<pre class="programlisting">struct MexMediaControls {
+  MxWidget parent;
+
+  MexMediaControlsPrivate *priv;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexMediaControlsClass"></a><h3>struct MexMediaControlsClass</h3>
+<pre class="programlisting">struct MexMediaControlsClass {
+  MxWidgetClass parent_class;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-controls-new"></a><h3>mex_media_controls_new ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      mex_media_controls_new              (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-controls-set-media"></a><h3>mex_media_controls_set_media ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_controls_set_media        (<em class="parameter"><code><a class="link" href="mex-MexMediaControls.html#MexMediaControls" title="struct MexMediaControls"><span class="type">MexMediaControls</span></a> *controls</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/ClutterMedia.html"><span class="type">ClutterMedia</span></a> *media</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-controls-get-media"></a><h3>mex_media_controls_get_media ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/clutter/ClutterMedia.html"><span class="returnvalue">ClutterMedia</span></a> *      mex_media_controls_get_media        (<em class="parameter"><code><a class="link" href="mex-MexMediaControls.html#MexMediaControls" title="struct MexMediaControls"><span class="type">MexMediaControls</span></a> *controls</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-controls-set-content"></a><h3>mex_media_controls_set_content ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_controls_set_content      (<em class="parameter"><code><a class="link" href="mex-MexMediaControls.html#MexMediaControls" title="struct MexMediaControls"><span class="type">MexMediaControls</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexContent</span> *content</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *context</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-controls-focus-content"></a><h3>mex_media_controls_focus_content ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_controls_focus_content    (<em class="parameter"><code><a class="link" href="mex-MexMediaControls.html#MexMediaControls" title="struct MexMediaControls"><span class="type">MexMediaControls</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexContent</span> *content</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexMediaControlsPrivate"></a><h3>MexMediaControlsPrivate</h3>
+<pre class="programlisting">typedef struct _MexMediaControlsPrivate MexMediaControlsPrivate;</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

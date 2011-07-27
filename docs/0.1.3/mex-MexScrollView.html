@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexScrollView</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch08.html" title="Container widgets">
+<link rel="prev" href="mex-MexResizingHBox.html" title="MexResizingHBox">
+<link rel="next" href="ch09.html" title="Basic widgets">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="mex-MexResizingHBox.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch08.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="ch09.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-MexScrollView.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-MexScrollView.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-MexScrollView"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-MexScrollView.top_of_page"></a>MexScrollView</span></h2>
+<p>MexScrollView</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-MexScrollView.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="mex-MexScrollView.html#MexScrollView" title="struct MexScrollView">MexScrollView</a>;
+struct              <a class="link" href="mex-MexScrollView.html#MexScrollViewClass" title="struct MexScrollViewClass">MexScrollViewClass</a>;
+<a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      <a class="link" href="mex-MexScrollView.html#mex-scroll-view-new" title="mex_scroll_view_new ()">mex_scroll_view_new</a>                 (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexScrollView.html#mex-scroll-view-set-indicators-hidden" title="mex_scroll_view_set_indicators_hidden ()">mex_scroll_view_set_indicators_hidden</a>
+                                                        (<em class="parameter"><code><a class="link" href="mex-MexScrollView.html#MexScrollView" title="struct MexScrollView"><span class="type">MexScrollView</span></a> *view</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> hidden</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="mex-MexScrollView.html#mex-scroll-view-get-indicators-hidden" title="mex_scroll_view_get_indicators_hidden ()">mex_scroll_view_get_indicators_hidden</a>
+                                                        (<em class="parameter"><code><a class="link" href="mex-MexScrollView.html#MexScrollView" title="struct MexScrollView"><span class="type">MexScrollView</span></a> *view</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexScrollView.html#mex-scroll-view-set-follow-recurse" title="mex_scroll_view_set_follow_recurse ()">mex_scroll_view_set_follow_recurse</a>  (<em class="parameter"><code><a class="link" href="mex-MexScrollView.html#MexScrollView" title="struct MexScrollView"><span class="type">MexScrollView</span></a> *view</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> recurse</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="mex-MexScrollView.html#mex-scroll-view-get-follow-recurse" title="mex_scroll_view_get_follow_recurse ()">mex_scroll_view_get_follow_recurse</a>  (<em class="parameter"><code><a class="link" href="mex-MexScrollView.html#MexScrollView" title="struct MexScrollView"><span class="type">MexScrollView</span></a> *view</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexScrollView.html#mex-scroll-view-ensure-visible" title="mex_scroll_view_ensure_visible ()">mex_scroll_view_ensure_visible</a>      (<em class="parameter"><code><a class="link" href="mex-MexScrollView.html#MexScrollView" title="struct MexScrollView"><span class="type">MexScrollView</span></a> *scroll</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html#ClutterGeometry"><span class="type">ClutterGeometry</span></a> *geometry</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexScrollView.html#mex-scroll-view-set-scroll-delay" title="mex_scroll_view_set_scroll_delay ()">mex_scroll_view_set_scroll_delay</a>    (<em class="parameter"><code><a class="link" href="mex-MexScrollView.html#MexScrollView" title="struct MexScrollView"><span class="type">MexScrollView</span></a> *view</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> delay</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="mex-MexScrollView.html#mex-scroll-view-get-scroll-delay" title="mex_scroll_view_get_scroll_delay ()">mex_scroll_view_get_scroll_delay</a>    (<em class="parameter"><code><a class="link" href="mex-MexScrollView.html#MexScrollView" title="struct MexScrollView"><span class="type">MexScrollView</span></a> *view</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexScrollView.html#mex-scroll-view-set-scroll-gravity" title="mex_scroll_view_set_scroll_gravity ()">mex_scroll_view_set_scroll_gravity</a>  (<em class="parameter"><code><a class="link" href="mex-MexScrollView.html#MexScrollView" title="struct MexScrollView"><span class="type">MexScrollView</span></a> *view</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/ClutterBehaviourScale.html#ClutterGravity"><span class="type">ClutterGravity</span></a> gravity</code></em>);
+<a href="/usr/share/gtk-doc/html/clutter/ClutterBehaviourScale.html#ClutterGravity"><span class="returnvalue">ClutterGravity</span></a>      <a class="link" href="mex-MexScrollView.html#mex-scroll-view-get-scroll-gravity" title="mex_scroll_view_get_scroll_gravity ()">mex_scroll_view_get_scroll_gravity</a>  (<em class="parameter"><code><a class="link" href="mex-MexScrollView.html#MexScrollView" title="struct MexScrollView"><span class="type">MexScrollView</span></a> *view</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexScrollView.html#mex-scroll-view-set-interpolate" title="mex_scroll_view_set_interpolate ()">mex_scroll_view_set_interpolate</a>     (<em class="parameter"><code><a class="link" href="mex-MexScrollView.html#MexScrollView" title="struct MexScrollView"><span class="type">MexScrollView</span></a> *view</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> interpolate</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="mex-MexScrollView.html#mex-scroll-view-get-interpolate" title="mex_scroll_view_get_interpolate ()">mex_scroll_view_get_interpolate</a>     (<em class="parameter"><code><a class="link" href="mex-MexScrollView.html#MexScrollView" title="struct MexScrollView"><span class="type">MexScrollView</span></a> *view</code></em>);
+                    <a class="link" href="mex-MexScrollView.html#MexScrollViewPrivate" title="MexScrollViewPrivate">MexScrollViewPrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-MexScrollView.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="mex-MexScrollView.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexScrollView"></a><h3>struct MexScrollView</h3>
+<pre class="programlisting">struct MexScrollView {
+  MxKineticScrollView parent;
+
+  MexScrollViewPrivate *priv;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexScrollViewClass"></a><h3>struct MexScrollViewClass</h3>
+<pre class="programlisting">struct MexScrollViewClass {
+  MxKineticScrollViewClass parent_class;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-scroll-view-new"></a><h3>mex_scroll_view_new ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      mex_scroll_view_new                 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-scroll-view-set-indicators-hidden"></a><h3>mex_scroll_view_set_indicators_hidden ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_scroll_view_set_indicators_hidden
+                                                        (<em class="parameter"><code><a class="link" href="mex-MexScrollView.html#MexScrollView" title="struct MexScrollView"><span class="type">MexScrollView</span></a> *view</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> hidden</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-scroll-view-get-indicators-hidden"></a><h3>mex_scroll_view_get_indicators_hidden ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            mex_scroll_view_get_indicators_hidden
+                                                        (<em class="parameter"><code><a class="link" href="mex-MexScrollView.html#MexScrollView" title="struct MexScrollView"><span class="type">MexScrollView</span></a> *view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-scroll-view-set-follow-recurse"></a><h3>mex_scroll_view_set_follow_recurse ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_scroll_view_set_follow_recurse  (<em class="parameter"><code><a class="link" href="mex-MexScrollView.html#MexScrollView" title="struct MexScrollView"><span class="type">MexScrollView</span></a> *view</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> recurse</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-scroll-view-get-follow-recurse"></a><h3>mex_scroll_view_get_follow_recurse ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            mex_scroll_view_get_follow_recurse  (<em class="parameter"><code><a class="link" href="mex-MexScrollView.html#MexScrollView" title="struct MexScrollView"><span class="type">MexScrollView</span></a> *view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-scroll-view-ensure-visible"></a><h3>mex_scroll_view_ensure_visible ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_scroll_view_ensure_visible      (<em class="parameter"><code><a class="link" href="mex-MexScrollView.html#MexScrollView" title="struct MexScrollView"><span class="type">MexScrollView</span></a> *scroll</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html#ClutterGeometry"><span class="type">ClutterGeometry</span></a> *geometry</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-scroll-view-set-scroll-delay"></a><h3>mex_scroll_view_set_scroll_delay ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_scroll_view_set_scroll_delay    (<em class="parameter"><code><a class="link" href="mex-MexScrollView.html#MexScrollView" title="struct MexScrollView"><span class="type">MexScrollView</span></a> *view</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> delay</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-scroll-view-get-scroll-delay"></a><h3>mex_scroll_view_get_scroll_delay ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               mex_scroll_view_get_scroll_delay    (<em class="parameter"><code><a class="link" href="mex-MexScrollView.html#MexScrollView" title="struct MexScrollView"><span class="type">MexScrollView</span></a> *view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-scroll-view-set-scroll-gravity"></a><h3>mex_scroll_view_set_scroll_gravity ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_scroll_view_set_scroll_gravity  (<em class="parameter"><code><a class="link" href="mex-MexScrollView.html#MexScrollView" title="struct MexScrollView"><span class="type">MexScrollView</span></a> *view</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/ClutterBehaviourScale.html#ClutterGravity"><span class="type">ClutterGravity</span></a> gravity</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-scroll-view-get-scroll-gravity"></a><h3>mex_scroll_view_get_scroll_gravity ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/clutter/ClutterBehaviourScale.html#ClutterGravity"><span class="returnvalue">ClutterGravity</span></a>      mex_scroll_view_get_scroll_gravity  (<em class="parameter"><code><a class="link" href="mex-MexScrollView.html#MexScrollView" title="struct MexScrollView"><span class="type">MexScrollView</span></a> *view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-scroll-view-set-interpolate"></a><h3>mex_scroll_view_set_interpolate ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_scroll_view_set_interpolate     (<em class="parameter"><code><a class="link" href="mex-MexScrollView.html#MexScrollView" title="struct MexScrollView"><span class="type">MexScrollView</span></a> *view</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> interpolate</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-scroll-view-get-interpolate"></a><h3>mex_scroll_view_get_interpolate ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            mex_scroll_view_get_interpolate     (<em class="parameter"><code><a class="link" href="mex-MexScrollView.html#MexScrollView" title="struct MexScrollView"><span class="type">MexScrollView</span></a> *view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexScrollViewPrivate"></a><h3>MexScrollViewPrivate</h3>
+<pre class="programlisting">typedef struct _MexScrollViewPrivate MexScrollViewPrivate;</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexAppletManager</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch06.html" title="Managers">
+<link rel="prev" href="mex-MexActionManager.html" title="MexActionManager">
+<link rel="next" href="mex-MexPluginManager.html" title="MexPluginManager">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="mex-MexActionManager.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch06.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="mex-MexPluginManager.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-MexAppletManager.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-MexAppletManager.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-MexAppletManager"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-MexAppletManager.top_of_page"></a>MexAppletManager</span></h2>
+<p>MexAppletManager</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-MexAppletManager.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="mex-MexAppletManager.html#MexAppletManager" title="struct MexAppletManager">MexAppletManager</a>;
+struct              <a class="link" href="mex-MexAppletManager.html#MexAppletManagerClass" title="struct MexAppletManagerClass">MexAppletManagerClass</a>;
+<a class="link" href="mex-MexAppletManager.html#MexAppletManager" title="struct MexAppletManager"><span class="returnvalue">MexAppletManager</span></a> *  <a class="link" href="mex-MexAppletManager.html#mex-applet-manager-get-default" title="mex_applet_manager_get_default ()">mex_applet_manager_get_default</a>      (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="mex-MexAppletManager.html#mex-applet-manager-get-applets" title="mex_applet_manager_get_applets ()">mex_applet_manager_get_applets</a>      (<em class="parameter"><code><a class="link" href="mex-MexAppletManager.html#MexAppletManager" title="struct MexAppletManager"><span class="type">MexAppletManager</span></a> *manager</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexAppletManager.html#mex-applet-manager-add-applet" title="mex_applet_manager_add_applet ()">mex_applet_manager_add_applet</a>       (<em class="parameter"><code><a class="link" href="mex-MexAppletManager.html#MexAppletManager" title="struct MexAppletManager"><span class="type">MexAppletManager</span></a> *manager</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-MexApplet.html#MexApplet" title="MexApplet"><span class="type">MexApplet</span></a> *applet</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexAppletManager.html#mex-applet-manager-remove-applet" title="mex_applet_manager_remove_applet ()">mex_applet_manager_remove_applet</a>    (<em class="parameter"><code><a class="link" href="mex-MexAppletManager.html#MexAppletManager" title="struct MexAppletManager"><span class="type">MexAppletManager</span></a> *manager</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>);
+                    <a class="link" href="mex-MexAppletManager.html#MexAppletManagerPrivate" title="MexAppletManagerPrivate">MexAppletManagerPrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-MexAppletManager.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="mex-MexAppletManager.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexAppletManager"></a><h3>struct MexAppletManager</h3>
+<pre class="programlisting">struct MexAppletManager {
+  GObject parent;
+
+  MexAppletManagerPrivate *priv;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexAppletManagerClass"></a><h3>struct MexAppletManagerClass</h3>
+<pre class="programlisting">struct MexAppletManagerClass {
+  GObjectClass parent_class;
+
+  void (* applet_added) (MexAppletManager *manager,
+                         MexApplet        *applet);
+  void (* applet_removed) (MexAppletManager *manager,
+                           const gchar      *id);
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-applet-manager-get-default"></a><h3>mex_applet_manager_get_default ()</h3>
+<pre class="programlisting"><a class="link" href="mex-MexAppletManager.html#MexAppletManager" title="struct MexAppletManager"><span class="returnvalue">MexAppletManager</span></a> *  mex_applet_manager_get_default      (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-applet-manager-get-applets"></a><h3>mex_applet_manager_get_applets ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             mex_applet_manager_get_applets      (<em class="parameter"><code><a class="link" href="mex-MexAppletManager.html#MexAppletManager" title="struct MexAppletManager"><span class="type">MexAppletManager</span></a> *manager</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-applet-manager-add-applet"></a><h3>mex_applet_manager_add_applet ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_applet_manager_add_applet       (<em class="parameter"><code><a class="link" href="mex-MexAppletManager.html#MexAppletManager" title="struct MexAppletManager"><span class="type">MexAppletManager</span></a> *manager</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-MexApplet.html#MexApplet" title="MexApplet"><span class="type">MexApplet</span></a> *applet</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-applet-manager-remove-applet"></a><h3>mex_applet_manager_remove_applet ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_applet_manager_remove_applet    (<em class="parameter"><code><a class="link" href="mex-MexAppletManager.html#MexAppletManager" title="struct MexAppletManager"><span class="type">MexAppletManager</span></a> *manager</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexAppletManagerPrivate"></a><h3>MexAppletManagerPrivate</h3>
+<pre class="programlisting">typedef struct _MexAppletManagerPrivate MexAppletManagerPrivate;</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

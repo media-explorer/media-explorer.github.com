@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexShadow</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch09.html" title="Basic widgets">
+<link rel="prev" href="mex-MexScrollIndicator.html" title="MexScrollIndicator">
+<link rel="next" href="mex-MexSlideShow.html" title="MexSlideShow">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="mex-MexScrollIndicator.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch09.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="mex-MexSlideShow.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-MexShadow.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-MexShadow.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-MexShadow"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-MexShadow.top_of_page"></a>MexShadow</span></h2>
+<p>MexShadow</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-MexShadow.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow">MexShadow</a>;
+struct              <a class="link" href="mex-MexShadow.html#MexShadowClass" title="struct MexShadowClass">MexShadowClass</a>;
+<a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow"><span class="returnvalue">MexShadow</span></a> *         <a class="link" href="mex-MexShadow.html#mex-shadow-new" title="mex_shadow_new ()">mex_shadow_new</a>                      (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      <a class="link" href="mex-MexShadow.html#mex-shadow-get-actor" title="mex_shadow_get_actor ()">mex_shadow_get_actor</a>                (<em class="parameter"><code><a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow"><span class="type">MexShadow</span></a> *shadow</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexShadow.html#mex-shadow-set-color" title="mex_shadow_set_color ()">mex_shadow_set_color</a>                (<em class="parameter"><code><a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow"><span class="type">MexShadow</span></a> *shadow</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="type">ClutterColor</span></a> *color</code></em>);
+const <a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="returnvalue">ClutterColor</span></a> * <a class="link" href="mex-MexShadow.html#mex-shadow-get-color" title="mex_shadow_get_color ()">mex_shadow_get_color</a>               (<em class="parameter"><code><a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow"><span class="type">MexShadow</span></a> *shadow</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexShadow.html#mex-shadow-set-radius-x" title="mex_shadow_set_radius_x ()">mex_shadow_set_radius_x</a>             (<em class="parameter"><code><a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow"><span class="type">MexShadow</span></a> *shadow</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> radius</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                <a class="link" href="mex-MexShadow.html#mex-shadow-get-radius-x" title="mex_shadow_get_radius_x ()">mex_shadow_get_radius_x</a>             (<em class="parameter"><code><a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow"><span class="type">MexShadow</span></a> *shadow</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexShadow.html#mex-shadow-set-radius-y" title="mex_shadow_set_radius_y ()">mex_shadow_set_radius_y</a>             (<em class="parameter"><code><a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow"><span class="type">MexShadow</span></a> *shadow</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> radius</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                <a class="link" href="mex-MexShadow.html#mex-shadow-get-radius-y" title="mex_shadow_get_radius_y ()">mex_shadow_get_radius_y</a>             (<em class="parameter"><code><a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow"><span class="type">MexShadow</span></a> *shadow</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexShadow.html#mex-shadow-set-offset-x" title="mex_shadow_set_offset_x ()">mex_shadow_set_offset_x</a>             (<em class="parameter"><code><a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow"><span class="type">MexShadow</span></a> *shadow</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> offset</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                <a class="link" href="mex-MexShadow.html#mex-shadow-get-offset-x" title="mex_shadow_get_offset_x ()">mex_shadow_get_offset_x</a>             (<em class="parameter"><code><a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow"><span class="type">MexShadow</span></a> *shadow</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexShadow.html#mex-shadow-set-offset-y" title="mex_shadow_set_offset_y ()">mex_shadow_set_offset_y</a>             (<em class="parameter"><code><a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow"><span class="type">MexShadow</span></a> *shadow</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> offset</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                <a class="link" href="mex-MexShadow.html#mex-shadow-get-offset-y" title="mex_shadow_get_offset_y ()">mex_shadow_get_offset_y</a>             (<em class="parameter"><code><a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow"><span class="type">MexShadow</span></a> *shadow</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexShadow.html#mex-shadow-set-paint-flags" title="mex_shadow_set_paint_flags ()">mex_shadow_set_paint_flags</a>          (<em class="parameter"><code><a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow"><span class="type">MexShadow</span></a> *shadow</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-mex-utils.html#MexPaintTextureFrameFlags" title="enum MexPaintTextureFrameFlags"><span class="type">MexPaintTextureFrameFlags</span></a> flags</code></em>);
+<a class="link" href="mex-mex-utils.html#MexPaintTextureFrameFlags" title="enum MexPaintTextureFrameFlags"><span class="returnvalue">MexPaintTextureFrameFlags</span></a>  <a class="link" href="mex-MexShadow.html#mex-shadow-get-paint-flags" title="mex_shadow_get_paint_flags ()">mex_shadow_get_paint_flags</a>   (<em class="parameter"><code><a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow"><span class="type">MexShadow</span></a> *shadow</code></em>);
+                    <a class="link" href="mex-MexShadow.html#MexShadowPrivate" title="MexShadowPrivate">MexShadowPrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-MexShadow.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="mex-MexShadow.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexShadow"></a><h3>struct MexShadow</h3>
+<pre class="programlisting">struct MexShadow {
+  ClutterEffect parent;
+
+  MexShadowPrivate *priv;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexShadowClass"></a><h3>struct MexShadowClass</h3>
+<pre class="programlisting">struct MexShadowClass {
+  ClutterEffectClass parent_class;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-shadow-new"></a><h3>mex_shadow_new ()</h3>
+<pre class="programlisting"><a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow"><span class="returnvalue">MexShadow</span></a> *         mex_shadow_new                      (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-shadow-get-actor"></a><h3>mex_shadow_get_actor ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      mex_shadow_get_actor                (<em class="parameter"><code><a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow"><span class="type">MexShadow</span></a> *shadow</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-shadow-set-color"></a><h3>mex_shadow_set_color ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_shadow_set_color                (<em class="parameter"><code><a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow"><span class="type">MexShadow</span></a> *shadow</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="type">ClutterColor</span></a> *color</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-shadow-get-color"></a><h3>mex_shadow_get_color ()</h3>
+<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/clutter/clutter-Colors.html#ClutterColor"><span class="returnvalue">ClutterColor</span></a> * mex_shadow_get_color               (<em class="parameter"><code><a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow"><span class="type">MexShadow</span></a> *shadow</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-shadow-set-radius-x"></a><h3>mex_shadow_set_radius_x ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_shadow_set_radius_x             (<em class="parameter"><code><a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow"><span class="type">MexShadow</span></a> *shadow</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> radius</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-shadow-get-radius-x"></a><h3>mex_shadow_get_radius_x ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                mex_shadow_get_radius_x             (<em class="parameter"><code><a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow"><span class="type">MexShadow</span></a> *shadow</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-shadow-set-radius-y"></a><h3>mex_shadow_set_radius_y ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_shadow_set_radius_y             (<em class="parameter"><code><a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow"><span class="type">MexShadow</span></a> *shadow</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> radius</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-shadow-get-radius-y"></a><h3>mex_shadow_get_radius_y ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                mex_shadow_get_radius_y             (<em class="parameter"><code><a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow"><span class="type">MexShadow</span></a> *shadow</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-shadow-set-offset-x"></a><h3>mex_shadow_set_offset_x ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_shadow_set_offset_x             (<em class="parameter"><code><a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow"><span class="type">MexShadow</span></a> *shadow</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> offset</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-shadow-get-offset-x"></a><h3>mex_shadow_get_offset_x ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                mex_shadow_get_offset_x             (<em class="parameter"><code><a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow"><span class="type">MexShadow</span></a> *shadow</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-shadow-set-offset-y"></a><h3>mex_shadow_set_offset_y ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_shadow_set_offset_y             (<em class="parameter"><code><a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow"><span class="type">MexShadow</span></a> *shadow</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> offset</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-shadow-get-offset-y"></a><h3>mex_shadow_get_offset_y ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                mex_shadow_get_offset_y             (<em class="parameter"><code><a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow"><span class="type">MexShadow</span></a> *shadow</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-shadow-set-paint-flags"></a><h3>mex_shadow_set_paint_flags ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_shadow_set_paint_flags          (<em class="parameter"><code><a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow"><span class="type">MexShadow</span></a> *shadow</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-mex-utils.html#MexPaintTextureFrameFlags" title="enum MexPaintTextureFrameFlags"><span class="type">MexPaintTextureFrameFlags</span></a> flags</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-shadow-get-paint-flags"></a><h3>mex_shadow_get_paint_flags ()</h3>
+<pre class="programlisting"><a class="link" href="mex-mex-utils.html#MexPaintTextureFrameFlags" title="enum MexPaintTextureFrameFlags"><span class="returnvalue">MexPaintTextureFrameFlags</span></a>  mex_shadow_get_paint_flags   (<em class="parameter"><code><a class="link" href="mex-MexShadow.html#MexShadow" title="struct MexShadow"><span class="type">MexShadow</span></a> *shadow</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexShadowPrivate"></a><h3>MexShadowPrivate</h3>
+<pre class="programlisting">typedef struct _MexShadowPrivate MexShadowPrivate;</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

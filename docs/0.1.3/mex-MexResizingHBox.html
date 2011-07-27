@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexResizingHBox</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch08.html" title="Container widgets">
+<link rel="prev" href="mex-MexNotificationArea.html" title="MexNotificationArea">
+<link rel="next" href="mex-MexScrollView.html" title="MexScrollView">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="mex-MexNotificationArea.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch08.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="mex-MexScrollView.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-MexResizingHBox.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-MexResizingHBox.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-MexResizingHBox"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-MexResizingHBox.top_of_page"></a>MexResizingHBox</span></h2>
+<p>MexResizingHBox</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-MexResizingHBox.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="mex-MexResizingHBox.html#MexResizingHBox" title="struct MexResizingHBox">MexResizingHBox</a>;
+struct              <a class="link" href="mex-MexResizingHBox.html#MexResizingHBoxClass" title="struct MexResizingHBoxClass">MexResizingHBoxClass</a>;
+<a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      <a class="link" href="mex-MexResizingHBox.html#mex-resizing-hbox-new" title="mex_resizing_hbox_new ()">mex_resizing_hbox_new</a>               (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexResizingHBox.html#mex-resizing-hbox-set-resizing-enabled" title="mex_resizing_hbox_set_resizing_enabled ()">mex_resizing_hbox_set_resizing_enabled</a>
+                                                        (<em class="parameter"><code><a class="link" href="mex-MexResizingHBox.html#MexResizingHBox" title="struct MexResizingHBox"><span class="type">MexResizingHBox</span></a> *hbox</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> enabled</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="mex-MexResizingHBox.html#mex-resizing-hbox-get-resizing-enabled" title="mex_resizing_hbox_get_resizing_enabled ()">mex_resizing_hbox_get_resizing_enabled</a>
+                                                        (<em class="parameter"><code><a class="link" href="mex-MexResizingHBox.html#MexResizingHBox" title="struct MexResizingHBox"><span class="type">MexResizingHBox</span></a> *hbox</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexResizingHBox.html#mex-resizing-hbox-set-horizontal-depth-scale" title="mex_resizing_hbox_set_horizontal_depth_scale ()">mex_resizing_hbox_set_horizontal_depth_scale</a>
+                                                        (<em class="parameter"><code><a class="link" href="mex-MexResizingHBox.html#MexResizingHBox" title="struct MexResizingHBox"><span class="type">MexResizingHBox</span></a> *hbox</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> multiplier</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="returnvalue">gfloat</span></a>              <a class="link" href="mex-MexResizingHBox.html#mex-resizing-hbox-get-horizontal-depth-scale" title="mex_resizing_hbox_get_horizontal_depth_scale ()">mex_resizing_hbox_get_horizontal_depth_scale</a>
+                                                        (<em class="parameter"><code><a class="link" href="mex-MexResizingHBox.html#MexResizingHBox" title="struct MexResizingHBox"><span class="type">MexResizingHBox</span></a> *hbox</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexResizingHBox.html#mex-resizing-hbox-set-vertical-depth-scale" title="mex_resizing_hbox_set_vertical_depth_scale ()">mex_resizing_hbox_set_vertical_depth_scale</a>
+                                                        (<em class="parameter"><code><a class="link" href="mex-MexResizingHBox.html#MexResizingHBox" title="struct MexResizingHBox"><span class="type">MexResizingHBox</span></a> *hbox</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> multiplier</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="returnvalue">gfloat</span></a>              <a class="link" href="mex-MexResizingHBox.html#mex-resizing-hbox-get-vertical-depth-scale" title="mex_resizing_hbox_get_vertical_depth_scale ()">mex_resizing_hbox_get_vertical_depth_scale</a>
+                                                        (<em class="parameter"><code><a class="link" href="mex-MexResizingHBox.html#MexResizingHBox" title="struct MexResizingHBox"><span class="type">MexResizingHBox</span></a> *hbox</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexResizingHBox.html#mex-resizing-hbox-set-depth-index" title="mex_resizing_hbox_set_depth_index ()">mex_resizing_hbox_set_depth_index</a>   (<em class="parameter"><code><a class="link" href="mex-MexResizingHBox.html#MexResizingHBox" title="struct MexResizingHBox"><span class="type">MexResizingHBox</span></a> *hbox</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> index</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                <a class="link" href="mex-MexResizingHBox.html#mex-resizing-hbox-get-depth-index" title="mex_resizing_hbox_get_depth_index ()">mex_resizing_hbox_get_depth_index</a>   (<em class="parameter"><code><a class="link" href="mex-MexResizingHBox.html#MexResizingHBox" title="struct MexResizingHBox"><span class="type">MexResizingHBox</span></a> *hbox</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexResizingHBox.html#mex-resizing-hbox-set-max-depth" title="mex_resizing_hbox_set_max_depth ()">mex_resizing_hbox_set_max_depth</a>     (<em class="parameter"><code><a class="link" href="mex-MexResizingHBox.html#MexResizingHBox" title="struct MexResizingHBox"><span class="type">MexResizingHBox</span></a> *hbox</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> depth</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                <a class="link" href="mex-MexResizingHBox.html#mex-resizing-hbox-get-max-depth" title="mex_resizing_hbox_get_max_depth ()">mex_resizing_hbox_get_max_depth</a>     (<em class="parameter"><code><a class="link" href="mex-MexResizingHBox.html#MexResizingHBox" title="struct MexResizingHBox"><span class="type">MexResizingHBox</span></a> *hbox</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexResizingHBox.html#mex-resizing-hbox-set-depth-fade" title="mex_resizing_hbox_set_depth_fade ()">mex_resizing_hbox_set_depth_fade</a>    (<em class="parameter"><code><a class="link" href="mex-MexResizingHBox.html#MexResizingHBox" title="struct MexResizingHBox"><span class="type">MexResizingHBox</span></a> *hbox</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> fade</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="mex-MexResizingHBox.html#mex-resizing-hbox-get-depth-fade" title="mex_resizing_hbox_get_depth_fade ()">mex_resizing_hbox_get_depth_fade</a>    (<em class="parameter"><code><a class="link" href="mex-MexResizingHBox.html#MexResizingHBox" title="struct MexResizingHBox"><span class="type">MexResizingHBox</span></a> *hbox</code></em>);
+                    <a class="link" href="mex-MexResizingHBox.html#MexResizingHBoxPrivate" title="MexResizingHBoxPrivate">MexResizingHBoxPrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-MexResizingHBox.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="mex-MexResizingHBox.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexResizingHBox"></a><h3>struct MexResizingHBox</h3>
+<pre class="programlisting">struct MexResizingHBox {
+  MxWidget parent;
+
+  MexResizingHBoxPrivate *priv;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexResizingHBoxClass"></a><h3>struct MexResizingHBoxClass</h3>
+<pre class="programlisting">struct MexResizingHBoxClass {
+  MxWidgetClass parent_class;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-resizing-hbox-new"></a><h3>mex_resizing_hbox_new ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      mex_resizing_hbox_new               (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-resizing-hbox-set-resizing-enabled"></a><h3>mex_resizing_hbox_set_resizing_enabled ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_resizing_hbox_set_resizing_enabled
+                                                        (<em class="parameter"><code><a class="link" href="mex-MexResizingHBox.html#MexResizingHBox" title="struct MexResizingHBox"><span class="type">MexResizingHBox</span></a> *hbox</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> enabled</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-resizing-hbox-get-resizing-enabled"></a><h3>mex_resizing_hbox_get_resizing_enabled ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            mex_resizing_hbox_get_resizing_enabled
+                                                        (<em class="parameter"><code><a class="link" href="mex-MexResizingHBox.html#MexResizingHBox" title="struct MexResizingHBox"><span class="type">MexResizingHBox</span></a> *hbox</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-resizing-hbox-set-horizontal-depth-scale"></a><h3>mex_resizing_hbox_set_horizontal_depth_scale ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_resizing_hbox_set_horizontal_depth_scale
+                                                        (<em class="parameter"><code><a class="link" href="mex-MexResizingHBox.html#MexResizingHBox" title="struct MexResizingHBox"><span class="type">MexResizingHBox</span></a> *hbox</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> multiplier</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-resizing-hbox-get-horizontal-depth-scale"></a><h3>mex_resizing_hbox_get_horizontal_depth_scale ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="returnvalue">gfloat</span></a>              mex_resizing_hbox_get_horizontal_depth_scale
+                                                        (<em class="parameter"><code><a class="link" href="mex-MexResizingHBox.html#MexResizingHBox" title="struct MexResizingHBox"><span class="type">MexResizingHBox</span></a> *hbox</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-resizing-hbox-set-vertical-depth-scale"></a><h3>mex_resizing_hbox_set_vertical_depth_scale ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_resizing_hbox_set_vertical_depth_scale
+                                                        (<em class="parameter"><code><a class="link" href="mex-MexResizingHBox.html#MexResizingHBox" title="struct MexResizingHBox"><span class="type">MexResizingHBox</span></a> *hbox</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> multiplier</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-resizing-hbox-get-vertical-depth-scale"></a><h3>mex_resizing_hbox_get_vertical_depth_scale ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="returnvalue">gfloat</span></a>              mex_resizing_hbox_get_vertical_depth_scale
+                                                        (<em class="parameter"><code><a class="link" href="mex-MexResizingHBox.html#MexResizingHBox" title="struct MexResizingHBox"><span class="type">MexResizingHBox</span></a> *hbox</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-resizing-hbox-set-depth-index"></a><h3>mex_resizing_hbox_set_depth_index ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_resizing_hbox_set_depth_index   (<em class="parameter"><code><a class="link" href="mex-MexResizingHBox.html#MexResizingHBox" title="struct MexResizingHBox"><span class="type">MexResizingHBox</span></a> *hbox</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> index</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-resizing-hbox-get-depth-index"></a><h3>mex_resizing_hbox_get_depth_index ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                mex_resizing_hbox_get_depth_index   (<em class="parameter"><code><a class="link" href="mex-MexResizingHBox.html#MexResizingHBox" title="struct MexResizingHBox"><span class="type">MexResizingHBox</span></a> *hbox</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-resizing-hbox-set-max-depth"></a><h3>mex_resizing_hbox_set_max_depth ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_resizing_hbox_set_max_depth     (<em class="parameter"><code><a class="link" href="mex-MexResizingHBox.html#MexResizingHBox" title="struct MexResizingHBox"><span class="type">MexResizingHBox</span></a> *hbox</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> depth</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-resizing-hbox-get-max-depth"></a><h3>mex_resizing_hbox_get_max_depth ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                mex_resizing_hbox_get_max_depth     (<em class="parameter"><code><a class="link" href="mex-MexResizingHBox.html#MexResizingHBox" title="struct MexResizingHBox"><span class="type">MexResizingHBox</span></a> *hbox</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-resizing-hbox-set-depth-fade"></a><h3>mex_resizing_hbox_set_depth_fade ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_resizing_hbox_set_depth_fade    (<em class="parameter"><code><a class="link" href="mex-MexResizingHBox.html#MexResizingHBox" title="struct MexResizingHBox"><span class="type">MexResizingHBox</span></a> *hbox</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> fade</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-resizing-hbox-get-depth-fade"></a><h3>mex_resizing_hbox_get_depth_fade ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            mex_resizing_hbox_get_depth_fade    (<em class="parameter"><code><a class="link" href="mex-MexResizingHBox.html#MexResizingHBox" title="struct MexResizingHBox"><span class="type">MexResizingHBox</span></a> *hbox</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexResizingHBoxPrivate"></a><h3>MexResizingHBoxPrivate</h3>
+<pre class="programlisting">typedef struct _MexResizingHBoxPrivate MexResizingHBoxPrivate;</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

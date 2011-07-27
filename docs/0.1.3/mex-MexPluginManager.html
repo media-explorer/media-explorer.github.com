@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexPluginManager</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch06.html" title="Managers">
+<link rel="prev" href="mex-MexAppletManager.html" title="MexAppletManager">
+<link rel="next" href="ch07.html" title="Model classes">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="mex-MexAppletManager.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch06.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="ch07.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-MexPluginManager.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-MexPluginManager.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-MexPluginManager"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-MexPluginManager.top_of_page"></a>MexPluginManager</span></h2>
+<p>MexPluginManager</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-MexPluginManager.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis"><a href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="returnvalue">GType</span></a>               (<a class="link" href="mex-MexPluginManager.html#MexPluginGetTypeFunc" title="MexPluginGetTypeFunc ()">*MexPluginGetTypeFunc</a>)             (<em class="parameter"><code><span class="type">void</span></code></em>);
+struct              <a class="link" href="mex-MexPluginManager.html#MexPluginManager" title="struct MexPluginManager">MexPluginManager</a>;
+struct              <a class="link" href="mex-MexPluginManager.html#MexPluginManagerClass" title="struct MexPluginManagerClass">MexPluginManagerClass</a>;
+<a class="link" href="mex-MexPluginManager.html#MexPluginManager" title="struct MexPluginManager"><span class="returnvalue">MexPluginManager</span></a> *  <a class="link" href="mex-MexPluginManager.html#mex-plugin-manager-get-default" title="mex_plugin_manager_get_default ()">mex_plugin_manager_get_default</a>      (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="mex-MexPluginManager.html#mex-plugin-manager-get-plugins" title="mex_plugin_manager_get_plugins ()">mex_plugin_manager_get_plugins</a>      (<em class="parameter"><code><a class="link" href="mex-MexPluginManager.html#MexPluginManager" title="struct MexPluginManager"><span class="type">MexPluginManager</span></a> *manager</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexPluginManager.html#mex-plugin-manager-refresh" title="mex_plugin_manager_refresh ()">mex_plugin_manager_refresh</a>          (<em class="parameter"><code><a class="link" href="mex-MexPluginManager.html#MexPluginManager" title="struct MexPluginManager"><span class="type">MexPluginManager</span></a> *manager</code></em>);
+                    <a class="link" href="mex-MexPluginManager.html#MexPluginManagerPrivate" title="MexPluginManagerPrivate">MexPluginManagerPrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-MexPluginManager.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="mex-MexPluginManager.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexPluginGetTypeFunc"></a><h3>MexPluginGetTypeFunc ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="returnvalue">GType</span></a>               (*MexPluginGetTypeFunc)             (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexPluginManager"></a><h3>struct MexPluginManager</h3>
+<pre class="programlisting">struct MexPluginManager {
+  GObject parent;
+
+  MexPluginManagerPrivate *priv;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexPluginManagerClass"></a><h3>struct MexPluginManagerClass</h3>
+<pre class="programlisting">struct MexPluginManagerClass {
+  GObjectClass parent_class;
+
+  void (* plugin_loaded) (MexPluginManager *manager,
+                          GObject          *plugin);
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-plugin-manager-get-default"></a><h3>mex_plugin_manager_get_default ()</h3>
+<pre class="programlisting"><a class="link" href="mex-MexPluginManager.html#MexPluginManager" title="struct MexPluginManager"><span class="returnvalue">MexPluginManager</span></a> *  mex_plugin_manager_get_default      (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-plugin-manager-get-plugins"></a><h3>mex_plugin_manager_get_plugins ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             mex_plugin_manager_get_plugins      (<em class="parameter"><code><a class="link" href="mex-MexPluginManager.html#MexPluginManager" title="struct MexPluginManager"><span class="type">MexPluginManager</span></a> *manager</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-plugin-manager-refresh"></a><h3>mex_plugin_manager_refresh ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_plugin_manager_refresh          (<em class="parameter"><code><a class="link" href="mex-MexPluginManager.html#MexPluginManager" title="struct MexPluginManager"><span class="type">MexPluginManager</span></a> *manager</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexPluginManagerPrivate"></a><h3>MexPluginManagerPrivate</h3>
+<pre class="programlisting">typedef struct _MexPluginManagerPrivate MexPluginManagerPrivate;</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

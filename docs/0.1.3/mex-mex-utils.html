@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>mex-utils</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch14.html" title="Utility functions">
+<link rel="prev" href="mex-mex-thumbnailer.html" title="mex-thumbnailer">
+<link rel="next" href="mex-objects.html" title="Part III. Mex actors and objects">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="mex-mex-thumbnailer.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch14.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="mex-objects.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-mex-utils.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-mex-utils.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-mex-utils"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-mex-utils.top_of_page"></a>mex-utils</span></h2>
+<p>mex-utils</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-mex-utils.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">enum                <a class="link" href="mex-mex-utils.html#MexPaintTextureFrameFlags" title="enum MexPaintTextureFrameFlags">MexPaintTextureFrameFlags</a>;
+#define             <a class="link" href="mex-mex-utils.html#MEX-PAINT-TEXTURE-FRAME-ALL:CAPS" title="MEX_PAINT_TEXTURE_FRAME_ALL">MEX_PAINT_TEXTURE_FRAME_ALL</a>
+#define             <a class="link" href="mex-mex-utils.html#MEX-PAINT-TEXTURE-FRAME-NOC:CAPS" title="MEX_PAINT_TEXTURE_FRAME_NOC">MEX_PAINT_TEXTURE_FRAME_NOC</a>
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                (<a class="link" href="mex-mex-utils.html#MexActorSortFunc" title="MexActorSortFunc ()">*MexActorSortFunc</a>)                 (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> *a</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> *b</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> userdata</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-utils.html#mex-style-load-default" title="mex_style_load_default ()">mex_style_load_default</a>              (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-utils.html#mex-paint-texture-frame" title="mex_paint_texture_frame ()">mex_paint_texture_frame</a>             (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> x</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> y</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> width</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> height</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> tex_width</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> tex_height</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> top</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> right</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> bottom</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> left</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-mex-utils.html#MexPaintTextureFrameFlags" title="enum MexPaintTextureFrameFlags"><span class="type">MexPaintTextureFrameFlags</span></a> flags</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-utils.html#mex-push-focus" title="mex_push_focus ()">mex_push_focus</a>                      (<em class="parameter"><code><a href="../mx/MxFocusable.html"><span class="type">MxFocusable</span></a> *actor</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-utils.html#mex-action-set-content" title="mex_action_set_content ()">mex_action_set_content</a>              (<em class="parameter"><code><a href="../mx/MxAction.html"><span class="type">MxAction</span></a> *action</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexContent</span> *content</code></em>);
+<span class="returnvalue">MexContent</span> *        <a class="link" href="mex-mex-utils.html#mex-action-get-content" title="mex_action_get_content ()">mex_action_get_content</a>              (<em class="parameter"><code><a href="../mx/MxAction.html"><span class="type">MxAction</span></a> *action</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-utils.html#mex-action-set-context" title="mex_action_set_context ()">mex_action_set_context</a>              (<em class="parameter"><code><a href="../mx/MxAction.html"><span class="type">MxAction</span></a> *action</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *model</code></em>);
+<span class="returnvalue">MexModel</span> *          <a class="link" href="mex-mex-utils.html#mex-action-get-context" title="mex_action_get_context ()">mex_action_get_context</a>              (<em class="parameter"><code><a href="../mx/MxAction.html"><span class="type">MxAction</span></a> *action</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                <a class="link" href="mex-mex-utils.html#mex-model-sort-alpha-cb" title="mex_model_sort_alpha_cb ()">mex_model_sort_alpha_cb</a>             (<em class="parameter"><code><span class="type">MexContent</span> *a</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexContent</span> *b</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> bool_reverse</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                <a class="link" href="mex-mex-utils.html#mex-model-sort-time-cb" title="mex_model_sort_time_cb ()">mex_model_sort_time_cb</a>              (<em class="parameter"><code><span class="type">MexContent</span> *a</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexContent</span> *b</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> bool_reverse</code></em>);
+<span class="returnvalue">MexModelInfo</span> *      <a class="link" href="mex-mex-utils.html#mex-model-info-new-with-sort-funcs" title="mex_model_info_new_with_sort_funcs ()">mex_model_info_new_with_sort_funcs</a>  (<em class="parameter"><code><span class="type">MexModel</span> *model</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *category</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> priority</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-utils.html#mex-print-date" title="mex_print_date ()">mex_print_date</a>                      (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-GDateTime.html#GDateTime"><span class="type">GDateTime</span></a> *date</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *prefix</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="mex-mex-utils.html#mex-date-to-string" title="mex_date_to_string ()">mex_date_to_string</a>                  (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-GDateTime.html#GDateTime"><span class="type">GDateTime</span></a> *date</code></em>);
+extern              const gchar *<a class="link" href="mex-mex-utils.html#mex-shader-box-blur" title="mex_shader_box_blur">mex_shader_box_blur</a>;
+<a href="/usr/share/gtk-doc/html/glib/glib-Quarks.html#GQuark"><span class="returnvalue">GQuark</span></a>              <a class="link" href="mex-mex-utils.html#mex-tile-shadow-quark" title="mex_tile_shadow_quark ()">mex_tile_shadow_quark</a>               (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-utils.html#mex-replace-border-image" title="mex_replace_border_image ()">mex_replace_border_image</a>            (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/cogl/cogl-General-API.html#CoglHandle"><span class="type">CoglHandle</span></a> *texture_p</code></em>,
+                                                         <em class="parameter"><code><a href="../mx/mx-mx-types.html#MxBorderImage"><span class="type">MxBorderImage</span></a> *image</code></em>,
+                                                         <em class="parameter"><code><a href="../mx/mx-mx-types.html#MxBorderImage"><span class="type">MxBorderImage</span></a> **image_p</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/cogl/cogl-General-API.html#CoglHandle"><span class="type">CoglHandle</span></a> *material_p</code></em>);
+const <span class="returnvalue">char</span> *        <a class="link" href="mex-mex-utils.html#mex-get-data-dir" title="mex_get_data_dir ()">mex_get_data_dir</a>                    (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="mex-mex-utils.html#mex-actor-has-focus" title="mex_actor_has_focus ()">mex_actor_has_focus</a>                 (<em class="parameter"><code><a href="../mx/MxFocusManager.html"><span class="type">MxFocusManager</span></a> *manager</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> *actor</code></em>);
+<span class="returnvalue">MexContent</span> *        <a class="link" href="mex-mex-utils.html#mex-content-from-uri" title="mex_content_from_uri ()">mex_content_from_uri</a>                (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uri</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-mex-utils.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="mex-mex-utils.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexPaintTextureFrameFlags"></a><h3>enum MexPaintTextureFrameFlags</h3>
+<pre class="programlisting">typedef enum
+{
+  MEX_TEXTURE_FRAME_EMPTY        = 0,
+  MEX_TEXTURE_FRAME_TOP_LEFT     = 1 &lt;&lt; 0,
+  MEX_TEXTURE_FRAME_TOP          = 1 &lt;&lt; 1,
+  MEX_TEXTURE_FRAME_TOP_RIGHT    = 1 &lt;&lt; 2,
+  MEX_TEXTURE_FRAME_LEFT         = 1 &lt;&lt; 3,
+  MEX_TEXTURE_FRAME_MIDDLE       = 1 &lt;&lt; 4,
+  MEX_TEXTURE_FRAME_RIGHT        = 1 &lt;&lt; 5,
+  MEX_TEXTURE_FRAME_BOTTOM_LEFT  = 1 &lt;&lt; 6,
+  MEX_TEXTURE_FRAME_BOTTOM       = 1 &lt;&lt; 7,
+  MEX_TEXTURE_FRAME_BOTTOM_RIGHT = 1 &lt;&lt; 8
+} MexPaintTextureFrameFlags;
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MEX-PAINT-TEXTURE-FRAME-ALL:CAPS"></a><h3>MEX_PAINT_TEXTURE_FRAME_ALL</h3>
+<pre class="programlisting">#define             MEX_PAINT_TEXTURE_FRAME_ALL</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MEX-PAINT-TEXTURE-FRAME-NOC:CAPS"></a><h3>MEX_PAINT_TEXTURE_FRAME_NOC</h3>
+<pre class="programlisting">#define             MEX_PAINT_TEXTURE_FRAME_NOC</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexActorSortFunc"></a><h3>MexActorSortFunc ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                (*MexActorSortFunc)                 (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> *a</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> *b</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> userdata</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-style-load-default"></a><h3>mex_style_load_default ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_style_load_default              (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-paint-texture-frame"></a><h3>mex_paint_texture_frame ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_paint_texture_frame             (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> x</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> y</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> width</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> height</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> tex_width</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> tex_height</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> top</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> right</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> bottom</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> left</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-mex-utils.html#MexPaintTextureFrameFlags" title="enum MexPaintTextureFrameFlags"><span class="type">MexPaintTextureFrameFlags</span></a> flags</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-push-focus"></a><h3>mex_push_focus ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_push_focus                      (<em class="parameter"><code><a href="../mx/MxFocusable.html"><span class="type">MxFocusable</span></a> *actor</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-action-set-content"></a><h3>mex_action_set_content ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_action_set_content              (<em class="parameter"><code><a href="../mx/MxAction.html"><span class="type">MxAction</span></a> *action</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexContent</span> *content</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-action-get-content"></a><h3>mex_action_get_content ()</h3>
+<pre class="programlisting"><span class="returnvalue">MexContent</span> *        mex_action_get_content              (<em class="parameter"><code><a href="../mx/MxAction.html"><span class="type">MxAction</span></a> *action</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-action-set-context"></a><h3>mex_action_set_context ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_action_set_context              (<em class="parameter"><code><a href="../mx/MxAction.html"><span class="type">MxAction</span></a> *action</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *model</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-action-get-context"></a><h3>mex_action_get_context ()</h3>
+<pre class="programlisting"><span class="returnvalue">MexModel</span> *          mex_action_get_context              (<em class="parameter"><code><a href="../mx/MxAction.html"><span class="type">MxAction</span></a> *action</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-model-sort-alpha-cb"></a><h3>mex_model_sort_alpha_cb ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                mex_model_sort_alpha_cb             (<em class="parameter"><code><span class="type">MexContent</span> *a</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexContent</span> *b</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> bool_reverse</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-model-sort-time-cb"></a><h3>mex_model_sort_time_cb ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                mex_model_sort_time_cb              (<em class="parameter"><code><span class="type">MexContent</span> *a</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexContent</span> *b</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> bool_reverse</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-model-info-new-with-sort-funcs"></a><h3>mex_model_info_new_with_sort_funcs ()</h3>
+<pre class="programlisting"><span class="returnvalue">MexModelInfo</span> *      mex_model_info_new_with_sort_funcs  (<em class="parameter"><code><span class="type">MexModel</span> *model</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *category</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> priority</code></em>);</pre>
+<p>
+Creates a new <span class="type">MexModelInfo</span> structure with the given category and priority,
+with the default sort functions, in this order:
+A to Z, Z to A, Newest, Oldest
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>model</code></em> :</span></p></td>
+<td>A <span class="type">MexModel</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>category</code></em> :</span></p></td>
+<td>A category name</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>priority</code></em> :</span></p></td>
+<td>The model priority</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A newly allocated <span class="type">MexModelInfo</span>, to be freed with
+<a class="link" href="mex-MexModelManager.html#mex-model-info-free" title="mex_model_info_free ()"><code class="function">mex_model_info_free()</code></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-print-date"></a><h3>mex_print_date ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_print_date                      (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-GDateTime.html#GDateTime"><span class="type">GDateTime</span></a> *date</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *prefix</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-date-to-string"></a><h3>mex_date_to_string ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             mex_date_to_string                  (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-GDateTime.html#GDateTime"><span class="type">GDateTime</span></a> *date</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-shader-box-blur"></a><h3>mex_shader_box_blur</h3>
+<pre class="programlisting">extern const gchar *mex_shader_box_blur;
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-tile-shadow-quark"></a><h3>mex_tile_shadow_quark ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Quarks.html#GQuark"><span class="returnvalue">GQuark</span></a>              mex_tile_shadow_quark               (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-replace-border-image"></a><h3>mex_replace_border_image ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_replace_border_image            (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/cogl/cogl-General-API.html#CoglHandle"><span class="type">CoglHandle</span></a> *texture_p</code></em>,
+                                                         <em class="parameter"><code><a href="../mx/mx-mx-types.html#MxBorderImage"><span class="type">MxBorderImage</span></a> *image</code></em>,
+                                                         <em class="parameter"><code><a href="../mx/mx-mx-types.html#MxBorderImage"><span class="type">MxBorderImage</span></a> **image_p</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/cogl/cogl-General-API.html#CoglHandle"><span class="type">CoglHandle</span></a> *material_p</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-get-data-dir"></a><h3>mex_get_data_dir ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *        mex_get_data_dir                    (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Gets the data directory for media explorer.
+Use this rather than anything else as this ensures greater compatibility.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>Path to mex data directory</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-actor-has-focus"></a><h3>mex_actor_has_focus ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            mex_actor_has_focus                 (<em class="parameter"><code><a href="../mx/MxFocusManager.html"><span class="type">MxFocusManager</span></a> *manager</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> *actor</code></em>);</pre>
+<p>
+Evaluates whether the actor has focus or not.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>manager</code></em> :</span></p></td>
+<td>The current MxFocusManager</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>actor</code></em> :</span></p></td>
+<td>The actor that you wish query if it is focused</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>True if the <em class="parameter"><code>actor</code></em> is focused</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-content-from-uri"></a><h3>mex_content_from_uri ()</h3>
+<pre class="programlisting"><span class="returnvalue">MexContent</span> *        mex_content_from_uri                (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uri</code></em>);</pre>
+<p>
+Creates a new MexContent from any given uri and tries to guess
+at some metadata.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uri</code></em> :</span></p></td>
+<td>A valid uri for some media</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A new MexContent</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>mex-thumbnailer</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch14.html" title="Utility functions">
+<link rel="prev" href="mex-mex-metadata-utils.html" title="mex-metadata-utils">
+<link rel="next" href="mex-mex-utils.html" title="mex-utils">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="mex-mex-metadata-utils.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch14.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="mex-mex-utils.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-mex-thumbnailer.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-mex-thumbnailer.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-mex-thumbnailer"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-mex-thumbnailer.top_of_page"></a>mex-thumbnailer</span></h2>
+<p>mex-thumbnailer</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-mex-thumbnailer.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis"><span class="returnvalue">void</span>                (<a class="link" href="mex-mex-thumbnailer.html#MexThumbnailCallback" title="MexThumbnailCallback ()">*MexThumbnailCallback</a>)             (<em class="parameter"><code>const <span class="type">char</span> *uri</code></em>,
+                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-thumbnailer.html#mex-thumbnailer-generate" title="mex_thumbnailer_generate ()">mex_thumbnailer_generate</a>            (<em class="parameter"><code>const <span class="type">char</span> *uri</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *mime_type</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-mex-thumbnailer.html#MexThumbnailCallback" title="MexThumbnailCallback ()"><span class="type">MexThumbnailCallback</span></a> callback</code></em>,
+                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-mex-thumbnailer.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="mex-mex-thumbnailer.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexThumbnailCallback"></a><h3>MexThumbnailCallback ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                (*MexThumbnailCallback)             (<em class="parameter"><code>const <span class="type">char</span> *uri</code></em>,
+                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-thumbnailer-generate"></a><h3>mex_thumbnailer_generate ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_thumbnailer_generate            (<em class="parameter"><code>const <span class="type">char</span> *uri</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *mime_type</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-mex-thumbnailer.html#MexThumbnailCallback" title="MexThumbnailCallback ()"><span class="type">MexThumbnailCallback</span></a> callback</code></em>,
+                                                         <em class="parameter"><code><span class="type">gpointer</span> user_data</code></em>);</pre>
+<p>
+Attempt to generate a thumbnail for <em class="parameter"><code>url</code></em> asynchronously.  When thumbnailing
+is complete, <em class="parameter"><code>callback</code></em> is called.  If thumbnailing isn't possible or fails no
+callback will be made, so it is recommended to set a fallback image before
+calling this function.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>url</code></em> :</span></p></td>
+<td>the URL to thumbnail</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mime_type</code></em> :</span></p></td>
+<td>the MIME type of the URL (will be sniffed if <code class="literal">NULL</code>)</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>callback</code></em> :</span></p></td>
+<td>function to callback when thumbnailing is successfull</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>data to pass to <em class="parameter"><code>callback</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

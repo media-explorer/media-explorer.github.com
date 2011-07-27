@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexTile</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch09.html" title="Basic widgets">
+<link rel="prev" href="mex-MexSlideShow.html" title="MexSlideShow">
+<link rel="next" href="mex-MexVolumeControl.html" title="MexVolumeControl">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="mex-MexSlideShow.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch09.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="mex-MexVolumeControl.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-MexTile.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-MexTile.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-MexTile"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-MexTile.top_of_page"></a>MexTile</span></h2>
+<p>MexTile</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-MexTile.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="mex-MexTile.html#MexTile" title="struct MexTile">MexTile</a>;
+struct              <a class="link" href="mex-MexTile.html#MexTileClass" title="struct MexTileClass">MexTileClass</a>;
+<a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      <a class="link" href="mex-MexTile.html#mex-tile-new" title="mex_tile_new ()">mex_tile_new</a>                        (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      <a class="link" href="mex-MexTile.html#mex-tile-new-with-label" title="mex_tile_new_with_label ()">mex_tile_new_with_label</a>             (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *label</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexTile.html#mex-tile-set-label" title="mex_tile_set_label ()">mex_tile_set_label</a>                  (<em class="parameter"><code><a class="link" href="mex-MexTile.html#MexTile" title="struct MexTile"><span class="type">MexTile</span></a> *tile</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *label</code></em>);
+const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="mex-MexTile.html#mex-tile-get-label" title="mex_tile_get_label ()">mex_tile_get_label</a>                  (<em class="parameter"><code><a class="link" href="mex-MexTile.html#MexTile" title="struct MexTile"><span class="type">MexTile</span></a> *tile</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexTile.html#mex-tile-set-primary-icon" title="mex_tile_set_primary_icon ()">mex_tile_set_primary_icon</a>           (<em class="parameter"><code><a class="link" href="mex-MexTile.html#MexTile" title="struct MexTile"><span class="type">MexTile</span></a> *tile</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> *icon</code></em>);
+<a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      <a class="link" href="mex-MexTile.html#mex-tile-get-primary-icon" title="mex_tile_get_primary_icon ()">mex_tile_get_primary_icon</a>           (<em class="parameter"><code><a class="link" href="mex-MexTile.html#MexTile" title="struct MexTile"><span class="type">MexTile</span></a> *tile</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexTile.html#mex-tile-set-secondary-icon" title="mex_tile_set_secondary_icon ()">mex_tile_set_secondary_icon</a>         (<em class="parameter"><code><a class="link" href="mex-MexTile.html#MexTile" title="struct MexTile"><span class="type">MexTile</span></a> *tile</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> *icon</code></em>);
+<a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      <a class="link" href="mex-MexTile.html#mex-tile-get-secondary-icon" title="mex_tile_get_secondary_icon ()">mex_tile_get_secondary_icon</a>         (<em class="parameter"><code><a class="link" href="mex-MexTile.html#MexTile" title="struct MexTile"><span class="type">MexTile</span></a> *tile</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="mex-MexTile.html#mex-tile-get-header-visible" title="mex_tile_get_header_visible ()">mex_tile_get_header_visible</a>         (<em class="parameter"><code><a class="link" href="mex-MexTile.html#MexTile" title="struct MexTile"><span class="type">MexTile</span></a> *tile</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexTile.html#mex-tile-set-header-visible" title="mex_tile_set_header_visible ()">mex_tile_set_header_visible</a>         (<em class="parameter"><code><a class="link" href="mex-MexTile.html#MexTile" title="struct MexTile"><span class="type">MexTile</span></a> *tile</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> header_visible</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="mex-MexTile.html#mex-tile-get-important" title="mex_tile_get_important ()">mex_tile_get_important</a>              (<em class="parameter"><code><a class="link" href="mex-MexTile.html#MexTile" title="struct MexTile"><span class="type">MexTile</span></a> *tile</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexTile.html#mex-tile-set-important" title="mex_tile_set_important ()">mex_tile_set_important</a>              (<em class="parameter"><code><a class="link" href="mex-MexTile.html#MexTile" title="struct MexTile"><span class="type">MexTile</span></a> *tile</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> important</code></em>);
+                    <a class="link" href="mex-MexTile.html#MexTilePrivate" title="MexTilePrivate">MexTilePrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-MexTile.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="mex-MexTile.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexTile"></a><h3>struct MexTile</h3>
+<pre class="programlisting">struct MexTile {
+  MxBin parent;
+
+  MexTilePrivate *priv;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexTileClass"></a><h3>struct MexTileClass</h3>
+<pre class="programlisting">struct MexTileClass {
+  MxBinClass parent_class;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-tile-new"></a><h3>mex_tile_new ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      mex_tile_new                        (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-tile-new-with-label"></a><h3>mex_tile_new_with_label ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      mex_tile_new_with_label             (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *label</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-tile-set-label"></a><h3>mex_tile_set_label ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_tile_set_label                  (<em class="parameter"><code><a class="link" href="mex-MexTile.html#MexTile" title="struct MexTile"><span class="type">MexTile</span></a> *tile</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *label</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-tile-get-label"></a><h3>mex_tile_get_label ()</h3>
+<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       mex_tile_get_label                  (<em class="parameter"><code><a class="link" href="mex-MexTile.html#MexTile" title="struct MexTile"><span class="type">MexTile</span></a> *tile</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-tile-set-primary-icon"></a><h3>mex_tile_set_primary_icon ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_tile_set_primary_icon           (<em class="parameter"><code><a class="link" href="mex-MexTile.html#MexTile" title="struct MexTile"><span class="type">MexTile</span></a> *tile</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> *icon</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-tile-get-primary-icon"></a><h3>mex_tile_get_primary_icon ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      mex_tile_get_primary_icon           (<em class="parameter"><code><a class="link" href="mex-MexTile.html#MexTile" title="struct MexTile"><span class="type">MexTile</span></a> *tile</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-tile-set-secondary-icon"></a><h3>mex_tile_set_secondary_icon ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_tile_set_secondary_icon         (<em class="parameter"><code><a class="link" href="mex-MexTile.html#MexTile" title="struct MexTile"><span class="type">MexTile</span></a> *tile</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> *icon</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-tile-get-secondary-icon"></a><h3>mex_tile_get_secondary_icon ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      mex_tile_get_secondary_icon         (<em class="parameter"><code><a class="link" href="mex-MexTile.html#MexTile" title="struct MexTile"><span class="type">MexTile</span></a> *tile</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-tile-get-header-visible"></a><h3>mex_tile_get_header_visible ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            mex_tile_get_header_visible         (<em class="parameter"><code><a class="link" href="mex-MexTile.html#MexTile" title="struct MexTile"><span class="type">MexTile</span></a> *tile</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-tile-set-header-visible"></a><h3>mex_tile_set_header_visible ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_tile_set_header_visible         (<em class="parameter"><code><a class="link" href="mex-MexTile.html#MexTile" title="struct MexTile"><span class="type">MexTile</span></a> *tile</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> header_visible</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-tile-get-important"></a><h3>mex_tile_get_important ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            mex_tile_get_important              (<em class="parameter"><code><a class="link" href="mex-MexTile.html#MexTile" title="struct MexTile"><span class="type">MexTile</span></a> *tile</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-tile-set-important"></a><h3>mex_tile_set_important ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_tile_set_important              (<em class="parameter"><code><a class="link" href="mex-MexTile.html#MexTile" title="struct MexTile"><span class="type">MexTile</span></a> *tile</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> important</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexTilePrivate"></a><h3>MexTilePrivate</h3>
+<pre class="programlisting">typedef struct _MexTilePrivate MexTilePrivate;</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

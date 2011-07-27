@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexGrid</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch08.html" title="Container widgets">
+<link rel="prev" href="mex-MexExplorer.html" title="MexExplorer">
+<link rel="next" href="mex-MexNotificationArea.html" title="MexNotificationArea">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="mex-MexExplorer.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch08.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="mex-MexNotificationArea.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-MexGrid.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-MexGrid.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-MexGrid"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-MexGrid.top_of_page"></a>MexGrid</span></h2>
+<p>MexGrid</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-MexGrid.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="mex-MexGrid.html#MexGrid" title="struct MexGrid">MexGrid</a>;
+struct              <a class="link" href="mex-MexGrid.html#MexGridClass" title="struct MexGridClass">MexGridClass</a>;
+<a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      <a class="link" href="mex-MexGrid.html#mex-grid-new" title="mex_grid_new ()">mex_grid_new</a>                        (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                <a class="link" href="mex-MexGrid.html#mex-grid-get-stride" title="mex_grid_get_stride ()">mex_grid_get_stride</a>                 (<em class="parameter"><code><a class="link" href="mex-MexGrid.html#MexGrid" title="struct MexGrid"><span class="type">MexGrid</span></a> *grid</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexGrid.html#mex-grid-set-stride" title="mex_grid_set_stride ()">mex_grid_set_stride</a>                 (<em class="parameter"><code><a class="link" href="mex-MexGrid.html#MexGrid" title="struct MexGrid"><span class="type">MexGrid</span></a> *grid</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> stride</code></em>);
+                    <a class="link" href="mex-MexGrid.html#MexGridPrivate" title="MexGridPrivate">MexGridPrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-MexGrid.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="mex-MexGrid.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexGrid"></a><h3>struct MexGrid</h3>
+<pre class="programlisting">struct MexGrid {
+  MxWidget parent;
+
+  MexGridPrivate *priv;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexGridClass"></a><h3>struct MexGridClass</h3>
+<pre class="programlisting">struct MexGridClass {
+  MxWidgetClass parent_class;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-grid-new"></a><h3>mex_grid_new ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      mex_grid_new                        (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-grid-get-stride"></a><h3>mex_grid_get_stride ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                mex_grid_get_stride                 (<em class="parameter"><code><a class="link" href="mex-MexGrid.html#MexGrid" title="struct MexGrid"><span class="type">MexGrid</span></a> *grid</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-grid-set-stride"></a><h3>mex_grid_set_stride ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_grid_set_stride                 (<em class="parameter"><code><a class="link" href="mex-MexGrid.html#MexGrid" title="struct MexGrid"><span class="type">MexGrid</span></a> *grid</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> stride</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexGridPrivate"></a><h3>MexGridPrivate</h3>
+<pre class="programlisting">typedef struct _MexGridPrivate MexGridPrivate;</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

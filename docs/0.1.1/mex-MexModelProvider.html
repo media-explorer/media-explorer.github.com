@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexModelProvider</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch05.html" title="Plugin-specific interfaces">
+<link rel="prev" href="mex-MexLogoProvider.html" title="MexLogoProvider">
+<link rel="next" href="mex-MexToolProvider.html" title="MexToolProvider">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="mex-MexLogoProvider.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch05.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="mex-MexToolProvider.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-MexModelProvider.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-MexModelProvider.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-MexModelProvider"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-MexModelProvider.top_of_page"></a>MexModelProvider</span></h2>
+<p>MexModelProvider — Interface for sources of models</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-MexModelProvider.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">#define             <a class="link" href="mex-MexModelProvider.html#MEX-MODEL-PROVIDER-IFACE:CAPS" title="MEX_MODEL_PROVIDER_IFACE()">MEX_MODEL_PROVIDER_IFACE</a>            (iface)
+#define             <a class="link" href="mex-MexModelProvider.html#MEX-IS-MODEL-PROVIDER-IFACE:CAPS" title="MEX_IS_MODEL_PROVIDER_IFACE()">MEX_IS_MODEL_PROVIDER_IFACE</a>         (iface)
+struct              <a class="link" href="mex-MexModelProvider.html#MexModelProviderInterface" title="struct MexModelProviderInterface">MexModelProviderInterface</a>;
+const <span class="returnvalue">GList</span> *       <a class="link" href="mex-MexModelProvider.html#mex-model-provider-get-models" title="mex_model_provider_get_models ()">mex_model_provider_get_models</a>       (<em class="parameter"><code><span class="type">MexModelProvider</span> *provider</code></em>);
+<span class="returnvalue">gboolean</span>            <a class="link" href="mex-MexModelProvider.html#mex-model-provider-model-activated" title="mex_model_provider_model_activated ()">mex_model_provider_model_activated</a>  (<em class="parameter"><code><span class="type">MexModelProvider</span> *provider</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *model</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexModelProvider.html#mex-model-provider-present-model" title="mex_model_provider_present_model ()">mex_model_provider_present_model</a>    (<em class="parameter"><code><span class="type">MexModelProvider</span> *provider</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModelInfo</span> *model_info</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-MexModelProvider.description"></a><h2>Description</h2>
+<p>
+Implementing <span class="type">MexModelProvider</span> means that the class can provide a list
+of models that belong in given categories.
+</p>
+</div>
+<div class="refsect1">
+<a name="mex-MexModelProvider.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MEX-MODEL-PROVIDER-IFACE:CAPS"></a><h3>MEX_MODEL_PROVIDER_IFACE()</h3>
+<pre class="programlisting">#define             MEX_MODEL_PROVIDER_IFACE(iface)</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MEX-IS-MODEL-PROVIDER-IFACE:CAPS"></a><h3>MEX_IS_MODEL_PROVIDER_IFACE()</h3>
+<pre class="programlisting">#define             MEX_IS_MODEL_PROVIDER_IFACE(iface)</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexModelProviderInterface"></a><h3>struct MexModelProviderInterface</h3>
+<pre class="programlisting">struct MexModelProviderInterface {
+  GTypeInterface g_iface;
+
+  /* virtual functions */
+  const GList * (*get_models)      (MexModelProvider *provider);
+  gboolean      (*model_activated) (MexModelProvider *provider,
+                                    MexModel         *model);
+
+  /* signals */
+  void (* present_model)        (MexModelProvider *provider,
+                                 MexModelInfo     *model_info);
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-model-provider-get-models"></a><h3>mex_model_provider_get_models ()</h3>
+<pre class="programlisting">const <span class="returnvalue">GList</span> *       mex_model_provider_get_models       (<em class="parameter"><code><span class="type">MexModelProvider</span> *provider</code></em>);</pre>
+<p>
+Retrieves the list of models from a <span class="type">MexModelProvider</span>. This is a list of
+<span class="type">MexModelInfo</span>##s.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>provider</code></em> :</span></p></td>
+<td>a <span class="type">MexModelProvider</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The models of <em class="parameter"><code>provider</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-model-provider-model-activated"></a><h3>mex_model_provider_model_activated ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            mex_model_provider_model_activated  (<em class="parameter"><code><span class="type">MexModelProvider</span> *provider</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *model</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-model-provider-present-model"></a><h3>mex_model_provider_present_model ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_model_provider_present_model    (<em class="parameter"><code><span class="type">MexModelProvider</span> *provider</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModelInfo</span> *model_info</code></em>);</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

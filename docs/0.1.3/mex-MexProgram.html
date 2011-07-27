@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexProgram</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch07.html" title="Model classes">
+<link rel="prev" href="mex-MexModelManager.html" title="MexModelManager">
+<link rel="next" href="mex-MexQueueModel.html" title="MexQueueModel">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="mex-MexModelManager.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch07.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="mex-MexQueueModel.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-MexProgram.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-MexProgram.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-MexProgram"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-MexProgram.top_of_page"></a>MexProgram</span></h2>
+<p>MexProgram</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-MexProgram.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">#define             <a class="link" href="mex-MexProgram.html#MEX-PROGRAM-RATING-UNRATED:CAPS" title="MEX_PROGRAM_RATING_UNRATED">MEX_PROGRAM_RATING_UNRATED</a>
+#define             <a class="link" href="mex-MexProgram.html#MEX-PROGRAM-RATING-EVERYONE:CAPS" title="MEX_PROGRAM_RATING_EVERYONE">MEX_PROGRAM_RATING_EVERYONE</a>
+#define             <a class="link" href="mex-MexProgram.html#MEX-PROGRAM-RATING-CHILDREN:CAPS" title="MEX_PROGRAM_RATING_CHILDREN">MEX_PROGRAM_RATING_CHILDREN</a>
+#define             <a class="link" href="mex-MexProgram.html#MEX-PROGRAM-RATING-TEENS:CAPS" title="MEX_PROGRAM_RATING_TEENS">MEX_PROGRAM_RATING_TEENS</a>
+#define             <a class="link" href="mex-MexProgram.html#MEX-PROGRAM-RATING-RESTRICTED:CAPS" title="MEX_PROGRAM_RATING_RESTRICTED">MEX_PROGRAM_RATING_RESTRICTED</a>
+#define             <a class="link" href="mex-MexProgram.html#MEX-PROGRAM-RATING-NC17:CAPS" title="MEX_PROGRAM_RATING_NC17">MEX_PROGRAM_RATING_NC17</a>
+<span class="returnvalue">void</span>                (<a class="link" href="mex-MexProgram.html#MexGetStreamReply" title="MexGetStreamReply ()">*MexGetStreamReply</a>)                (<em class="parameter"><code><a class="link" href="mex-MexFeed.html#MexProgram" title="MexProgram"><span class="type">MexProgram</span></a> *program</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *stream_url</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> *error</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> userdata</code></em>);
+                    <a class="link" href="mex-MexFeed.html#MexProgram" title="MexProgram">MexProgram</a>;
+struct              <a class="link" href="mex-MexProgram.html#MexProgramClass" title="struct MexProgramClass">MexProgramClass</a>;
+<a class="link" href="mex-MexFeed.html#MexProgram" title="MexProgram"><span class="returnvalue">MexProgram</span></a> *        <a class="link" href="mex-MexProgram.html#mex-program-new" title="mex_program_new ()">mex_program_new</a>                     (<em class="parameter"><code><a class="link" href="mex-MexFeed.html#MexFeed" title="struct MexFeed"><span class="type">MexFeed</span></a> *feed</code></em>);
+<a class="link" href="mex-MexFeed.html#MexFeed" title="struct MexFeed"><span class="returnvalue">MexFeed</span></a> *           <a class="link" href="mex-MexProgram.html#mex-program-get-feed" title="mex_program_get_feed ()">mex_program_get_feed</a>                (<em class="parameter"><code><a class="link" href="mex-MexFeed.html#MexProgram" title="MexProgram"><span class="type">MexProgram</span></a> *program</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexProgram.html#mex-program-add-actor" title="mex_program_add_actor ()">mex_program_add_actor</a>               (<em class="parameter"><code><a class="link" href="mex-MexFeed.html#MexProgram" title="MexProgram"><span class="type">MexProgram</span></a> *program</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *actor</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Pointer-Arrays.html#GPtrArray"><span class="returnvalue">GPtrArray</span></a> *         <a class="link" href="mex-MexProgram.html#mex-program-get-actors" title="mex_program_get_actors ()">mex_program_get_actors</a>              (<em class="parameter"><code><a class="link" href="mex-MexFeed.html#MexProgram" title="MexProgram"><span class="type">MexProgram</span></a> *program</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexProgram.html#mex-program-get-stream" title="mex_program_get_stream ()">mex_program_get_stream</a>              (<em class="parameter"><code><a class="link" href="mex-MexFeed.html#MexProgram" title="MexProgram"><span class="type">MexProgram</span></a> *program</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-MexProgram.html#MexGetStreamReply" title="MexGetStreamReply ()"><span class="type">MexGetStreamReply</span></a> reply</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> userdata</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="mex-MexProgram.html#mex-program-get-index-str" title="mex_program_get_index_str ()">mex_program_get_index_str</a>           (<em class="parameter"><code><a class="link" href="mex-MexFeed.html#MexProgram" title="MexProgram"><span class="type">MexProgram</span></a> *program</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="mex-MexProgram.html#mex-program-get-id" title="mex_program_get_id ()">mex_program_get_id</a>                  (<em class="parameter"><code><a class="link" href="mex-MexFeed.html#MexProgram" title="MexProgram"><span class="type">MexProgram</span></a> *program</code></em>);
+                    <a class="link" href="mex-MexProgram.html#MexProgramPrivate" title="MexProgramPrivate">MexProgramPrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-MexProgram.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="mex-MexProgram.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MEX-PROGRAM-RATING-UNRATED:CAPS"></a><h3>MEX_PROGRAM_RATING_UNRATED</h3>
+<pre class="programlisting">#define MEX_PROGRAM_RATING_UNRATED "n"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MEX-PROGRAM-RATING-EVERYONE:CAPS"></a><h3>MEX_PROGRAM_RATING_EVERYONE</h3>
+<pre class="programlisting">#define MEX_PROGRAM_RATING_EVERYONE "u"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MEX-PROGRAM-RATING-CHILDREN:CAPS"></a><h3>MEX_PROGRAM_RATING_CHILDREN</h3>
+<pre class="programlisting">#define MEX_PROGRAM_RATING_CHILDREN "pg"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MEX-PROGRAM-RATING-TEENS:CAPS"></a><h3>MEX_PROGRAM_RATING_TEENS</h3>
+<pre class="programlisting">#define MEX_PROGRAM_RATING_TEENS "pg13"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MEX-PROGRAM-RATING-RESTRICTED:CAPS"></a><h3>MEX_PROGRAM_RATING_RESTRICTED</h3>
+<pre class="programlisting">#define MEX_PROGRAM_RATING_RESTRICTED "r"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MEX-PROGRAM-RATING-NC17:CAPS"></a><h3>MEX_PROGRAM_RATING_NC17</h3>
+<pre class="programlisting">#define MEX_PROGRAM_RATING_NC17 "nc17"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexGetStreamReply"></a><h3>MexGetStreamReply ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                (*MexGetStreamReply)                (<em class="parameter"><code><a class="link" href="mex-MexFeed.html#MexProgram" title="MexProgram"><span class="type">MexProgram</span></a> *program</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *stream_url</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> *error</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> userdata</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexProgram"></a><h3>MexProgram</h3>
+<pre class="programlisting">typedef struct {
+  MexGenericContent parent;
+
+  MexProgramPrivate *priv;
+} MexProgram;
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexProgramClass"></a><h3>struct MexProgramClass</h3>
+<pre class="programlisting">struct MexProgramClass {
+  MexGenericContentClass parent_class;
+
+  gchar *(*get_index_str) (MexProgram *program);
+  gchar *(*get_id) (MexProgram *program);
+
+  void (*complete) (MexProgram *program);
+  void (*get_stream) (MexProgram       *program,
+                      MexGetStreamReply reply,
+                      gpointer          userdata);
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-program-new"></a><h3>mex_program_new ()</h3>
+<pre class="programlisting"><a class="link" href="mex-MexFeed.html#MexProgram" title="MexProgram"><span class="returnvalue">MexProgram</span></a> *        mex_program_new                     (<em class="parameter"><code><a class="link" href="mex-MexFeed.html#MexFeed" title="struct MexFeed"><span class="type">MexFeed</span></a> *feed</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-program-get-feed"></a><h3>mex_program_get_feed ()</h3>
+<pre class="programlisting"><a class="link" href="mex-MexFeed.html#MexFeed" title="struct MexFeed"><span class="returnvalue">MexFeed</span></a> *           mex_program_get_feed                (<em class="parameter"><code><a class="link" href="mex-MexFeed.html#MexProgram" title="MexProgram"><span class="type">MexProgram</span></a> *program</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-program-add-actor"></a><h3>mex_program_add_actor ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_program_add_actor               (<em class="parameter"><code><a class="link" href="mex-MexFeed.html#MexProgram" title="MexProgram"><span class="type">MexProgram</span></a> *program</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *actor</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-program-get-actors"></a><h3>mex_program_get_actors ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Pointer-Arrays.html#GPtrArray"><span class="returnvalue">GPtrArray</span></a> *         mex_program_get_actors              (<em class="parameter"><code><a class="link" href="mex-MexFeed.html#MexProgram" title="MexProgram"><span class="type">MexProgram</span></a> *program</code></em>);</pre>
+<p>
+Retrieves the <a href="/usr/share/gtk-doc/html/glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> containing the actor names as strings. Call
+g_ptr_array_unref on the returned value once finished with.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>program</code></em> :</span></p></td>
+<td>A <a class="link" href="mex-MexFeed.html#MexProgram" title="MexProgram"><span class="type">MexProgram</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="/usr/share/gtk-doc/html/glib/glib-Pointer-Arrays.html#GPtrArray"><span class="type">GPtrArray</span></a> or NULL if there are no actors defined.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-program-get-stream"></a><h3>mex_program_get_stream ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_program_get_stream              (<em class="parameter"><code><a class="link" href="mex-MexFeed.html#MexProgram" title="MexProgram"><span class="type">MexProgram</span></a> *program</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-MexProgram.html#MexGetStreamReply" title="MexGetStreamReply ()"><span class="type">MexGetStreamReply</span></a> reply</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> userdata</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-program-get-index-str"></a><h3>mex_program_get_index_str ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             mex_program_get_index_str           (<em class="parameter"><code><a class="link" href="mex-MexFeed.html#MexProgram" title="MexProgram"><span class="type">MexProgram</span></a> *program</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-program-get-id"></a><h3>mex_program_get_id ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             mex_program_get_id                  (<em class="parameter"><code><a class="link" href="mex-MexFeed.html#MexProgram" title="MexProgram"><span class="type">MexProgram</span></a> *program</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexProgramPrivate"></a><h3>MexProgramPrivate</h3>
+<pre class="programlisting">typedef struct _MexProgramPrivate MexProgramPrivate;</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexProxy</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch04.html" title="Abstract classes and interfaces">
+<link rel="prev" href="mex-MexModel.html" title="MexModel">
+<link rel="next" href="ch05.html" title="Plugin-specific interfaces">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="mex-MexModel.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch04.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="ch05.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#MexProxy.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#MexProxy.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#MexProxy.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#MexProxy.properties" class="shortcut">Properties</a>
+                   | 
+                  <a href="#MexProxy.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="MexProxy"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="MexProxy.top_of_page"></a>MexProxy</span></h2>
+<p>MexProxy — An abstract proxy for mapping <span class="type">MexModel</span>
+content items to arbitrary <span class="type">GObjects</span>.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="MexProxy.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="MexProxy.html#MexProxy-struct" title="struct MexProxy">MexProxy</a>;
+struct              <a class="link" href="MexProxy.html#MexProxyClass" title="struct MexProxyClass">MexProxyClass</a>;
+<span class="returnvalue">MexModel</span> *          <a class="link" href="MexProxy.html#mex-proxy-get-model" title="mex_proxy_get_model ()">mex_proxy_get_model</a>                 (<em class="parameter"><code><a class="link" href="MexProxy.html" title="MexProxy"><span class="type">MexProxy</span></a> *proxy</code></em>);
+<span class="returnvalue">GType</span>               <a class="link" href="MexProxy.html#mex-proxy-get-object-type" title="mex_proxy_get_object_type ()">mex_proxy_get_object_type</a>           (<em class="parameter"><code><a class="link" href="MexProxy.html" title="MexProxy"><span class="type">MexProxy</span></a> *proxy</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexProxy.html#mex-proxy-set-limit" title="mex_proxy_set_limit ()">mex_proxy_set_limit</a>                 (<em class="parameter"><code><a class="link" href="MexProxy.html" title="MexProxy"><span class="type">MexProxy</span></a> *proxy</code></em>,
+                                                         <em class="parameter"><code><span class="type">guint</span> limit</code></em>);
+<span class="returnvalue">guint</span>               <a class="link" href="MexProxy.html#mex-proxy-get-limit" title="mex_proxy_get_limit ()">mex_proxy_get_limit</a>                 (<em class="parameter"><code><a class="link" href="MexProxy.html" title="MexProxy"><span class="type">MexProxy</span></a> *proxy</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexProxy.html#mex-proxy-start" title="mex_proxy_start ()">mex_proxy_start</a>                     (<em class="parameter"><code><a class="link" href="MexProxy.html" title="MexProxy"><span class="type">MexProxy</span></a> *proxy</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexProxy.html#mex-proxy-start-at" title="mex_proxy_start_at ()">mex_proxy_start_at</a>                  (<em class="parameter"><code><a class="link" href="MexProxy.html" title="MexProxy"><span class="type">MexProxy</span></a> *proxy</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexContent</span> *start_at_content</code></em>,
+                                                         <em class="parameter"><code><span class="type">gboolean</span> loop</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexProxy.html#mex-proxy-stop" title="mex_proxy_stop ()">mex_proxy_stop</a>                      (<em class="parameter"><code><a class="link" href="MexProxy.html" title="MexProxy"><span class="type">MexProxy</span></a> *proxy</code></em>);
+                    <a class="link" href="MexProxy.html#MexProxyPrivate" title="MexProxyPrivate">MexProxyPrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexProxy.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GObject
+   +----MexProxy
+         +----<a class="link" href="MexContentProxy.html" title="MexContentProxy">MexContentProxy</a>
+         +----<a class="link" href="MexGenericProxy.html" title="MexGenericProxy">MexGenericProxy</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexProxy.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="MexProxy.html#MexProxy--limit" title='The "limit" property'>limit</a>"                    <span class="type">guint</span>                 : Read / Write
+  "<a class="link" href="MexProxy.html#MexProxy--model" title='The "model" property'>model</a>"                    <span class="type">GObject</span>*              : Read / Write
+  "<a class="link" href="MexProxy.html#MexProxy--object-type" title='The "object-type" property'>object-type</a>"              <span class="type">GType</span>*                : Read / Write / Construct Only
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexProxy.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="MexProxy.html#MexProxy-object-created" title='The "object-created" signal'>object-created</a>"                                 : <code class="literal">Run Last</code>
+  "<a class="link" href="MexProxy.html#MexProxy-object-removed" title='The "object-removed" signal'>object-removed</a>"                                 : <code class="literal">Run First</code>
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexProxy.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="MexProxy.html" title="MexProxy"><span class="type">MexProxy</span></a> can also be used to limit the number of content items
+in the model which are translated to GObjects (see <a class="link" href="MexProxy.html#mex-proxy-set-limit" title="mex_proxy_set_limit ()"><code class="function">mex_proxy_set_limit()</code></a>),
+and reorder the content in a model (by changing the start point from
+which items are added: see <a class="link" href="MexProxy.html#mex-proxy-start-at" title="mex_proxy_start_at ()"><code class="function">mex_proxy_start_at()</code></a>).
+</p>
+</div>
+<div class="refsect1">
+<a name="MexProxy.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexProxy-struct"></a><h3>struct MexProxy</h3>
+<pre class="programlisting">struct MexProxy;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexProxyClass"></a><h3>struct MexProxyClass</h3>
+<pre class="programlisting">struct MexProxyClass {
+  GObjectClass parent_class;
+
+  void (*object_created) (MexProxy   *proxy,
+                          MexContent *content,
+                          GObject    *object);
+  void (*object_removed) (MexProxy   *proxy,
+                          MexContent *content,
+                          GObject    *object);
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-proxy-get-model"></a><h3>mex_proxy_get_model ()</h3>
+<pre class="programlisting"><span class="returnvalue">MexModel</span> *          mex_proxy_get_model                 (<em class="parameter"><code><a class="link" href="MexProxy.html" title="MexProxy"><span class="type">MexProxy</span></a> *proxy</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-proxy-get-object-type"></a><h3>mex_proxy_get_object_type ()</h3>
+<pre class="programlisting"><span class="returnvalue">GType</span>               mex_proxy_get_object_type           (<em class="parameter"><code><a class="link" href="MexProxy.html" title="MexProxy"><span class="type">MexProxy</span></a> *proxy</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-proxy-set-limit"></a><h3>mex_proxy_set_limit ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_proxy_set_limit                 (<em class="parameter"><code><a class="link" href="MexProxy.html" title="MexProxy"><span class="type">MexProxy</span></a> *proxy</code></em>,
+                                                         <em class="parameter"><code><span class="type">guint</span> limit</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-proxy-get-limit"></a><h3>mex_proxy_get_limit ()</h3>
+<pre class="programlisting"><span class="returnvalue">guint</span>               mex_proxy_get_limit                 (<em class="parameter"><code><a class="link" href="MexProxy.html" title="MexProxy"><span class="type">MexProxy</span></a> *proxy</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-proxy-start"></a><h3>mex_proxy_start ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_proxy_start                     (<em class="parameter"><code><a class="link" href="MexProxy.html" title="MexProxy"><span class="type">MexProxy</span></a> *proxy</code></em>);</pre>
+<p>
+Add all content items to a proxy from its associated model;
+see also <a class="link" href="MexProxy.html#mex-proxy-start-at" title="mex_proxy_start_at ()"><code class="function">mex_proxy_start_at()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>proxy</code></em> :</span></p></td>
+<td>Proxy to add content to</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-proxy-start-at"></a><h3>mex_proxy_start_at ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_proxy_start_at                  (<em class="parameter"><code><a class="link" href="MexProxy.html" title="MexProxy"><span class="type">MexProxy</span></a> *proxy</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexContent</span> *start_at_content</code></em>,
+                                                         <em class="parameter"><code><span class="type">gboolean</span> loop</code></em>);</pre>
+<p>
+Add content from a model to a proxy.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>proxy</code></em> :</span></p></td>
+<td>Proxy to add content to</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>start_at_content</code></em> :</span></p></td>
+<td>First content item in the model to add to
+the proxy</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>loop</code></em> :</span></p></td>
+<td>Whether to loop back to the beginning of the
+associated <span class="type">MexModel</span>'s content items once the last item is reached;
+if <code class="literal">TRUE</code>, content items before the <em class="parameter"><code>start_at_content</code></em> will be
+added once the last of the model's content items is reached;
+if <code class="literal">FALSE</code>, only content items from <em class="parameter"><code>start_at_content</code></em> to the last of
+the model's content items are added</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-proxy-stop"></a><h3>mex_proxy_stop ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_proxy_stop                      (<em class="parameter"><code><a class="link" href="MexProxy.html" title="MexProxy"><span class="type">MexProxy</span></a> *proxy</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexProxyPrivate"></a><h3>MexProxyPrivate</h3>
+<pre class="programlisting">typedef struct _MexProxyPrivate MexProxyPrivate;</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="MexProxy.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="MexProxy--limit"></a><h3>The <code class="literal">"limit"</code> property</h3>
+<pre class="programlisting">  "limit"                    <span class="type">guint</span>                 : Read / Write</pre>
+<p>Limit on number of objects created.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexProxy--model"></a><h3>The <code class="literal">"model"</code> property</h3>
+<pre class="programlisting">  "model"                    <span class="type">GObject</span>*              : Read / Write</pre>
+<p>MexModel the proxy is listening to.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexProxy--object-type"></a><h3>The <code class="literal">"object-type"</code> property</h3>
+<pre class="programlisting">  "object-type"              <span class="type">GType</span>*                : Read / Write / Construct Only</pre>
+<p>GType for creating GObjects.</p>
+<p>Allowed values: GObject</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="MexProxy.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="MexProxy-object-created"></a><h3>The <code class="literal">"object-created"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="MexProxy.html" title="MexProxy"><span class="type">MexProxy</span></a> *mexproxy,
+                                                        <span class="type">GObject</span>  *arg1,
+                                                        <span class="type">GObject</span>  *arg2,
+                                                        <span class="type">gpointer</span>  user_data)      : <code class="literal">Run Last</code></pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexProxy-object-removed"></a><h3>The <code class="literal">"object-removed"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="MexProxy.html" title="MexProxy"><span class="type">MexProxy</span></a> *mexproxy,
+                                                        <span class="type">GObject</span>  *arg1,
+                                                        <span class="type">GObject</span>  *arg2,
+                                                        <span class="type">gpointer</span>  user_data)      : <code class="literal">Run First</code></pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

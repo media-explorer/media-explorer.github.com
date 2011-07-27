@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexColumn</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch08.html" title="Container widgets">
+<link rel="prev" href="mex-MexAspectFrame.html" title="MexAspectFrame">
+<link rel="next" href="mex-MexExpanderBox.html" title="MexExpanderBox">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="mex-MexAspectFrame.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch08.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="mex-MexExpanderBox.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-MexColumn.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-MexColumn.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-MexColumn"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-MexColumn.top_of_page"></a>MexColumn</span></h2>
+<p>MexColumn</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-MexColumn.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="mex-MexColumn.html#MexColumn" title="struct MexColumn">MexColumn</a>;
+struct              <a class="link" href="mex-MexColumn.html#MexColumnClass" title="struct MexColumnClass">MexColumnClass</a>;
+<a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      <a class="link" href="mex-MexColumn.html#mex-column-new" title="mex_column_new ()">mex_column_new</a>                      (<em class="parameter"><code>const <span class="type">char</span> *label</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *icon_name</code></em>);
+const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="mex-MexColumn.html#mex-column-get-label" title="mex_column_get_label ()">mex_column_get_label</a>                (<em class="parameter"><code><a class="link" href="mex-MexColumn.html#MexColumn" title="struct MexColumn"><span class="type">MexColumn</span></a> *column</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexColumn.html#mex-column-set-label" title="mex_column_set_label ()">mex_column_set_label</a>                (<em class="parameter"><code><a class="link" href="mex-MexColumn.html#MexColumn" title="struct MexColumn"><span class="type">MexColumn</span></a> *column</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *label</code></em>);
+const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="mex-MexColumn.html#mex-column-get-icon-name" title="mex_column_get_icon_name ()">mex_column_get_icon_name</a>            (<em class="parameter"><code><a class="link" href="mex-MexColumn.html#MexColumn" title="struct MexColumn"><span class="type">MexColumn</span></a> *column</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexColumn.html#mex-column-set-icon-name" title="mex_column_set_icon_name ()">mex_column_set_icon_name</a>            (<em class="parameter"><code><a class="link" href="mex-MexColumn.html#MexColumn" title="struct MexColumn"><span class="type">MexColumn</span></a> *column</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);
+<a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      <a class="link" href="mex-MexColumn.html#mex-column-get-placeholder-actor" title="mex_column_get_placeholder_actor ()">mex_column_get_placeholder_actor</a>    (<em class="parameter"><code><a class="link" href="mex-MexColumn.html#MexColumn" title="struct MexColumn"><span class="type">MexColumn</span></a> *column</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexColumn.html#mex-column-set-placeholder-actor" title="mex_column_set_placeholder_actor ()">mex_column_set_placeholder_actor</a>    (<em class="parameter"><code><a class="link" href="mex-MexColumn.html#MexColumn" title="struct MexColumn"><span class="type">MexColumn</span></a> *column</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> *label</code></em>);
+                    <a class="link" href="mex-MexColumn.html#MexColumnPrivate" title="MexColumnPrivate">MexColumnPrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-MexColumn.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="mex-MexColumn.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexColumn"></a><h3>struct MexColumn</h3>
+<pre class="programlisting">struct MexColumn {
+  MxWidget parent;
+
+  MexColumnPrivate *priv;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexColumnClass"></a><h3>struct MexColumnClass</h3>
+<pre class="programlisting">struct MexColumnClass {
+  MxWidgetClass parent_class;
+
+  /* signals */
+  void (* activated) (MexColumn *self);
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-column-new"></a><h3>mex_column_new ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      mex_column_new                      (<em class="parameter"><code>const <span class="type">char</span> *label</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *icon_name</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-column-get-label"></a><h3>mex_column_get_label ()</h3>
+<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       mex_column_get_label                (<em class="parameter"><code><a class="link" href="mex-MexColumn.html#MexColumn" title="struct MexColumn"><span class="type">MexColumn</span></a> *column</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-column-set-label"></a><h3>mex_column_set_label ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_column_set_label                (<em class="parameter"><code><a class="link" href="mex-MexColumn.html#MexColumn" title="struct MexColumn"><span class="type">MexColumn</span></a> *column</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *label</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-column-get-icon-name"></a><h3>mex_column_get_icon_name ()</h3>
+<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       mex_column_get_icon_name            (<em class="parameter"><code><a class="link" href="mex-MexColumn.html#MexColumn" title="struct MexColumn"><span class="type">MexColumn</span></a> *column</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-column-set-icon-name"></a><h3>mex_column_set_icon_name ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_column_set_icon_name            (<em class="parameter"><code><a class="link" href="mex-MexColumn.html#MexColumn" title="struct MexColumn"><span class="type">MexColumn</span></a> *column</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-column-get-placeholder-actor"></a><h3>mex_column_get_placeholder_actor ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      mex_column_get_placeholder_actor    (<em class="parameter"><code><a class="link" href="mex-MexColumn.html#MexColumn" title="struct MexColumn"><span class="type">MexColumn</span></a> *column</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-column-set-placeholder-actor"></a><h3>mex_column_set_placeholder_actor ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_column_set_placeholder_actor    (<em class="parameter"><code><a class="link" href="mex-MexColumn.html#MexColumn" title="struct MexColumn"><span class="type">MexColumn</span></a> *column</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="type">ClutterActor</span></a> *label</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexColumnPrivate"></a><h3>MexColumnPrivate</h3>
+<pre class="programlisting">typedef struct _MexColumnPrivate MexColumnPrivate;</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

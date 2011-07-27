@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexProxy</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch04.html" title="Abstract classes and interfaces">
+<link rel="prev" href="mex-MexModel.html" title="MexModel">
+<link rel="next" href="ch05.html" title="Plugin-specific interfaces">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="mex-MexModel.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch04.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="ch05.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-MexProxy.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-MexProxy.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-MexProxy"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-MexProxy.top_of_page"></a>MexProxy</span></h2>
+<p>MexProxy — An abstract proxy for mapping <span class="type">MexModel</span>
+content items to arbitrary <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject"><span class="type">GObjects</span></a>.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-MexProxy.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="mex-MexProxy.html#MexProxy" title="struct MexProxy">MexProxy</a>;
+struct              <a class="link" href="mex-MexProxy.html#MexProxyClass" title="struct MexProxyClass">MexProxyClass</a>;
+<span class="returnvalue">MexModel</span> *          <a class="link" href="mex-MexProxy.html#mex-proxy-get-model" title="mex_proxy_get_model ()">mex_proxy_get_model</a>                 (<em class="parameter"><code><a class="link" href="mex-MexProxy.html#MexProxy" title="struct MexProxy"><span class="type">MexProxy</span></a> *proxy</code></em>);
+<a href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="returnvalue">GType</span></a>               <a class="link" href="mex-MexProxy.html#mex-proxy-get-object-type" title="mex_proxy_get_object_type ()">mex_proxy_get_object_type</a>           (<em class="parameter"><code><a class="link" href="mex-MexProxy.html#MexProxy" title="struct MexProxy"><span class="type">MexProxy</span></a> *proxy</code></em>);
+                    <a class="link" href="mex-MexProxy.html#MexProxyPrivate" title="MexProxyPrivate">MexProxyPrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-MexProxy.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="mex-MexProxy.html#MexProxy" title="struct MexProxy"><span class="type">MexProxy</span></a> can also be used to limit the number of content items
+in the model which are translated to GObjects (see <a href="/usr/share/gtk-doc/html/html/mex/mex-MexProxy.html#mex-proxy-set-limit"><code class="function">mex_proxy_set_limit()</code></a>),
+and reorder the content in a model (by changing the start point from
+which items are added: see <a href="/usr/share/gtk-doc/html/html/mex/mex-MexProxy.html#mex-proxy-start-at"><code class="function">mex_proxy_start_at()</code></a>).
+</p>
+</div>
+<div class="refsect1">
+<a name="mex-MexProxy.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexProxy"></a><h3>struct MexProxy</h3>
+<pre class="programlisting">struct MexProxy {
+  GObject parent;
+
+  MexProxyPrivate *priv;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexProxyClass"></a><h3>struct MexProxyClass</h3>
+<pre class="programlisting">struct MexProxyClass {
+  GObjectClass parent_class;
+
+  void (*object_created) (MexProxy   *proxy,
+                          MexContent *content,
+                          GObject    *object);
+  void (*object_removed) (MexProxy   *proxy,
+                          MexContent *content,
+                          GObject    *object);
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-proxy-get-model"></a><h3>mex_proxy_get_model ()</h3>
+<pre class="programlisting"><span class="returnvalue">MexModel</span> *          mex_proxy_get_model                 (<em class="parameter"><code><a class="link" href="mex-MexProxy.html#MexProxy" title="struct MexProxy"><span class="type">MexProxy</span></a> *proxy</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-proxy-get-object-type"></a><h3>mex_proxy_get_object_type ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="returnvalue">GType</span></a>               mex_proxy_get_object_type           (<em class="parameter"><code><a class="link" href="mex-MexProxy.html#MexProxy" title="struct MexProxy"><span class="type">MexProxy</span></a> *proxy</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexProxyPrivate"></a><h3>MexProxyPrivate</h3>
+<pre class="programlisting">typedef struct _MexProxyPrivate MexProxyPrivate;</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

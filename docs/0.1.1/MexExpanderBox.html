@@ -1,0 +1,416 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexExpanderBox</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch08.html" title="Container widgets">
+<link rel="prev" href="MexColumn.html" title="MexColumn">
+<link rel="next" href="MexExplorer.html" title="MexExplorer">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="MexColumn.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch08.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="MexExplorer.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#MexExpanderBox.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#MexExpanderBox.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#MexExpanderBox.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#MexExpanderBox.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#MexExpanderBox.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="MexExpanderBox"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="MexExpanderBox.top_of_page"></a>MexExpanderBox</span></h2>
+<p>MexExpanderBox</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="MexExpanderBox.synopsis"></a><h2>Synopsis</h2>
+<a name="MexExpanderBoxDirection"></a><pre class="synopsis">struct              <a class="link" href="MexExpanderBox.html#MexExpanderBox-struct" title="struct MexExpanderBox">MexExpanderBox</a>;
+struct              <a class="link" href="MexExpanderBox.html#MexExpanderBoxClass" title="struct MexExpanderBoxClass">MexExpanderBoxClass</a>;
+enum                <a class="link" href="MexExpanderBox.html#MexExpanderBoxDirection">MexExpanderBoxDirection</a>;
+<span class="returnvalue">ClutterActor</span> *      <a class="link" href="MexExpanderBox.html#mex-expander-box-new" title="mex_expander_box_new ()">mex_expander_box_new</a>                (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexExpanderBox.html#mex-expander-box-set-primary-child" title="mex_expander_box_set_primary_child ()">mex_expander_box_set_primary_child</a>  (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>,
+                                                         <em class="parameter"><code><span class="type">ClutterActor</span> *actor</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexExpanderBox.html#mex-expander-box-set-secondary-child" title="mex_expander_box_set_secondary_child ()">mex_expander_box_set_secondary_child</a>
+                                                        (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>,
+                                                         <em class="parameter"><code><span class="type">ClutterActor</span> *actor</code></em>);
+<span class="returnvalue">ClutterActor</span> *      <a class="link" href="MexExpanderBox.html#mex-expander-box-get-primary-child" title="mex_expander_box_get_primary_child ()">mex_expander_box_get_primary_child</a>  (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>);
+<span class="returnvalue">ClutterActor</span> *      <a class="link" href="MexExpanderBox.html#mex-expander-box-get-secondary-child" title="mex_expander_box_get_secondary_child ()">mex_expander_box_get_secondary_child</a>
+                                                        (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexExpanderBox.html#mex-expander-box-set-grow-direction" title="mex_expander_box_set_grow_direction ()">mex_expander_box_set_grow_direction</a> (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="MexExpanderBox.html#MexExpanderBoxDirection"><span class="type">MexExpanderBoxDirection</span></a> direction</code></em>);
+<a class="link" href="MexExpanderBox.html#MexExpanderBoxDirection"><span class="returnvalue">MexExpanderBoxDirection</span></a>  <a class="link" href="MexExpanderBox.html#mex-expander-box-get-grow-direction" title="mex_expander_box_get_grow_direction ()">mex_expander_box_get_grow_direction</a>
+                                                        (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexExpanderBox.html#mex-expander-box-set-important" title="mex_expander_box_set_important ()">mex_expander_box_set_important</a>      (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>,
+                                                         <em class="parameter"><code><span class="type">gboolean</span> important</code></em>);
+<span class="returnvalue">gboolean</span>            <a class="link" href="MexExpanderBox.html#mex-expander-box-get-important" title="mex_expander_box_get_important ()">mex_expander_box_get_important</a>      (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexExpanderBox.html#mex-expander-box-set-important-on-focus" title="mex_expander_box_set_important_on_focus ()">mex_expander_box_set_important_on_focus</a>
+                                                        (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>,
+                                                         <em class="parameter"><code><span class="type">gboolean</span> important_on_focus</code></em>);
+<span class="returnvalue">gboolean</span>            <a class="link" href="MexExpanderBox.html#mex-expander-box-get-important-on-focus" title="mex_expander_box_get_important_on_focus ()">mex_expander_box_get_important_on_focus</a>
+                                                        (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexExpanderBox.html#mex-expander-box-set-open" title="mex_expander_box_set_open ()">mex_expander_box_set_open</a>           (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>,
+                                                         <em class="parameter"><code><span class="type">gboolean</span> open</code></em>);
+<span class="returnvalue">gboolean</span>            <a class="link" href="MexExpanderBox.html#mex-expander-box-get-open" title="mex_expander_box_get_open ()">mex_expander_box_get_open</a>           (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexExpanderBox.html#mex-expander-box-set-open-on-focus" title="mex_expander_box_set_open_on_focus ()">mex_expander_box_set_open_on_focus</a>  (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>,
+                                                         <em class="parameter"><code><span class="type">gboolean</span> open</code></em>);
+<span class="returnvalue">gboolean</span>            <a class="link" href="MexExpanderBox.html#mex-expander-box-get-open-on-focus" title="mex_expander_box_get_open_on_focus ()">mex_expander_box_get_open_on_focus</a>  (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexExpanderBox.html#mex-expander-box-set-close-on-unfocus" title="mex_expander_box_set_close_on_unfocus ()">mex_expander_box_set_close_on_unfocus</a>
+                                                        (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>,
+                                                         <em class="parameter"><code><span class="type">gboolean</span> close_on_unfocus</code></em>);
+<span class="returnvalue">gboolean</span>            <a class="link" href="MexExpanderBox.html#mex-expander-box-get-close-on-unfocus" title="mex_expander_box_get_close_on_unfocus ()">mex_expander_box_get_close_on_unfocus</a>
+                                                        (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexExpanderBox.html#mex-expander-box-set-expand" title="mex_expander_box_set_expand ()">mex_expander_box_set_expand</a>         (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>,
+                                                         <em class="parameter"><code><span class="type">gboolean</span> expand</code></em>);
+<span class="returnvalue">gboolean</span>            <a class="link" href="MexExpanderBox.html#mex-expander-box-get-expand" title="mex_expander_box_get_expand ()">mex_expander_box_get_expand</a>         (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexExpanderBox.html#mex-expander-box-set-max-size" title="mex_expander_box_set_max_size ()">mex_expander_box_set_max_size</a>       (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>,
+                                                         <em class="parameter"><code><span class="type">gboolean</span> primary</code></em>,
+                                                         <em class="parameter"><code><span class="type">gfloat</span> max_width</code></em>,
+                                                         <em class="parameter"><code><span class="type">gfloat</span> max_height</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexExpanderBox.html#mex-expander-box-get-max-size" title="mex_expander_box_get_max_size ()">mex_expander_box_get_max_size</a>       (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>,
+                                                         <em class="parameter"><code><span class="type">gboolean</span> primary</code></em>,
+                                                         <em class="parameter"><code><span class="type">gfloat</span> *max_width</code></em>,
+                                                         <em class="parameter"><code><span class="type">gfloat</span> *max_height</code></em>);
+                    <a class="link" href="MexExpanderBox.html#MexExpanderBoxPrivate" title="MexExpanderBoxPrivate">MexExpanderBoxPrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexExpanderBox.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GObject
+   +----GInitiallyUnowned
+         +----ClutterActor
+               +----MxWidget
+                     +----MexExpanderBox
+                           +----<a class="link" href="MexContentBox.html" title="MexContentBox">MexContentBox</a>
+</pre>
+<pre class="synopsis">
+  GEnum
+   +----MexExpanderBoxDirection
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexExpanderBox.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+MexExpanderBox implements
+ ClutterScriptable,  ClutterAnimatable,  AtkImplementorIface,  MxStylable,  ClutterContainer and  MxFocusable.</p>
+</div>
+<div class="refsect1">
+<a name="MexExpanderBox.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="MexExpanderBox.html#MexExpanderBox--close-on-unfocus" title='The "close-on-unfocus" property'>close-on-unfocus</a>"         <span class="type">gboolean</span>              : Read / Write
+  "<a class="link" href="MexExpanderBox.html#MexExpanderBox--expand" title='The "expand" property'>expand</a>"                   <span class="type">gboolean</span>              : Read / Write
+  "<a class="link" href="MexExpanderBox.html#MexExpanderBox--grow-direction" title='The "grow-direction" property'>grow-direction</a>"           <a class="link" href="MexExpanderBox.html#MexExpanderBoxDirection"><span class="type">MexExpanderBoxDirection</span></a>  : Read / Write
+  "<a class="link" href="MexExpanderBox.html#MexExpanderBox--important" title='The "important" property'>important</a>"                <span class="type">gboolean</span>              : Read / Write
+  "<a class="link" href="MexExpanderBox.html#MexExpanderBox--important-on-focus" title='The "important-on-focus" property'>important-on-focus</a>"       <span class="type">gboolean</span>              : Read / Write
+  "<a class="link" href="MexExpanderBox.html#MexExpanderBox--open" title='The "open" property'>open</a>"                     <span class="type">gboolean</span>              : Read / Write
+  "<a class="link" href="MexExpanderBox.html#MexExpanderBox--open-on-focus" title='The "open-on-focus" property'>open-on-focus</a>"            <span class="type">gboolean</span>              : Read / Write
+  "<a class="link" href="MexExpanderBox.html#MexExpanderBox--primary-child" title='The "primary-child" property'>primary-child</a>"            <span class="type">ClutterActor</span>*         : Read / Write
+  "<a class="link" href="MexExpanderBox.html#MexExpanderBox--secondary-child" title='The "secondary-child" property'>secondary-child</a>"          <span class="type">ClutterActor</span>*         : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexExpanderBox.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="MexExpanderBox.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexExpanderBox-struct"></a><h3>struct MexExpanderBox</h3>
+<pre class="programlisting">struct MexExpanderBox;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexExpanderBoxClass"></a><h3>struct MexExpanderBoxClass</h3>
+<pre class="programlisting">struct MexExpanderBoxClass {
+  MxWidgetClass parent_class;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexExpanderBoxDirection"></a><h3>enum MexExpanderBoxDirection</h3>
+<pre class="programlisting">typedef enum
+{
+  MEX_EXPANDER_BOX_UP,
+  MEX_EXPANDER_BOX_RIGHT,
+  MEX_EXPANDER_BOX_DOWN,
+  MEX_EXPANDER_BOX_LEFT
+} MexExpanderBoxDirection;
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-expander-box-new"></a><h3>mex_expander_box_new ()</h3>
+<pre class="programlisting"><span class="returnvalue">ClutterActor</span> *      mex_expander_box_new                (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-expander-box-set-primary-child"></a><h3>mex_expander_box_set_primary_child ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_expander_box_set_primary_child  (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>,
+                                                         <em class="parameter"><code><span class="type">ClutterActor</span> *actor</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-expander-box-set-secondary-child"></a><h3>mex_expander_box_set_secondary_child ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_expander_box_set_secondary_child
+                                                        (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>,
+                                                         <em class="parameter"><code><span class="type">ClutterActor</span> *actor</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-expander-box-get-primary-child"></a><h3>mex_expander_box_get_primary_child ()</h3>
+<pre class="programlisting"><span class="returnvalue">ClutterActor</span> *      mex_expander_box_get_primary_child  (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-expander-box-get-secondary-child"></a><h3>mex_expander_box_get_secondary_child ()</h3>
+<pre class="programlisting"><span class="returnvalue">ClutterActor</span> *      mex_expander_box_get_secondary_child
+                                                        (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-expander-box-set-grow-direction"></a><h3>mex_expander_box_set_grow_direction ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_expander_box_set_grow_direction (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="MexExpanderBox.html#MexExpanderBoxDirection"><span class="type">MexExpanderBoxDirection</span></a> direction</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-expander-box-get-grow-direction"></a><h3>mex_expander_box_get_grow_direction ()</h3>
+<pre class="programlisting"><a class="link" href="MexExpanderBox.html#MexExpanderBoxDirection"><span class="returnvalue">MexExpanderBoxDirection</span></a>  mex_expander_box_get_grow_direction
+                                                        (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-expander-box-set-important"></a><h3>mex_expander_box_set_important ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_expander_box_set_important      (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>,
+                                                         <em class="parameter"><code><span class="type">gboolean</span> important</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-expander-box-get-important"></a><h3>mex_expander_box_get_important ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            mex_expander_box_get_important      (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-expander-box-set-important-on-focus"></a><h3>mex_expander_box_set_important_on_focus ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_expander_box_set_important_on_focus
+                                                        (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>,
+                                                         <em class="parameter"><code><span class="type">gboolean</span> important_on_focus</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-expander-box-get-important-on-focus"></a><h3>mex_expander_box_get_important_on_focus ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            mex_expander_box_get_important_on_focus
+                                                        (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-expander-box-set-open"></a><h3>mex_expander_box_set_open ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_expander_box_set_open           (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>,
+                                                         <em class="parameter"><code><span class="type">gboolean</span> open</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-expander-box-get-open"></a><h3>mex_expander_box_get_open ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            mex_expander_box_get_open           (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-expander-box-set-open-on-focus"></a><h3>mex_expander_box_set_open_on_focus ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_expander_box_set_open_on_focus  (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>,
+                                                         <em class="parameter"><code><span class="type">gboolean</span> open</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-expander-box-get-open-on-focus"></a><h3>mex_expander_box_get_open_on_focus ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            mex_expander_box_get_open_on_focus  (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-expander-box-set-close-on-unfocus"></a><h3>mex_expander_box_set_close_on_unfocus ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_expander_box_set_close_on_unfocus
+                                                        (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>,
+                                                         <em class="parameter"><code><span class="type">gboolean</span> close_on_unfocus</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-expander-box-get-close-on-unfocus"></a><h3>mex_expander_box_get_close_on_unfocus ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            mex_expander_box_get_close_on_unfocus
+                                                        (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-expander-box-set-expand"></a><h3>mex_expander_box_set_expand ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_expander_box_set_expand         (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>,
+                                                         <em class="parameter"><code><span class="type">gboolean</span> expand</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-expander-box-get-expand"></a><h3>mex_expander_box_get_expand ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            mex_expander_box_get_expand         (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-expander-box-set-max-size"></a><h3>mex_expander_box_set_max_size ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_expander_box_set_max_size       (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>,
+                                                         <em class="parameter"><code><span class="type">gboolean</span> primary</code></em>,
+                                                         <em class="parameter"><code><span class="type">gfloat</span> max_width</code></em>,
+                                                         <em class="parameter"><code><span class="type">gfloat</span> max_height</code></em>);</pre>
+<p>
+Note this function must be called after populating the box. Adding an
+actor resets its set max_width/max_height to -1
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>box</code></em> :</span></p></td>
+<td>The expander box</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>primary</code></em> :</span></p></td>
+<td>
+<code class="literal">TRUE</code> to set the limit on the primary child, <code class="literal">FALSE</code> for the
+secondary.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>max_width</code></em> :</span></p></td>
+<td>Maximum width for the child in the <em class="parameter"><code>position</code></em> to be limited to
+or -1 to use the natural width.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>max_height</code></em> :</span></p></td>
+<td>Maximum height for the child in the <em class="parameter"><code>position</code></em> to be limited to
+or -1 to use the natural height.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-expander-box-get-max-size"></a><h3>mex_expander_box_get_max_size ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_expander_box_get_max_size       (<em class="parameter"><code><a class="link" href="MexExpanderBox.html" title="MexExpanderBox"><span class="type">MexExpanderBox</span></a> *box</code></em>,
+                                                         <em class="parameter"><code><span class="type">gboolean</span> primary</code></em>,
+                                                         <em class="parameter"><code><span class="type">gfloat</span> *max_width</code></em>,
+                                                         <em class="parameter"><code><span class="type">gfloat</span> *max_height</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>box</code></em> :</span></p></td>
+<td>The expander box</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>primary</code></em> :</span></p></td>
+<td>
+<code class="literal">TRUE</code> to get the limit on the primary child, <code class="literal">FALSE</code> for the
+secondary.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>max_width</code></em> :</span></p></td>
+<td>Out variable for maximum width that the child in
+<em class="parameter"><code>position</code></em> is limited to or -1 if it's not limited. <span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>max_height</code></em> :</span></p></td>
+<td>Out variable for maximum height that the child in
+<em class="parameter"><code>position</code></em> is limited to or -1 if it's not limited. <span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexExpanderBoxPrivate"></a><h3>MexExpanderBoxPrivate</h3>
+<pre class="programlisting">typedef struct _MexExpanderBoxPrivate MexExpanderBoxPrivate;</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="MexExpanderBox.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="MexExpanderBox--close-on-unfocus"></a><h3>The <code class="literal">"close-on-unfocus"</code> property</h3>
+<pre class="programlisting">  "close-on-unfocus"         <span class="type">gboolean</span>              : Read / Write</pre>
+<p>Close the expander when it loses focus.</p>
+<p>Default value: TRUE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexExpanderBox--expand"></a><h3>The <code class="literal">"expand"</code> property</h3>
+<pre class="programlisting">  "expand"                   <span class="type">gboolean</span>              : Read / Write</pre>
+<p>Expand into allocated space.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexExpanderBox--grow-direction"></a><h3>The <code class="literal">"grow-direction"</code> property</h3>
+<pre class="programlisting">  "grow-direction"           <a class="link" href="MexExpanderBox.html#MexExpanderBoxDirection"><span class="type">MexExpanderBoxDirection</span></a>  : Read / Write</pre>
+<p>Expand direction of the secondary child.</p>
+<p>Default value: MEX_EXPANDER_BOX_DOWN</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexExpanderBox--important"></a><h3>The <code class="literal">"important"</code> property</h3>
+<pre class="programlisting">  "important"                <span class="type">gboolean</span>              : Read / Write</pre>
+<p>Whether the centre child should be displayed, regardless of focus.</p>
+<p>Default value: TRUE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexExpanderBox--important-on-focus"></a><h3>The <code class="literal">"important-on-focus"</code> property</h3>
+<pre class="programlisting">  "important-on-focus"       <span class="type">gboolean</span>              : Read / Write</pre>
+<p>Mark the box as important when it receives focus.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexExpanderBox--open"></a><h3>The <code class="literal">"open"</code> property</h3>
+<pre class="programlisting">  "open"                     <span class="type">gboolean</span>              : Read / Write</pre>
+<p>Whether the expander are open.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexExpanderBox--open-on-focus"></a><h3>The <code class="literal">"open-on-focus"</code> property</h3>
+<pre class="programlisting">  "open-on-focus"            <span class="type">gboolean</span>              : Read / Write</pre>
+<p>Open the expander when it receives focus.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexExpanderBox--primary-child"></a><h3>The <code class="literal">"primary-child"</code> property</h3>
+<pre class="programlisting">  "primary-child"            <span class="type">ClutterActor</span>*         : Read / Write</pre>
+<p>Primary child of the widget.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexExpanderBox--secondary-child"></a><h3>The <code class="literal">"secondary-child"</code> property</h3>
+<pre class="programlisting">  "secondary-child"          <span class="type">ClutterActor</span>*         : Read / Write</pre>
+<p>Child that expands out of the widget.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

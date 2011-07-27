@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexModelManager</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch07.html" title="Model classes">
+<link rel="prev" href="MexGriloTrackerFeed.html" title="MexGriloTrackerFeed">
+<link rel="next" href="MexProgram.html" title="MexProgram">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="MexGriloTrackerFeed.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch07.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="MexProgram.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#MexModelManager.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#MexModelManager.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#MexModelManager.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#MexModelManager.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="MexModelManager"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="MexModelManager.top_of_page"></a>MexModelManager</span></h2>
+<p>MexModelManager</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="MexModelManager.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="MexModelManager.html#MexModelManager-struct" title="struct MexModelManager">MexModelManager</a>;
+struct              <a class="link" href="MexModelManager.html#MexModelManagerClass" title="struct MexModelManagerClass">MexModelManagerClass</a>;
+<a class="link" href="MexModelManager.html" title="MexModelManager"><span class="returnvalue">MexModelManager</span></a> *   <a class="link" href="MexModelManager.html#mex-model-manager-get-default" title="mex_model_manager_get_default ()">mex_model_manager_get_default</a>       ();
+<span class="returnvalue">GList</span> *             <a class="link" href="MexModelManager.html#mex-model-manager-get-models" title="mex_model_manager_get_models ()">mex_model_manager_get_models</a>        (<em class="parameter"><code><a class="link" href="MexModelManager.html" title="MexModelManager"><span class="type">MexModelManager</span></a> *manager</code></em>);
+<span class="returnvalue">GList</span> *             <a class="link" href="MexModelManager.html#mex-model-manager-get-models-for-category" title="mex_model_manager_get_models_for_category ()">mex_model_manager_get_models_for_category</a>
+                                                        (<em class="parameter"><code><a class="link" href="MexModelManager.html" title="MexModelManager"><span class="type">MexModelManager</span></a> *manager</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *category</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexModelManager.html#mex-model-manager-add-model" title="mex_model_manager_add_model ()">mex_model_manager_add_model</a>         (<em class="parameter"><code><a class="link" href="MexModelManager.html" title="MexModelManager"><span class="type">MexModelManager</span></a> *manager</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">MexModelInfo</span> *info</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexModelManager.html#mex-model-manager-remove-model" title="mex_model_manager_remove_model ()">mex_model_manager_remove_model</a>      (<em class="parameter"><code><a class="link" href="MexModelManager.html" title="MexModelManager"><span class="type">MexModelManager</span></a> *manager</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *model</code></em>);
+const <span class="returnvalue">MexModelInfo</span> * <a class="link" href="MexModelManager.html#mex-model-manager-get-model-info" title="mex_model_manager_get_model_info ()">mex_model_manager_get_model_info</a>   (<em class="parameter"><code><a class="link" href="MexModelManager.html" title="MexModelManager"><span class="type">MexModelManager</span></a> *manager</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *model</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexModelManager.html#mex-model-manager-add-category" title="mex_model_manager_add_category ()">mex_model_manager_add_category</a>      (<em class="parameter"><code><a class="link" href="MexModelManager.html" title="MexModelManager"><span class="type">MexModelManager</span></a> *manager</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">MexModelCategoryInfo</span> *info</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexModelManager.html#mex-model-manager-remove-category" title="mex_model_manager_remove_category ()">mex_model_manager_remove_category</a>   (<em class="parameter"><code><a class="link" href="MexModelManager.html" title="MexModelManager"><span class="type">MexModelManager</span></a> *manager</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *name</code></em>);
+<span class="returnvalue">GList</span> *             <a class="link" href="MexModelManager.html#mex-model-manager-get-categories" title="mex_model_manager_get_categories ()">mex_model_manager_get_categories</a>    (<em class="parameter"><code><a class="link" href="MexModelManager.html" title="MexModelManager"><span class="type">MexModelManager</span></a> *manager</code></em>);
+const <span class="returnvalue">MexModelCategoryInfo</span> * <a class="link" href="MexModelManager.html#mex-model-manager-get-category-info" title="mex_model_manager_get_category_info ()">mex_model_manager_get_category_info</a>
+                                                        (<em class="parameter"><code><a class="link" href="MexModelManager.html" title="MexModelManager"><span class="type">MexModelManager</span></a> *manager</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *name</code></em>);
+<span class="returnvalue">MexModelInfo</span> *      <a class="link" href="MexModelManager.html#mex-model-info-new" title="mex_model_info_new ()">mex_model_info_new</a>                  (<em class="parameter"><code><span class="type">MexModel</span> *model</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *category</code></em>,
+                                                         <em class="parameter"><code><span class="type">gint</span> priority</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *first_sort_func_name</code></em>,
+                                                         <em class="parameter"><code>...</code></em>);
+<span class="returnvalue">MexModelInfo</span> *      <a class="link" href="MexModelManager.html#mex-model-info-copy" title="mex_model_info_copy ()">mex_model_info_copy</a>                 (<em class="parameter"><code>const <span class="type">MexModelInfo</span> *info</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="MexModelManager.html#mex-model-info-free" title="mex_model_info_free ()">mex_model_info_free</a>                 (<em class="parameter"><code><span class="type">MexModelInfo</span> *info</code></em>);
+                    <a class="link" href="MexModelManager.html#MexModelManagerPrivate" title="MexModelManagerPrivate">MexModelManagerPrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexModelManager.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GObject
+   +----MexModelManager
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexModelManager.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="MexModelManager.html#MexModelManager-categories-changed" title='The "categories-changed" signal'>categories-changed</a>"                             : <code class="literal">Run Last</code>
+  "<a class="link" href="MexModelManager.html#MexModelManager-model-added" title='The "model-added" signal'>model-added</a>"                                    : <code class="literal">Run Last</code>
+  "<a class="link" href="MexModelManager.html#MexModelManager-model-removed" title='The "model-removed" signal'>model-removed</a>"                                  : <code class="literal">Run Last</code>
+</pre>
+</div>
+<div class="refsect1">
+<a name="MexModelManager.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="MexModelManager.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexModelManager-struct"></a><h3>struct MexModelManager</h3>
+<pre class="programlisting">struct MexModelManager;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexModelManagerClass"></a><h3>struct MexModelManagerClass</h3>
+<pre class="programlisting">struct MexModelManagerClass {
+  GObjectClass parent_class;
+
+  void (* model_added)   (MexModelManager    *manager,
+                          const MexModelInfo *info);
+  void (* model_removed) (MexModelManager *manager,
+                          MexModel        *model,
+                          const gchar     *category);
+
+  void (* categories_changed) (MexModelManager *manager);
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-model-manager-get-default"></a><h3>mex_model_manager_get_default ()</h3>
+<pre class="programlisting"><a class="link" href="MexModelManager.html" title="MexModelManager"><span class="returnvalue">MexModelManager</span></a> *   mex_model_manager_get_default       ();</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-model-manager-get-models"></a><h3>mex_model_manager_get_models ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *             mex_model_manager_get_models        (<em class="parameter"><code><a class="link" href="MexModelManager.html" title="MexModelManager"><span class="type">MexModelManager</span></a> *manager</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-model-manager-get-models-for-category"></a><h3>mex_model_manager_get_models_for_category ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *             mex_model_manager_get_models_for_category
+                                                        (<em class="parameter"><code><a class="link" href="MexModelManager.html" title="MexModelManager"><span class="type">MexModelManager</span></a> *manager</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *category</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-model-manager-add-model"></a><h3>mex_model_manager_add_model ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_model_manager_add_model         (<em class="parameter"><code><a class="link" href="MexModelManager.html" title="MexModelManager"><span class="type">MexModelManager</span></a> *manager</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">MexModelInfo</span> *info</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-model-manager-remove-model"></a><h3>mex_model_manager_remove_model ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_model_manager_remove_model      (<em class="parameter"><code><a class="link" href="MexModelManager.html" title="MexModelManager"><span class="type">MexModelManager</span></a> *manager</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *model</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-model-manager-get-model-info"></a><h3>mex_model_manager_get_model_info ()</h3>
+<pre class="programlisting">const <span class="returnvalue">MexModelInfo</span> * mex_model_manager_get_model_info   (<em class="parameter"><code><a class="link" href="MexModelManager.html" title="MexModelManager"><span class="type">MexModelManager</span></a> *manager</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *model</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-model-manager-add-category"></a><h3>mex_model_manager_add_category ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_model_manager_add_category      (<em class="parameter"><code><a class="link" href="MexModelManager.html" title="MexModelManager"><span class="type">MexModelManager</span></a> *manager</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">MexModelCategoryInfo</span> *info</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-model-manager-remove-category"></a><h3>mex_model_manager_remove_category ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_model_manager_remove_category   (<em class="parameter"><code><a class="link" href="MexModelManager.html" title="MexModelManager"><span class="type">MexModelManager</span></a> *manager</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *name</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-model-manager-get-categories"></a><h3>mex_model_manager_get_categories ()</h3>
+<pre class="programlisting"><span class="returnvalue">GList</span> *             mex_model_manager_get_categories    (<em class="parameter"><code><a class="link" href="MexModelManager.html" title="MexModelManager"><span class="type">MexModelManager</span></a> *manager</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-model-manager-get-category-info"></a><h3>mex_model_manager_get_category_info ()</h3>
+<pre class="programlisting">const <span class="returnvalue">MexModelCategoryInfo</span> * mex_model_manager_get_category_info
+                                                        (<em class="parameter"><code><a class="link" href="MexModelManager.html" title="MexModelManager"><span class="type">MexModelManager</span></a> *manager</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *name</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-model-info-new"></a><h3>mex_model_info_new ()</h3>
+<pre class="programlisting"><span class="returnvalue">MexModelInfo</span> *      mex_model_info_new                  (<em class="parameter"><code><span class="type">MexModel</span> *model</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *category</code></em>,
+                                                         <em class="parameter"><code><span class="type">gint</span> priority</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *first_sort_func_name</code></em>,
+                                                         <em class="parameter"><code>...</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-model-info-copy"></a><h3>mex_model_info_copy ()</h3>
+<pre class="programlisting"><span class="returnvalue">MexModelInfo</span> *      mex_model_info_copy                 (<em class="parameter"><code>const <span class="type">MexModelInfo</span> *info</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-model-info-free"></a><h3>mex_model_info_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_model_info_free                 (<em class="parameter"><code><span class="type">MexModelInfo</span> *info</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexModelManagerPrivate"></a><h3>MexModelManagerPrivate</h3>
+<pre class="programlisting">typedef struct _MexModelManagerPrivate MexModelManagerPrivate;</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="MexModelManager.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="MexModelManager-categories-changed"></a><h3>The <code class="literal">"categories-changed"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="MexModelManager.html" title="MexModelManager"><span class="type">MexModelManager</span></a> *mexmodelmanager,
+                                                        <span class="type">gpointer</span>         user_data)            : <code class="literal">Run Last</code></pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexModelManager-model-added"></a><h3>The <code class="literal">"model-added"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="MexModelManager.html" title="MexModelManager"><span class="type">MexModelManager</span></a> *mexmodelmanager,
+                                                        <span class="type">gpointer</span>         arg1,
+                                                        <span class="type">gpointer</span>         user_data)            : <code class="literal">Run Last</code></pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexModelManager-model-removed"></a><h3>The <code class="literal">"model-removed"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="MexModelManager.html" title="MexModelManager"><span class="type">MexModelManager</span></a> *mexmodelmanager,
+                                                        <span class="type">GObject</span>         *arg1,
+                                                        <span class="type">gchar</span>           *arg2,
+                                                        <span class="type">gpointer</span>         user_data)            : <code class="literal">Run Last</code></pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

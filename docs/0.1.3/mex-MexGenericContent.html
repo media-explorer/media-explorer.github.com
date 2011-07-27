@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexGenericContent</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch04.html" title="Abstract classes and interfaces">
+<link rel="prev" href="mex-MexContentView.html" title="MexContentView">
+<link rel="next" href="mex-MexGenericModel.html" title="MexGenericModel">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="mex-MexContentView.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch04.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="mex-MexGenericModel.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-MexGenericContent.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-MexGenericContent.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-MexGenericContent"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-MexGenericContent.top_of_page"></a>MexGenericContent</span></h2>
+<p>MexGenericContent</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-MexGenericContent.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">#define             <a class="link" href="mex-MexGenericContent.html#MEX-TYPE-GENERIC-CONTENT:CAPS" title="MEX_TYPE_GENERIC_CONTENT">MEX_TYPE_GENERIC_CONTENT</a>
+#define             <a class="link" href="mex-MexGenericContent.html#MEX-GENERIC-CONTENT:CAPS" title="MEX_GENERIC_CONTENT()">MEX_GENERIC_CONTENT</a>                 (obj)
+#define             <a class="link" href="mex-MexGenericContent.html#MEX-GENERIC-CONTENT-CLASS:CAPS" title="MEX_GENERIC_CONTENT_CLASS()">MEX_GENERIC_CONTENT_CLASS</a>           (klass)
+#define             <a class="link" href="mex-MexGenericContent.html#IS-MEX-GENERIC-CONTENT:CAPS" title="IS_MEX_GENERIC_CONTENT()">IS_MEX_GENERIC_CONTENT</a>              (obj)
+#define             <a class="link" href="mex-MexGenericContent.html#IS-MEX-GENERIC-CONTENT-CLASS:CAPS" title="IS_MEX_GENERIC_CONTENT_CLASS()">IS_MEX_GENERIC_CONTENT_CLASS</a>        (klass)
+#define             <a class="link" href="mex-MexGenericContent.html#MEX-GENERIC-CONTENT-GET-CLASS:CAPS" title="MEX_GENERIC_CONTENT_GET_CLASS()">MEX_GENERIC_CONTENT_GET_CLASS</a>       (obj)
+struct              <a class="link" href="mex-MexGenericContent.html#MexGenericContent" title="struct MexGenericContent">MexGenericContent</a>;
+struct              <a class="link" href="mex-MexGenericContent.html#MexGenericContentClass" title="struct MexGenericContentClass">MexGenericContentClass</a>;
+<a href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="returnvalue">GType</span></a>               <a class="link" href="mex-MexGenericContent.html#mex-generic-content-get-type" title="mex_generic_content_get_type ()">mex_generic_content_get_type</a>        (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="mex-MexGenericContent.html#mex-generic-content-get-last-position-start" title="mex_generic_content_get_last_position_start ()">mex_generic_content_get_last_position_start</a>
+                                                        (<em class="parameter"><code><a class="link" href="mex-MexGenericContent.html#MexGenericContent" title="struct MexGenericContent"><span class="type">MexGenericContent</span></a> *self</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="mex-MexGenericContent.html#mex-generic-content-get-save-last-position" title="mex_generic_content_get_save_last_position ()">mex_generic_content_get_save_last_position</a>
+                                                        (<em class="parameter"><code><a class="link" href="mex-MexGenericContent.html#MexGenericContent" title="struct MexGenericContent"><span class="type">MexGenericContent</span></a> *self</code></em>);
+                    <a class="link" href="mex-MexGenericContent.html#MexGenericContentPrivate" title="MexGenericContentPrivate">MexGenericContentPrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-MexGenericContent.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="mex-MexGenericContent.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MEX-TYPE-GENERIC-CONTENT:CAPS"></a><h3>MEX_TYPE_GENERIC_CONTENT</h3>
+<pre class="programlisting">#define             MEX_TYPE_GENERIC_CONTENT</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MEX-GENERIC-CONTENT:CAPS"></a><h3>MEX_GENERIC_CONTENT()</h3>
+<pre class="programlisting">#define             MEX_GENERIC_CONTENT(obj)</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MEX-GENERIC-CONTENT-CLASS:CAPS"></a><h3>MEX_GENERIC_CONTENT_CLASS()</h3>
+<pre class="programlisting">#define             MEX_GENERIC_CONTENT_CLASS(klass)</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="IS-MEX-GENERIC-CONTENT:CAPS"></a><h3>IS_MEX_GENERIC_CONTENT()</h3>
+<pre class="programlisting">#define             IS_MEX_GENERIC_CONTENT(obj)</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="IS-MEX-GENERIC-CONTENT-CLASS:CAPS"></a><h3>IS_MEX_GENERIC_CONTENT_CLASS()</h3>
+<pre class="programlisting">#define             IS_MEX_GENERIC_CONTENT_CLASS(klass)</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MEX-GENERIC-CONTENT-GET-CLASS:CAPS"></a><h3>MEX_GENERIC_CONTENT_GET_CLASS()</h3>
+<pre class="programlisting">#define             MEX_GENERIC_CONTENT_GET_CLASS(obj)</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexGenericContent"></a><h3>struct MexGenericContent</h3>
+<pre class="programlisting">struct MexGenericContent {
+  GInitiallyUnowned parent;
+
+  MexGenericContentPrivate *priv;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexGenericContentClass"></a><h3>struct MexGenericContentClass</h3>
+<pre class="programlisting">struct MexGenericContentClass {
+  GInitiallyUnownedClass parent_class;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-generic-content-get-type"></a><h3>mex_generic_content_get_type ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="returnvalue">GType</span></a>               mex_generic_content_get_type        (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-generic-content-get-last-position-start"></a><h3>mex_generic_content_get_last_position_start ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            mex_generic_content_get_last_position_start
+                                                        (<em class="parameter"><code><a class="link" href="mex-MexGenericContent.html#MexGenericContent" title="struct MexGenericContent"><span class="type">MexGenericContent</span></a> *self</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-generic-content-get-save-last-position"></a><h3>mex_generic_content_get_save_last_position ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            mex_generic_content_get_save_last_position
+                                                        (<em class="parameter"><code><a class="link" href="mex-MexGenericContent.html#MexGenericContent" title="struct MexGenericContent"><span class="type">MexGenericContent</span></a> *self</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexGenericContentPrivate"></a><h3>MexGenericContentPrivate</h3>
+<pre class="programlisting">typedef struct _MexGenericContentPrivate MexGenericContentPrivate;</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

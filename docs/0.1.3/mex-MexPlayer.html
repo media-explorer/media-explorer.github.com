@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexPlayer</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch11.html" title="Media playback">
+<link rel="prev" href="ch11.html" title="Media playback">
+<link rel="next" href="mex-MexPlayerClient.html" title="MexPlayerClient">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ch11.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch11.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="mex-MexPlayerClient.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-MexPlayer.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-MexPlayer.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-MexPlayer"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-MexPlayer.top_of_page"></a>MexPlayer</span></h2>
+<p>MexPlayer</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-MexPlayer.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="mex-MexPlayer.html#MexPlayer" title="struct MexPlayer">MexPlayer</a>;
+struct              <a class="link" href="mex-MexPlayer.html#MexPlayerClass" title="struct MexPlayerClass">MexPlayerClass</a>;
+<a class="link" href="mex-MexPlayer.html#MexPlayer" title="struct MexPlayer"><span class="returnvalue">MexPlayer</span></a> *          <a class="link" href="mex-MexPlayer.html#mex-player-get-default" title="mex_player_get_default ()">mex_player_get_default</a>             (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="/usr/share/gtk-doc/html/clutter/ClutterMedia.html"><span class="returnvalue">ClutterMedia</span></a> *       <a class="link" href="mex-MexPlayer.html#mex-player-get-clutter-media" title="mex_player_get_clutter_media ()">mex_player_get_clutter_media</a>       (<em class="parameter"><code><a class="link" href="mex-MexPlayer.html#MexPlayer" title="struct MexPlayer"><span class="type">MexPlayer</span></a> *player</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexPlayer.html#mex-player-set-idle-mode" title="mex_player_set_idle_mode ()">mex_player_set_idle_mode</a>            (<em class="parameter"><code><a class="link" href="mex-MexPlayer.html#MexPlayer" title="struct MexPlayer"><span class="type">MexPlayer</span></a> *player</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> idle</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="mex-MexPlayer.html#mex-player-get-idle-mode" title="mex_player_get_idle_mode ()">mex_player_get_idle_mode</a>            (<em class="parameter"><code><a class="link" href="mex-MexPlayer.html#MexPlayer" title="struct MexPlayer"><span class="type">MexPlayer</span></a> *player</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexPlayer.html#mex-player-stop" title="mex_player_stop ()">mex_player_stop</a>                     (<em class="parameter"><code><a class="link" href="mex-MexPlayer.html#MexPlayer" title="struct MexPlayer"><span class="type">MexPlayer</span></a> *player</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexPlayer.html#mex-player-play" title="mex_player_play ()">mex_player_play</a>                     (<em class="parameter"><code><a class="link" href="mex-MexPlayer.html#MexPlayer" title="struct MexPlayer"><span class="type">MexPlayer</span></a> *player</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexPlayer.html#mex-player-pause" title="mex_player_pause ()">mex_player_pause</a>                    (<em class="parameter"><code><a class="link" href="mex-MexPlayer.html#MexPlayer" title="struct MexPlayer"><span class="type">MexPlayer</span></a> *player</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexPlayer.html#mex-player-forward" title="mex_player_forward ()">mex_player_forward</a>                  (<em class="parameter"><code><a class="link" href="mex-MexPlayer.html#MexPlayer" title="struct MexPlayer"><span class="type">MexPlayer</span></a> *player</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexPlayer.html#mex-player-rewind" title="mex_player_rewind ()">mex_player_rewind</a>                   (<em class="parameter"><code><a class="link" href="mex-MexPlayer.html#MexPlayer" title="struct MexPlayer"><span class="type">MexPlayer</span></a> *player</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexPlayer.html#mex-player-next" title="mex_player_next ()">mex_player_next</a>                     (<em class="parameter"><code><a class="link" href="mex-MexPlayer.html#MexPlayer" title="struct MexPlayer"><span class="type">MexPlayer</span></a> *player</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexPlayer.html#mex-player-previous" title="mex_player_previous ()">mex_player_previous</a>                 (<em class="parameter"><code><a class="link" href="mex-MexPlayer.html#MexPlayer" title="struct MexPlayer"><span class="type">MexPlayer</span></a> *player</code></em>);
+                    <a class="link" href="mex-MexPlayer.html#MexPlayerPrivate" title="MexPlayerPrivate">MexPlayerPrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-MexPlayer.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="mex-MexPlayer.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexPlayer"></a><h3>struct MexPlayer</h3>
+<pre class="programlisting">struct MexPlayer {
+  MxStack parent;
+
+  MexPlayerPrivate *priv;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexPlayerClass"></a><h3>struct MexPlayerClass</h3>
+<pre class="programlisting">struct MexPlayerClass {
+  MxStackClass parent_class;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-player-get-default"></a><h3>mex_player_get_default ()</h3>
+<pre class="programlisting"><a class="link" href="mex-MexPlayer.html#MexPlayer" title="struct MexPlayer"><span class="returnvalue">MexPlayer</span></a> *          mex_player_get_default             (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-player-get-clutter-media"></a><h3>mex_player_get_clutter_media ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/clutter/ClutterMedia.html"><span class="returnvalue">ClutterMedia</span></a> *       mex_player_get_clutter_media       (<em class="parameter"><code><a class="link" href="mex-MexPlayer.html#MexPlayer" title="struct MexPlayer"><span class="type">MexPlayer</span></a> *player</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-player-set-idle-mode"></a><h3>mex_player_set_idle_mode ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_player_set_idle_mode            (<em class="parameter"><code><a class="link" href="mex-MexPlayer.html#MexPlayer" title="struct MexPlayer"><span class="type">MexPlayer</span></a> *player</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> idle</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-player-get-idle-mode"></a><h3>mex_player_get_idle_mode ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            mex_player_get_idle_mode            (<em class="parameter"><code><a class="link" href="mex-MexPlayer.html#MexPlayer" title="struct MexPlayer"><span class="type">MexPlayer</span></a> *player</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-player-stop"></a><h3>mex_player_stop ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_player_stop                     (<em class="parameter"><code><a class="link" href="mex-MexPlayer.html#MexPlayer" title="struct MexPlayer"><span class="type">MexPlayer</span></a> *player</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-player-play"></a><h3>mex_player_play ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_player_play                     (<em class="parameter"><code><a class="link" href="mex-MexPlayer.html#MexPlayer" title="struct MexPlayer"><span class="type">MexPlayer</span></a> *player</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-player-pause"></a><h3>mex_player_pause ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_player_pause                    (<em class="parameter"><code><a class="link" href="mex-MexPlayer.html#MexPlayer" title="struct MexPlayer"><span class="type">MexPlayer</span></a> *player</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-player-forward"></a><h3>mex_player_forward ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_player_forward                  (<em class="parameter"><code><a class="link" href="mex-MexPlayer.html#MexPlayer" title="struct MexPlayer"><span class="type">MexPlayer</span></a> *player</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-player-rewind"></a><h3>mex_player_rewind ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_player_rewind                   (<em class="parameter"><code><a class="link" href="mex-MexPlayer.html#MexPlayer" title="struct MexPlayer"><span class="type">MexPlayer</span></a> *player</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-player-next"></a><h3>mex_player_next ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_player_next                     (<em class="parameter"><code><a class="link" href="mex-MexPlayer.html#MexPlayer" title="struct MexPlayer"><span class="type">MexPlayer</span></a> *player</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-player-previous"></a><h3>mex_player_previous ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_player_previous                 (<em class="parameter"><code><a class="link" href="mex-MexPlayer.html#MexPlayer" title="struct MexPlayer"><span class="type">MexPlayer</span></a> *player</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexPlayerPrivate"></a><h3>MexPlayerPrivate</h3>
+<pre class="programlisting">typedef struct _MexPlayerPrivate MexPlayerPrivate;</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

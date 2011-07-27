@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Media Explorer for developers</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="mex-overview.html" title="Part I. Mex Overview">
+<link rel="prev" href="users-content-sources.html" title="Configuring extra content sources">
+<link rel="next" href="developers-works.html" title="How it works">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2"><tr valign="middle">
+<td><a accesskey="p" href="users-content-sources.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="mex-overview.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="developers-works.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="chapter">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="developers"></a>Media Explorer for developers</h2></div></div></div>
+<div class="toc"><dl>
+<dt><span class="section"><a href="developers.html#developers-architecture">Architecture</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="developers.html#developers-architecture-integration">Integration points with other libraries and services</a></span></dt>
+<dt><span class="section"><a href="developers.html#developers-ux">User experience design</a></span></dt>
+</dl></dd>
+<dt><span class="section"><a href="developers-works.html">How it works</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="developers-works.html#developers-works-mvc">MVC</a></span></dt>
+<dt><span class="section"><a href="developers-works.html#developers-works-classes">Class hierarchy</a></span></dt>
+<dt><span class="section"><a href="developers-works.html#developers-works-content">Content discovery</a></span></dt>
+<dt><span class="section"><a href="developers-works.html#developers-works-events">Binding keys to actions</a></span></dt>
+<dt><span class="section"><a href="developers-works.html#developers-works-plugins">Plugin management and configuration</a></span></dt>
+</dl></dd>
+<dt><span class="section"><a href="developers-extending.html">Extending Media Explorer</a></span></dt>
+<dd><dl>
+<dt><span class="section"><a href="developers-extending.html#developers-extending-need-to-know">What you need to know</a></span></dt>
+<dt><span class="section"><a href="developers-extending.html#developers-extending-environment">Setting up a development environment</a></span></dt>
+<dt><span class="section"><a href="developers-extending.html#developers-extending-building">Enabling and configuring content sources</a></span></dt>
+</dl></dd>
+</dl></div>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="developers-architecture"></a>Architecture</h2></div></div></div>
+<p>Media Explorer is a single project, but it is composed of
+    several interrelated libraries and applications. The points
+    below explain these parts and where they live in the source
+    tree:</p>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem">
+<p><span class="emphasis"><em>libmex</em></span> is a library
+        containing the <GTKDOCLINK HREF="">MVC
+        framework</GTKDOCLINK>, plugin framework, generic widgets, and other
+        components used by the UX.</p>
+<p>It lives in the <code class="filename">mex</code> directory.</p>
+</li>
+<li class="listitem">
+<p><span class="emphasis"><em>Media Explorer</em></span> is the application,
+        built with the libmex library. Note that the libmex
+        classes could be used to build alternative UXs: see
+        <a class="link" href="developers-works.html#developers-works-classes" title="Class hierarchy">this diagram</a>
+        for a (very) high-level overview of the classes available.</p>
+<p>It lives in the <code class="filename">shell</code> directory.</p>
+</li>
+<li class="listitem"><p>The <span class="emphasis"><em>player</em></span> (in a directory with the
+        same name) exposes the Media Explorer player over DBus. The
+        core functionality is documented in
+        <a class="link" href="MexMediaDBUSBridge.html" title="MexMediaDBUSBridge"><span class="type">MexMediaDBUSBridge</span></a>.
+        </p></li>
+<li class="listitem">
+<p>The <code class="filename">plugins</code> directory (in the
+        source code) contains various Media Explorer plugins, which
+        extend the functionality of the basic libmex library.</p>
+<p>This is where the
+        <a class="link" href="developers-works.html#developers-works-content" title="Content discovery">Media Explorer Tracker
+        plugin</a> lives (in the <code class="filename">tracker</code>
+        directory).</p>
+<p>Search and queue are also implemented as plugins, also
+        in this directory.</p>
+</li>
+</ul></div>
+<p>Media Explorer also integrates with various other libraries
+    and services, as described in
+    <a class="link" href="developers.html#developers-architecture-integration" title="Integration points with other libraries and services">this
+    section</a>.</p>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="developers-architecture-integration"></a>Integration points with other libraries and services</h3></div></div></div>
+<p>Media Explorer was designed to integrate smoothly with
+      the MeeGo software stack. Consequently, there are
+      a number of points where Media Explorer integrates with
+      other libraries and services; see
+      <a class="link" href="developers.html#developers-architecture-integration-diagram">this
+      diagram</a> for an overview (as seen by
+      <span class="command"><strong>jhbuild dot</strong></span>).</p>
+<div class="mediaobject">
+<a name="developers-architecture-integration-diagram"></a><img src="dependencies.png">
+</div>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem">
+<p><b><a class="ulink" href="http://gupnp.org/" target="_top">GUPnP</a>. </b>This is part of the standard MeeGo UPnP stack. It is a
+            low-level implementation that provides the raw UPnP protocol:
+            it has no APIs for higher-level specifications such as MediaServer:1.</p>
+<p><a class="ulink" href="http://live.gnome.org/Rygel" target="_top">Rygel</a> (also part
+          of MeeGo) is available as a ContentDirectory implementation for
+          sharing media to other devices. However, this is not used at
+          present.</p>
+</li>
+<li class="listitem"><p><b><a class="ulink" href="http://projects.gnome.org/tracker/" target="_top">Tracker</a>. </b>This is Media Explorer's metadata store. It holds
+            metadata for both local and removable media, as well
+            as caching data about any UPnP servers discovered. Local
+            and removable media is indexed using standard Tracker
+            methods.</p></li>
+<li class="listitem">
+<p><b><a class="ulink" href="http://live.gnome.org/Grilo" target="_top">Grilo</a>. </b>This is a media discovery and metadata aggregation
+            library which abstracts content browsing and searching. By
+            default, Media Explorer uses Grilo to enable browsing and
+            searching of local files and content on UPnP
+            servers.</p>
+<p>Configuring other Grilo plugins can enable access to further
+          content sources: see <GTKDOCLINK HREF="users-content-discovery">the section
+          about configuring Grilo plugins</GTKDOCLINK> for more details.</p>
+</li>
+<li class="listitem"><p><b><a class="ulink" href="http://gstreamer.freedesktop.org/" target="_top">GStreamer</a>. </b>The media player is a GStreamer-based daemon with a
+            DBus API. It uses the GStreamer <span class="type">playbin2</span>
+            element for playback, so hardware acceleration is used if
+            suitable elements are installed.</p></li>
+<li class="listitem"><p><b><a class="ulink" href="http://www.freedesktop.org/wiki/Software/dbus" target="_top">DBus</a>. </b>The media player exposes a DBus API to other
+            applications.</p></li>
+<li class="listitem"><p><b><a class="ulink" href="http://clutter-project.org" target="_top">Clutter</a>. </b>Clutter is a low-level drawing toolkit which abstracts and
+            simplifies the OpenGL API. Clutter doesn't mandate a particular
+            look and feel: this is provided by toolkits built on top of Clutter
+            (like Mx, see below).</p></li>
+<li class="listitem"><p><b><a class="ulink" href="http://git.clutter-project.org/mx/" target="_top">Mx</a>. </b>Mx is a high-level toolkit built on top of Clutter.
+            It provides an application model and a variety of widgets
+            such as buttons, dialogs and toolbars.</p></li>
+</ul></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>
+<p>While Media Explorer was designed with MeeGo in mind,
+        it is perfectly possible to build and run it on other
+        distributions (e.g. Fedora). However, bear in mind that it
+        uses some libraries which may either be unavailable for
+        your distro (e.g. Mx, Grilo) or at versions which are too old
+        (e.g. DBus, Tracker). If your distro is too outdated,
+        one solution is to build Media Explorer with jhbuild:
+        <a class="link" href="developers-extending.html#developers-extending-environment" title="Setting up a development environment">this
+        section</a> explains how.</p>
+</div>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="developers-ux"></a>User experience design</h3></div></div></div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="developers-ux-input"></a>Input device</h4></div></div></div>
+<p>The input device is expected to have a 5-way d-pad
+        (up/down/left/right/activate), back, information and home keys. These
+        are the primary navigation keys, and are all that is required to
+        use the majority of the UX. The remote is also expected to
+        have a full alphanumeric keyboard, used for searching and in the
+        web browser.</p>
+<p>Because the UX doesn't support a mouse pointer,
+        UX elements are activated by navigating to the element and
+        pressing the activate button.</p>
+<p>On a netbook, the inputs are mapped onto the keyboard
+        as follows (by default):</p>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem"><p>up/down/left/right = cursor keys</p></li>
+<li class="listitem"><p>activate (a.k.a. ok) = return key</p></li>
+<li class="listitem"><p>back = <span class="keycap"><strong>Esc</strong></span> key</p></li>
+<li class="listitem"><p>information = right-click key
+            (on my keyboard, it looks like a context menu)</p></li>
+<li class="listitem"><p>home = the "Windows" key</p></li>
+</ul></div>
+<p>This configuration can be modified via the
+        <a class="link" href="developers-works.html#developers-works-events" title="Binding keys to actions">rebinder</a>.</p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="id2894325"></a>Output device</h4></div></div></div>
+<p>720p is the only supported video mode. The display will be
+        configured for the best mode approximating 720p, and if this
+        isn't possible an error message will be displayed.</p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="id2894339"></a>Views</h4></div></div></div>
+<p>The majority of the UX is based around two styles of view:
+        <span class="emphasis"><em>panel</em></span> and <span class="emphasis"><em>grid</em></span>.</p>
+<p><span class="emphasis"><em>A panel view</em></span> displays a number of
+        panels (as columns across the screen); each has a header which
+        can be activated to "drill down" from the summary to a more
+        detailed view (another panel view or a grid view) showing a
+        limited number of items (generally 8). Typically these items are
+        the most relevant or recent. The remaining items are accessed by
+        activating the panel heading, which changes the UX to show a grid
+        view. When an item is activated, relevant metadata for the item
+        and actions associated with it are displayed.</p>
+<p><span class="emphasis"><em>A grid view</em></span> fills the screen with
+        items and can be scrolled vertically. All of the items are
+        included, and there is no implicit filtering.</p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="id2894383"></a>Home screen</h4></div></div></div>
+<p>The home screen is a panel view, with columns for
+        <span class="guilabel">Search</span>, <span class="guilabel">Video</span>,
+        <span class="guilabel">Photo</span>, and <span class="guilabel">Queue</span>.</p>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem">
+<p><b><span class="guilabel">Search</span>. </b>This is used to search all available media,
+              i.e. local files, UPnP servers, Vimeo
+              and so on.</p>
+<p>Search history is stored and presented to
+            the user if available. Search results are presented in
+            panels, organised by source; a user can drill down from
+            any panel to a grid view of relevant results.</p>
+</li>
+<li class="listitem">
+<p><b><span class="guilabel">Video</span>. </b>This displays available video content.</p>
+<p>Drilling down from the home screen will take you to the
+            source view, where each source is another panel showing
+            the 8 most recent videos from that source. Drilling
+            down from the source panel will open the grid view,
+            where all the content items from that source are visually
+            presented as thumbnails. Any folder hierarchy is flattened
+            and the content can be sorted in various ways.</p>
+<p>If there is only one source, drilling down from the
+            home screen will go directly to the grid view.</p>
+</li>
+<li class="listitem"><p><b><span class="guilabel">Photos</span>. </b>Very similar to <span class="guilabel">Video</span>, but
+              for still images. There are different controls available
+              when viewing images, for example starting a slideshow or
+              rotating the image.</p></li>
+<li class="listitem">
+<p><b><span class="guilabel">Queue</span>. </b>A queue of content to be played can be created by
+              activating the items and selecting <span class="guilabel">Add to
+              Queue</span>.</p>
+<p>If the item is already in a queue, this action
+            becomes <span class="guilabel">Remove from Queue</span>.</p>
+</li>
+</ul></div>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="id2937640"></a>Playback</h4></div></div></div>
+<p>When playing back media, the metaphor is that the controls
+        and information are "below" the screen. These are arranged in
+        rows; a user can navigate between the rows with the up
+        and down keys. Specific controls in each row are
+        traversed by using the left and right keys.</p>
+<p>For videos, pressing the down key will slide up the pause
+        and stop controls; pressing down again will slide up the seek
+        bar; and again will bring up the <span class="guilabel">Related Content</span>
+        list.</p>
+<p>The <span class="guilabel">Related Content</span> row lists
+        content that is related to the current content. If the media is
+        from a directory, it lists media in the same directory; if from
+        a search, the other results; and so on. This area could also
+        be used to show recommended content or advertising.</p>
+<p>For photos, the controls are different (rotate buttons,
+        no seek bar, etc). Pressing up will slide these off the screen,
+        resulting in just the photo being visible.</p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="id2937690"></a>Media information</h4></div></div></div>
+<p>At any time in the Media Explorer, you can get
+        information about the current displayed media or the
+        currently selected media by pressing the info key.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

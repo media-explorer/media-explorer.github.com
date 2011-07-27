@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexAspectFrame</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch08.html" title="Container widgets">
+<link rel="prev" href="ch08.html" title="Container widgets">
+<link rel="next" href="mex-MexColumn.html" title="MexColumn">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ch08.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch08.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="mex-MexColumn.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-MexAspectFrame.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-MexAspectFrame.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-MexAspectFrame"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-MexAspectFrame.top_of_page"></a>MexAspectFrame</span></h2>
+<p>MexAspectFrame</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-MexAspectFrame.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="mex-MexAspectFrame.html#MexAspectFrame" title="struct MexAspectFrame">MexAspectFrame</a>;
+struct              <a class="link" href="mex-MexAspectFrame.html#MexAspectFrameClass" title="struct MexAspectFrameClass">MexAspectFrameClass</a>;
+<a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      <a class="link" href="mex-MexAspectFrame.html#mex-aspect-frame-new" title="mex_aspect_frame_new ()">mex_aspect_frame_new</a>                (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexAspectFrame.html#mex-aspect-frame-set-expand" title="mex_aspect_frame_set_expand ()">mex_aspect_frame_set_expand</a>         (<em class="parameter"><code><a class="link" href="mex-MexAspectFrame.html#MexAspectFrame" title="struct MexAspectFrame"><span class="type">MexAspectFrame</span></a> *frame</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> expand</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="mex-MexAspectFrame.html#mex-aspect-frame-get-expand" title="mex_aspect_frame_get_expand ()">mex_aspect_frame_get_expand</a>         (<em class="parameter"><code><a class="link" href="mex-MexAspectFrame.html#MexAspectFrame" title="struct MexAspectFrame"><span class="type">MexAspectFrame</span></a> *frame</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexAspectFrame.html#mex-aspect-frame-set-ratio" title="mex_aspect_frame_set_ratio ()">mex_aspect_frame_set_ratio</a>          (<em class="parameter"><code><a class="link" href="mex-MexAspectFrame.html#MexAspectFrame" title="struct MexAspectFrame"><span class="type">MexAspectFrame</span></a> *frame</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> ratio</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="returnvalue">gfloat</span></a>              <a class="link" href="mex-MexAspectFrame.html#mex-aspect-frame-get-ratio" title="mex_aspect_frame_get_ratio ()">mex_aspect_frame_get_ratio</a>          (<em class="parameter"><code><a class="link" href="mex-MexAspectFrame.html#MexAspectFrame" title="struct MexAspectFrame"><span class="type">MexAspectFrame</span></a> *frame</code></em>);
+                    <a class="link" href="mex-MexAspectFrame.html#MexAspectFramePrivate" title="MexAspectFramePrivate">MexAspectFramePrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-MexAspectFrame.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="mex-MexAspectFrame.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexAspectFrame"></a><h3>struct MexAspectFrame</h3>
+<pre class="programlisting">struct MexAspectFrame {
+  MxBin parent;
+
+  MexAspectFramePrivate *priv;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexAspectFrameClass"></a><h3>struct MexAspectFrameClass</h3>
+<pre class="programlisting">struct MexAspectFrameClass {
+  MxBinClass parent_class;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-aspect-frame-new"></a><h3>mex_aspect_frame_new ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      mex_aspect_frame_new                (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-aspect-frame-set-expand"></a><h3>mex_aspect_frame_set_expand ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_aspect_frame_set_expand         (<em class="parameter"><code><a class="link" href="mex-MexAspectFrame.html#MexAspectFrame" title="struct MexAspectFrame"><span class="type">MexAspectFrame</span></a> *frame</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> expand</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-aspect-frame-get-expand"></a><h3>mex_aspect_frame_get_expand ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            mex_aspect_frame_get_expand         (<em class="parameter"><code><a class="link" href="mex-MexAspectFrame.html#MexAspectFrame" title="struct MexAspectFrame"><span class="type">MexAspectFrame</span></a> *frame</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-aspect-frame-set-ratio"></a><h3>mex_aspect_frame_set_ratio ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_aspect_frame_set_ratio          (<em class="parameter"><code><a class="link" href="mex-MexAspectFrame.html#MexAspectFrame" title="struct MexAspectFrame"><span class="type">MexAspectFrame</span></a> *frame</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> ratio</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-aspect-frame-get-ratio"></a><h3>mex_aspect_frame_get_ratio ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"><span class="returnvalue">gfloat</span></a>              mex_aspect_frame_get_ratio          (<em class="parameter"><code><a class="link" href="mex-MexAspectFrame.html#MexAspectFrame" title="struct MexAspectFrame"><span class="type">MexAspectFrame</span></a> *frame</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexAspectFramePrivate"></a><h3>MexAspectFramePrivate</h3>
+<pre class="programlisting">typedef struct _MexAspectFramePrivate MexAspectFramePrivate;</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

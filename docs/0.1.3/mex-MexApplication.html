@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexApplication</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch13.html" title="Utility classes">
+<link rel="prev" href="ch13.html" title="Utility classes">
+<link rel="next" href="mex-MexApplicationCategory.html" title="MexApplicationCategory">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ch13.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch13.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="mex-MexApplicationCategory.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-MexApplication.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-MexApplication.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-MexApplication"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-MexApplication.top_of_page"></a>MexApplication</span></h2>
+<p>MexApplication</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-MexApplication.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication">MexApplication</a>;
+struct              <a class="link" href="mex-MexApplication.html#MexApplicationClass" title="struct MexApplicationClass">MexApplicationClass</a>;
+<a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="returnvalue">MexApplication</span></a> *    <a class="link" href="mex-MexApplication.html#mex-application-new" title="mex_application_new ()">mex_application_new</a>                 (<em class="parameter"><code><span class="type">void</span></code></em>);
+const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="mex-MexApplication.html#mex-application-get-name" title="mex_application_get_name ()">mex_application_get_name</a>            (<em class="parameter"><code><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="type">MexApplication</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexApplication.html#mex-application-set-name" title="mex_application_set_name ()">mex_application_set_name</a>            (<em class="parameter"><code><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="type">MexApplication</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);
+const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="mex-MexApplication.html#mex-application-get-executable" title="mex_application_get_executable ()">mex_application_get_executable</a>      (<em class="parameter"><code><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="type">MexApplication</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexApplication.html#mex-application-set-executable" title="mex_application_set_executable ()">mex_application_set_executable</a>      (<em class="parameter"><code><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="type">MexApplication</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *executable</code></em>);
+const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="mex-MexApplication.html#mex-application-get-icon" title="mex_application_get_icon ()">mex_application_get_icon</a>            (<em class="parameter"><code><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="type">MexApplication</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexApplication.html#mex-application-set-icon" title="mex_application_set_icon ()">mex_application_set_icon</a>            (<em class="parameter"><code><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="type">MexApplication</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *icon</code></em>);
+const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="mex-MexApplication.html#mex-application-get-thumbnail" title="mex_application_get_thumbnail ()">mex_application_get_thumbnail</a>       (<em class="parameter"><code><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="type">MexApplication</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexApplication.html#mex-application-set-thumbnail" title="mex_application_set_thumbnail ()">mex_application_set_thumbnail</a>       (<em class="parameter"><code><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="type">MexApplication</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *thumbnail</code></em>);
+const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="mex-MexApplication.html#mex-application-get-description" title="mex_application_get_description ()">mex_application_get_description</a>     (<em class="parameter"><code><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="type">MexApplication</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexApplication.html#mex-application-set-description" title="mex_application_set_description ()">mex_application_set_description</a>     (<em class="parameter"><code><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="type">MexApplication</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *description</code></em>);
+const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="mex-MexApplication.html#mex-application-get-desktop-file" title="mex_application_get_desktop_file ()">mex_application_get_desktop_file</a>    (<em class="parameter"><code><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="type">MexApplication</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexApplication.html#mex-application-set-desktop-file" title="mex_application_set_desktop_file ()">mex_application_set_desktop_file</a>    (<em class="parameter"><code><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="type">MexApplication</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *desktop_file</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="mex-MexApplication.html#mex-application-get-bookmarked" title="mex_application_get_bookmarked ()">mex_application_get_bookmarked</a>      (<em class="parameter"><code><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="type">MexApplication</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexApplication.html#mex-application-set-bookmarked" title="mex_application_set_bookmarked ()">mex_application_set_bookmarked</a>      (<em class="parameter"><code><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="type">MexApplication</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> bookmarked</code></em>);
+                    <a class="link" href="mex-MexApplication.html#MexApplicationPrivate" title="MexApplicationPrivate">MexApplicationPrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-MexApplication.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="mex-MexApplication.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexApplication"></a><h3>struct MexApplication</h3>
+<pre class="programlisting">struct MexApplication {
+  MexGenericContent parent;
+
+  MexApplicationPrivate *priv;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexApplicationClass"></a><h3>struct MexApplicationClass</h3>
+<pre class="programlisting">struct MexApplicationClass {
+  MexGenericContentClass parent_class;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-application-new"></a><h3>mex_application_new ()</h3>
+<pre class="programlisting"><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="returnvalue">MexApplication</span></a> *    mex_application_new                 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-application-get-name"></a><h3>mex_application_get_name ()</h3>
+<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       mex_application_get_name            (<em class="parameter"><code><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="type">MexApplication</span></a> *self</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-application-set-name"></a><h3>mex_application_set_name ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_application_set_name            (<em class="parameter"><code><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="type">MexApplication</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-application-get-executable"></a><h3>mex_application_get_executable ()</h3>
+<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       mex_application_get_executable      (<em class="parameter"><code><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="type">MexApplication</span></a> *self</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-application-set-executable"></a><h3>mex_application_set_executable ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_application_set_executable      (<em class="parameter"><code><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="type">MexApplication</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *executable</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-application-get-icon"></a><h3>mex_application_get_icon ()</h3>
+<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       mex_application_get_icon            (<em class="parameter"><code><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="type">MexApplication</span></a> *self</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-application-set-icon"></a><h3>mex_application_set_icon ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_application_set_icon            (<em class="parameter"><code><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="type">MexApplication</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *icon</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-application-get-thumbnail"></a><h3>mex_application_get_thumbnail ()</h3>
+<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       mex_application_get_thumbnail       (<em class="parameter"><code><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="type">MexApplication</span></a> *self</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-application-set-thumbnail"></a><h3>mex_application_set_thumbnail ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_application_set_thumbnail       (<em class="parameter"><code><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="type">MexApplication</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *thumbnail</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-application-get-description"></a><h3>mex_application_get_description ()</h3>
+<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       mex_application_get_description     (<em class="parameter"><code><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="type">MexApplication</span></a> *self</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-application-set-description"></a><h3>mex_application_set_description ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_application_set_description     (<em class="parameter"><code><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="type">MexApplication</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *description</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-application-get-desktop-file"></a><h3>mex_application_get_desktop_file ()</h3>
+<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       mex_application_get_desktop_file    (<em class="parameter"><code><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="type">MexApplication</span></a> *self</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-application-set-desktop-file"></a><h3>mex_application_set_desktop_file ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_application_set_desktop_file    (<em class="parameter"><code><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="type">MexApplication</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *desktop_file</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-application-get-bookmarked"></a><h3>mex_application_get_bookmarked ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            mex_application_get_bookmarked      (<em class="parameter"><code><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="type">MexApplication</span></a> *self</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-application-set-bookmarked"></a><h3>mex_application_set_bookmarked ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_application_set_bookmarked      (<em class="parameter"><code><a class="link" href="mex-MexApplication.html#MexApplication" title="struct MexApplication"><span class="type">MexApplication</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> bookmarked</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexApplicationPrivate"></a><h3>MexApplicationPrivate</h3>
+<pre class="programlisting">typedef struct _MexApplicationPrivate MexApplicationPrivate;</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

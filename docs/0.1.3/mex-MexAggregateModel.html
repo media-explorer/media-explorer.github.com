@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexAggregateModel</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch07.html" title="Model classes">
+<link rel="prev" href="ch07.html" title="Model classes">
+<link rel="next" href="mex-MexFeed.html" title="MexFeed">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ch07.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch07.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="mex-MexFeed.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-MexAggregateModel.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-MexAggregateModel.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-MexAggregateModel"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-MexAggregateModel.top_of_page"></a>MexAggregateModel</span></h2>
+<p>MexAggregateModel</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-MexAggregateModel.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="mex-MexAggregateModel.html#MexAggregateModel" title="struct MexAggregateModel">MexAggregateModel</a>;
+struct              <a class="link" href="mex-MexAggregateModel.html#MexAggregateModelClass" title="struct MexAggregateModelClass">MexAggregateModelClass</a>;
+<span class="returnvalue">MexModel</span> *          <a class="link" href="mex-MexAggregateModel.html#mex-aggregate-model-new" title="mex_aggregate_model_new ()">mex_aggregate_model_new</a>             (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexAggregateModel.html#mex-aggregate-model-add-model" title="mex_aggregate_model_add_model ()">mex_aggregate_model_add_model</a>       (<em class="parameter"><code><a class="link" href="mex-MexAggregateModel.html#MexAggregateModel" title="struct MexAggregateModel"><span class="type">MexAggregateModel</span></a> *aggregate</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *model</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexAggregateModel.html#mex-aggregate-model-remove-model" title="mex_aggregate_model_remove_model ()">mex_aggregate_model_remove_model</a>    (<em class="parameter"><code><a class="link" href="mex-MexAggregateModel.html#MexAggregateModel" title="struct MexAggregateModel"><span class="type">MexAggregateModel</span></a> *aggregate</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *model</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexAggregateModel.html#mex-aggregate-model-clear" title="mex_aggregate_model_clear ()">mex_aggregate_model_clear</a>           (<em class="parameter"><code><a class="link" href="mex-MexAggregateModel.html#MexAggregateModel" title="struct MexAggregateModel"><span class="type">MexAggregateModel</span></a> *aggregate</code></em>);
+const <a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *       <a class="link" href="mex-MexAggregateModel.html#mex-aggregate-model-get-models" title="mex_aggregate_model_get_models ()">mex_aggregate_model_get_models</a>      (<em class="parameter"><code><a class="link" href="mex-MexAggregateModel.html#MexAggregateModel" title="struct MexAggregateModel"><span class="type">MexAggregateModel</span></a> *aggregate</code></em>);
+<span class="returnvalue">MexModel</span> *          <a class="link" href="mex-MexAggregateModel.html#mex-aggregate-model-get-model-for-content" title="mex_aggregate_model_get_model_for_content ()">mex_aggregate_model_get_model_for_content</a>
+                                                        (<em class="parameter"><code><a class="link" href="mex-MexAggregateModel.html#MexAggregateModel" title="struct MexAggregateModel"><span class="type">MexAggregateModel</span></a> *aggregate</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexContent</span> *content</code></em>);
+                    <a class="link" href="mex-MexAggregateModel.html#MexAggregateModelPrivate" title="MexAggregateModelPrivate">MexAggregateModelPrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-MexAggregateModel.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="mex-MexAggregateModel.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexAggregateModel"></a><h3>struct MexAggregateModel</h3>
+<pre class="programlisting">struct MexAggregateModel {
+  MexGenericModel parent;
+
+  MexAggregateModelPrivate *priv;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexAggregateModelClass"></a><h3>struct MexAggregateModelClass</h3>
+<pre class="programlisting">struct MexAggregateModelClass {
+  MexGenericModelClass parent_class;
+
+  /* signals, not vfuncs */
+  void (*model_added)   (MexAggregateModel *aggregate,
+                         MexModel          *model);
+  void (*model_removed) (MexAggregateModel *aggregate,
+                         MexModel          *model);
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-aggregate-model-new"></a><h3>mex_aggregate_model_new ()</h3>
+<pre class="programlisting"><span class="returnvalue">MexModel</span> *          mex_aggregate_model_new             (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-aggregate-model-add-model"></a><h3>mex_aggregate_model_add_model ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_aggregate_model_add_model       (<em class="parameter"><code><a class="link" href="mex-MexAggregateModel.html#MexAggregateModel" title="struct MexAggregateModel"><span class="type">MexAggregateModel</span></a> *aggregate</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *model</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-aggregate-model-remove-model"></a><h3>mex_aggregate_model_remove_model ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_aggregate_model_remove_model    (<em class="parameter"><code><a class="link" href="mex-MexAggregateModel.html#MexAggregateModel" title="struct MexAggregateModel"><span class="type">MexAggregateModel</span></a> *aggregate</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *model</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-aggregate-model-clear"></a><h3>mex_aggregate_model_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_aggregate_model_clear           (<em class="parameter"><code><a class="link" href="mex-MexAggregateModel.html#MexAggregateModel" title="struct MexAggregateModel"><span class="type">MexAggregateModel</span></a> *aggregate</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-aggregate-model-get-models"></a><h3>mex_aggregate_model_get_models ()</h3>
+<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *       mex_aggregate_model_get_models      (<em class="parameter"><code><a class="link" href="mex-MexAggregateModel.html#MexAggregateModel" title="struct MexAggregateModel"><span class="type">MexAggregateModel</span></a> *aggregate</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-aggregate-model-get-model-for-content"></a><h3>mex_aggregate_model_get_model_for_content ()</h3>
+<pre class="programlisting"><span class="returnvalue">MexModel</span> *          mex_aggregate_model_get_model_for_content
+                                                        (<em class="parameter"><code><a class="link" href="mex-MexAggregateModel.html#MexAggregateModel" title="struct MexAggregateModel"><span class="type">MexAggregateModel</span></a> *aggregate</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexContent</span> *content</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexAggregateModelPrivate"></a><h3>MexAggregateModelPrivate</h3>
+<pre class="programlisting">typedef struct _MexAggregateModelPrivate MexAggregateModelPrivate;</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

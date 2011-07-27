@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexGriloFeed</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch07.html" title="Model classes">
+<link rel="prev" href="mex-MexFeed.html" title="MexFeed">
+<link rel="next" href="mex-MexGriloProgram.html" title="MexGriloProgram">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="mex-MexFeed.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch07.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="mex-MexGriloProgram.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-MexGriloFeed.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-MexGriloFeed.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-MexGriloFeed"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-MexGriloFeed.top_of_page"></a>MexGriloFeed</span></h2>
+<p>MexGriloFeed</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-MexGriloFeed.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">enum                <a class="link" href="mex-MexGriloFeed.html#MexGriloOperationType" title="enum MexGriloOperationType">MexGriloOperationType</a>;
+                    <a class="link" href="mex-MexGriloFeed.html#MexGriloOperation" title="MexGriloOperation">MexGriloOperation</a>;
+struct              <a class="link" href="mex-MexGriloFeed.html#MexGriloFeed" title="struct MexGriloFeed">MexGriloFeed</a>;
+struct              <a class="link" href="mex-MexGriloFeed.html#MexGriloFeedClass" title="struct MexGriloFeedClass">MexGriloFeedClass</a>;
+<a class="link" href="mex-MexFeed.html#MexFeed" title="struct MexFeed"><span class="returnvalue">MexFeed</span></a> *           <a class="link" href="mex-MexGriloFeed.html#mex-grilo-feed-new" title="mex_grilo_feed_new ()">mex_grilo_feed_new</a>                  (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/grilo/GrlMediaSource.html"><span class="type">GrlMediaSource</span></a> *source</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *query_keys</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *metadata_keys</code></em>,
+                                                         <em class="parameter"><code><span class="type">GrlMedia</span> *root</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexGriloFeed.html#mex-grilo-feed-browse" title="mex_grilo_feed_browse ()">mex_grilo_feed_browse</a>               (<em class="parameter"><code><a class="link" href="mex-MexGriloFeed.html#MexGriloFeed" title="struct MexGriloFeed"><span class="type">MexGriloFeed</span></a> *feed</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> offset</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> limit</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexGriloFeed.html#mex-grilo-feed-search" title="mex_grilo_feed_search ()">mex_grilo_feed_search</a>               (<em class="parameter"><code><a class="link" href="mex-MexGriloFeed.html#MexGriloFeed" title="struct MexGriloFeed"><span class="type">MexGriloFeed</span></a> *feed</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *search_text</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> offset</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> limit</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexGriloFeed.html#mex-grilo-feed-query" title="mex_grilo_feed_query ()">mex_grilo_feed_query</a>                (<em class="parameter"><code><a class="link" href="mex-MexGriloFeed.html#MexGriloFeed" title="struct MexGriloFeed"><span class="type">MexGriloFeed</span></a> *feed</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *query</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> offset</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> limit</code></em>);
+const <a class="link" href="mex-MexGriloFeed.html#MexGriloOperation" title="MexGriloOperation"><span class="returnvalue">MexGriloOperation</span></a> * <a class="link" href="mex-MexGriloFeed.html#mex-grilo-feed-get-operation" title="mex_grilo_feed_get_operation ()">mex_grilo_feed_get_operation</a>  (<em class="parameter"><code><a class="link" href="mex-MexGriloFeed.html#MexGriloFeed" title="struct MexGriloFeed"><span class="type">MexGriloFeed</span></a> *feed</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="mex-MexGriloFeed.html#mex-grilo-feed-get-completed" title="mex_grilo_feed_get_completed ()">mex_grilo_feed_get_completed</a>        (<em class="parameter"><code><a class="link" href="mex-MexGriloFeed.html#MexGriloFeed" title="struct MexGriloFeed"><span class="type">MexGriloFeed</span></a> *feed</code></em>);
+                    <a class="link" href="mex-MexGriloFeed.html#MexGriloFeedPrivate" title="MexGriloFeedPrivate">MexGriloFeedPrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-MexGriloFeed.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="mex-MexGriloFeed.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexGriloOperationType"></a><h3>enum MexGriloOperationType</h3>
+<pre class="programlisting">typedef enum {
+  MEX_GRILO_FEED_OPERATION_NONE,
+  MEX_GRILO_FEED_OPERATION_BROWSE,
+  MEX_GRILO_FEED_OPERATION_QUERY,
+  MEX_GRILO_FEED_OPERATION_SEARCH
+} MexGriloOperationType;
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexGriloOperation"></a><h3>MexGriloOperation</h3>
+<pre class="programlisting">typedef struct {
+  MexGriloOperationType type;
+
+  char    *text;
+  guint32  limit;
+  guint32  count;
+  guint32  offset;
+
+  guint32 op_id;
+} MexGriloOperation;
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexGriloFeed"></a><h3>struct MexGriloFeed</h3>
+<pre class="programlisting">struct MexGriloFeed {
+  MexFeed parent;
+
+  MexGriloFeedPrivate *priv;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexGriloFeedClass"></a><h3>struct MexGriloFeedClass</h3>
+<pre class="programlisting">struct MexGriloFeedClass {
+  MexFeedClass parent_class;
+
+  guint (*browse) (MexGriloFeed           *feed,
+                   int                     offset,
+                   int                     limit,
+                   GrlMediaSourceResultCb  callback);
+  guint (*query) (MexGriloFeed            *feed,
+                  const char              *query,
+                  int                      offset,
+                  int                      limit,
+                  GrlMediaSourceResultCb   callback);
+  guint (*search) (MexGriloFeed           *feed,
+                   const char             *search_text,
+                   int                     offset,
+                   int                     limit,
+                   GrlMediaSourceResultCb  callback);
+
+  void (*content_updated) (GrlMediaSource           *source,
+                           GPtrArray                *changed_medias,
+                           GrlMediaSourceChangeType  change_type,
+                           gboolean                  known_location,
+                           MexGriloFeed             *feed);
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-grilo-feed-new"></a><h3>mex_grilo_feed_new ()</h3>
+<pre class="programlisting"><a class="link" href="mex-MexFeed.html#MexFeed" title="struct MexFeed"><span class="returnvalue">MexFeed</span></a> *           mex_grilo_feed_new                  (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/grilo/GrlMediaSource.html"><span class="type">GrlMediaSource</span></a> *source</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *query_keys</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *metadata_keys</code></em>,
+                                                         <em class="parameter"><code><span class="type">GrlMedia</span> *root</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-grilo-feed-browse"></a><h3>mex_grilo_feed_browse ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_grilo_feed_browse               (<em class="parameter"><code><a class="link" href="mex-MexGriloFeed.html#MexGriloFeed" title="struct MexGriloFeed"><span class="type">MexGriloFeed</span></a> *feed</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> offset</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> limit</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-grilo-feed-search"></a><h3>mex_grilo_feed_search ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_grilo_feed_search               (<em class="parameter"><code><a class="link" href="mex-MexGriloFeed.html#MexGriloFeed" title="struct MexGriloFeed"><span class="type">MexGriloFeed</span></a> *feed</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *search_text</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> offset</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> limit</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-grilo-feed-query"></a><h3>mex_grilo_feed_query ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_grilo_feed_query                (<em class="parameter"><code><a class="link" href="mex-MexGriloFeed.html#MexGriloFeed" title="struct MexGriloFeed"><span class="type">MexGriloFeed</span></a> *feed</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *query</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> offset</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> limit</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-grilo-feed-get-operation"></a><h3>mex_grilo_feed_get_operation ()</h3>
+<pre class="programlisting">const <a class="link" href="mex-MexGriloFeed.html#MexGriloOperation" title="MexGriloOperation"><span class="returnvalue">MexGriloOperation</span></a> * mex_grilo_feed_get_operation  (<em class="parameter"><code><a class="link" href="mex-MexGriloFeed.html#MexGriloFeed" title="struct MexGriloFeed"><span class="type">MexGriloFeed</span></a> *feed</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-grilo-feed-get-completed"></a><h3>mex_grilo_feed_get_completed ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            mex_grilo_feed_get_completed        (<em class="parameter"><code><a class="link" href="mex-MexGriloFeed.html#MexGriloFeed" title="struct MexGriloFeed"><span class="type">MexGriloFeed</span></a> *feed</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexGriloFeedPrivate"></a><h3>MexGriloFeedPrivate</h3>
+<pre class="programlisting">typedef struct _MexGriloFeedPrivate MexGriloFeedPrivate;</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexContentView</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch04.html" title="Abstract classes and interfaces">
+<link rel="prev" href="mex-MexContent.html" title="MexContent">
+<link rel="next" href="MexGenericContent.html" title="MexGenericContent">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="mex-MexContent.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch04.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="MexGenericContent.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-MexContentView.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-MexContentView.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-MexContentView"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-MexContentView.top_of_page"></a>MexContentView</span></h2>
+<p>MexContentView</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-MexContentView.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">#define             <a class="link" href="mex-MexContentView.html#MEX-CONTENT-VIEW-IFACE:CAPS" title="MEX_CONTENT_VIEW_IFACE()">MEX_CONTENT_VIEW_IFACE</a>              (iface)
+#define             <a class="link" href="mex-MexContentView.html#MEX-IS-CONTENT-VIEW-IFACE:CAPS" title="MEX_IS_CONTENT_VIEW_IFACE()">MEX_IS_CONTENT_VIEW_IFACE</a>           (iface)
+struct              <a class="link" href="mex-MexContentView.html#MexContentViewIface" title="struct MexContentViewIface">MexContentViewIface</a>;
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexContentView.html#mex-content-view-set-content" title="mex_content_view_set_content ()">mex_content_view_set_content</a>        (<em class="parameter"><code><span class="type">MexContentView</span> *view</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexContent</span> *content</code></em>);
+<span class="returnvalue">MexContent</span> *        <a class="link" href="mex-MexContentView.html#mex-content-view-get-content" title="mex_content_view_get_content ()">mex_content_view_get_content</a>        (<em class="parameter"><code><span class="type">MexContentView</span> *view</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexContentView.html#mex-content-view-set-context" title="mex_content_view_set_context ()">mex_content_view_set_context</a>        (<em class="parameter"><code><span class="type">MexContentView</span> *view</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *model</code></em>);
+<span class="returnvalue">MexModel</span> *          <a class="link" href="mex-MexContentView.html#mex-content-view-get-context" title="mex_content_view_get_context ()">mex_content_view_get_context</a>        (<em class="parameter"><code><span class="type">MexContentView</span> *view</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-MexContentView.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="mex-MexContentView.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MEX-CONTENT-VIEW-IFACE:CAPS"></a><h3>MEX_CONTENT_VIEW_IFACE()</h3>
+<pre class="programlisting">#define MEX_CONTENT_VIEW_IFACE(iface) (G_TYPE_CHECK_CLASS_CAST ((iface), MEX_TYPE_CONTENT_VIEW, MexContentViewIface))
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MEX-IS-CONTENT-VIEW-IFACE:CAPS"></a><h3>MEX_IS_CONTENT_VIEW_IFACE()</h3>
+<pre class="programlisting">#define MEX_IS_CONTENT_VIEW_IFACE(iface) (G_TYPE_CHECK_CLASS_TYPE ((iface), MEX_TYPE_CONTENT_VIEW))
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexContentViewIface"></a><h3>struct MexContentViewIface</h3>
+<pre class="programlisting">struct MexContentViewIface {
+    GTypeInterface g_iface;
+
+    void        (*set_content) (MexContentView *view,
+                                MexContent     *content);
+    MexContent* (*get_content) (MexContentView *view);
+
+    void        (*set_context) (MexContentView *view,
+                                MexModel       *content);
+    MexModel*   (*get_context) (MexContentView *view);
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-content-view-set-content"></a><h3>mex_content_view_set_content ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_content_view_set_content        (<em class="parameter"><code><span class="type">MexContentView</span> *view</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexContent</span> *content</code></em>);</pre>
+<p>
+Adds <em class="parameter"><code>content</code></em> to <em class="parameter"><code>view</code></em>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>view</code></em> :</span></p></td>
+<td>a <span class="type">MexContentView</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>content</code></em> :</span></p></td>
+<td>a <span class="type">MexContent</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-content-view-get-content"></a><h3>mex_content_view_get_content ()</h3>
+<pre class="programlisting"><span class="returnvalue">MexContent</span> *        mex_content_view_get_content        (<em class="parameter"><code><span class="type">MexContentView</span> *view</code></em>);</pre>
+<p>
+Retrieves the content associated with <em class="parameter"><code>view</code></em>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>view</code></em> :</span></p></td>
+<td>a <span class="type">MexContentView</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <span class="type">MexContent</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-content-view-set-context"></a><h3>mex_content_view_set_context ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_content_view_set_context        (<em class="parameter"><code><span class="type">MexContentView</span> *view</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexModel</span> *model</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-content-view-get-context"></a><h3>mex_content_view_get_context ()</h3>
+<pre class="programlisting"><span class="returnvalue">MexModel</span> *          mex_content_view_get_context        (<em class="parameter"><code><span class="type">MexContentView</span> *view</code></em>);</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

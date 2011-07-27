@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Extending Media Explorer</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="developers.html" title="Media Explorer for developers">
+<link rel="prev" href="developers-works.html" title="How it works">
+<link rel="next" href="mex-base.html" title="Part II. Mex Core Reference">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2"><tr valign="middle">
+<td><a accesskey="p" href="developers-works.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="developers.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="mex-base.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="developers-extending"></a>Extending Media Explorer</h2></div></div></div>
+<p>This section explains how to add your own extensions and
+    customisations to Media Explorer.</p>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="developers-extending-need-to-know"></a>What you need to know</h3></div></div></div>
+<p>What you need to know to extend Media Explorer can be
+      summarised as "be a GNOME developer": most of the technologies
+      you need to know are used in the GNOME project.</p>
+<p>But, more specifically, you need to know:</p>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem"><p>How to use
+          <a class="ulink" href="https://live.gnome.org/Jhbuild" target="_top">jhbuild</a>. This
+          is the easiest way to build a working development
+          environment for Media Explorer (see
+          <a class="link" href="developers-extending.html#developers-extending-environment" title="Setting up a development environment">below</a>).</p></li>
+<li class="listitem"><p>How to use autotools (to put together a plugin
+          project)</p></li>
+<li class="listitem"><p>How to code in C (to be able to write in a language which
+          integrates with the Media Explorer app)</p></li>
+<li class="listitem"><p>How to use GObject (to be able to subclass libmex
+          classes to slot into Media Explorer)</p></li>
+<li class="listitem"><p>How to write applications using Clutter+Mx (optional and
+          not vital): to provide custom widgets for your plugin</p></li>
+</ul></div>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="developers-extending-environment"></a>Setting up a development environment</h3></div></div></div>
+<p>The easiest way to work on Media Explorer is to use
+      <span class="emphasis"><em>jhbuild-mex</em></span>. This can build
+      all the correct dependencies for Media Explorer, providing
+      you are working on a relatively recent Linux distro (e.g. Debian
+      sid or Fedora 14). You can get it from ???TODO. Installation
+      and Media Explorer build instructions are included in that
+      project.</p>
+<p>Once you've installed jhbuild-mex and built
+      Media Explorer, you can make local modifications to the Media
+      Explorer source from inside a jhbuild-mex shell, e.g.</p>
+<div class="informalexample"><pre class="screen">
+# work directly on the checked-out jhbuild source; see
+# <a class="link" href="developers-extending.html#developers-extending-environment-warning" title="Warning">below</a> for caveats
+<code class="prompt">$</code> <span class="command"><strong>cd $JHBUILD_MEX_SOURCE/media-explorer</strong></span>
+<code class="prompt">$</code> <span class="command"><strong>git co -b my-shiny-new-branch</strong></span>
+
+# ...edit source code and make local commits using your editor of choice...
+
+<code class="prompt">$</code> <span class="command"><strong>jhbuild-mex shell</strong></span>
+<code class="prompt">$</code> <span class="command"><strong>make</strong></span>
+
+# to install your version of mex over the stock version
+<code class="prompt">$</code> <span class="command"><strong>make install</strong></span>
+        </pre></div>
+<p>You only need to be inside the jhbuild-mex shell when
+      you want to build the source; but it's often easiest to just stay
+      inside a shell all the time so you don't forget to
+      switch before building.</p>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">
+<a name="developers-extending-environment-warning"></a>Warning</h3>
+<p>If you run <span class="command"><strong>jhbuild-mex build</strong></span> after
+        making modifications to the source, your branch will be used
+        as the basis for the build. So if you are working on your
+        own branch, you will need to merge any changes made
+        to mex master into your own branches yourself.</p>
+<p>You should also be aware that if you choose to clear
+        the source directory during a <span class="command"><strong>jhbuild-mex</strong></span>
+        build (one of the options if a module fails to build), any
+        local changes you've made could be lost. So it's a good idea
+        to push your own branches to a remote git server as a backup.</p>
+</div>
+<p>Another useful tool is <span class="command"><strong>turbine</strong></span>, which
+      provides a GUI for creating GObject classes. This can help a lot when
+      writing Media Explorer plugins (which are, naturally, GObject classes).
+      You can get turbine from
+      <a class="ulink" href="http://git.gnome.org/browse/turbine/" target="_top">GNOME git</a>.</p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="developers-extending-building"></a>Enabling and configuring content sources</h3></div></div></div>
+<p>The default jhbuild-mex configuration builds a minimal
+      version of the application and its support libraries, with most of
+      the Grilo plugins disabled (for various licensing reasons). This
+      means that you can't make use of Grilo to feed media from
+      other sources like Flickr, YouTube and Vimeo into Media
+      Explorer.</p>
+<p>However, you can re-enable Grilo plugins by changing the
+      default configure options, then adding the plugins to the Media Explorer
+      search whitelist. Then, providing the user supplies the
+      necessary API keys, results from these extra sources should
+      appear in Media Explorer's search results display.</p>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="developers-extending-building-enabling-grilo"></a>Enabling Grilo plugins</h4></div></div></div>
+<p>The following Grilo plugins can provide search results
+        to Media Explorer:</p>
+<div class="itemizedlist">
+<a name="developers-extending-building-enabling-grilo-list"></a><ul class="itemizedlist" type="disc">
+<li class="listitem"><p><b>jamendo. </b>For accessing free music from
+              <a class="ulink" href="http://www.jamendo.com/" target="_top">Jamendo</a>.</p></li>
+<li class="listitem"><p><b>upnp. </b>For accessing media on UPnP servers. Although
+              grilo-tracker + tracker-upnp (both enabled in
+              Media Explorer by default) provide access to UPnP
+              media, the Grilo UPnP plugin is an alternative way to
+              index UPnP media. It may be useful if you are using
+              Media Explorer on a system where Tracker isn't
+              available.</p></li>
+<li class="listitem"><p><b>vimeo. </b>For accesing videos on
+              <a class="ulink" href="http://vimeo.com/" target="_top">Vimeo</a>.</p></li>
+<li class="listitem"><p><b>youtube. </b>For accessing videos on
+              <a class="ulink" href="http://youtube.com" target="_top">YouTube</a>.</p></li>
+<li class="listitem"><p><b>flickr. </b>For accessing photos on
+              <a class="ulink" href="http://flickr.com/" target="_top">Flickr</a>.</p></li>
+</ul>
+</div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>
+<p>Grilo has various other plugins, and doubtless more
+          will be added over time, but the ones listed above are the
+          only ones which affect Media Explorer searches.</p>
+</div>
+<p>You can set configure options for the build via jhbuild-mex
+        by editing the <code class="filename">$HOME/.jhbuildrc-mex-custom</code>
+        file. Add a line to customise the arguments passed to
+        <span class="command"><strong>autogen.sh</strong></span>; this in turn affects how
+        <span class="command"><strong>configure</strong></span> is invoked.</p>
+<p>For example, to turn on the vimeo and youtube plugins, the line
+        would look like this:</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1</pre></td>
+        <td class="listing_code"><pre class="programlisting">module_autogenargs<span class="gtkdoc opt">[</span><span class="string">'grilo-plugins'</span><span class="gtkdoc opt">] =</span> <span class="string">'--enable-upnp --enable-vimeo'</span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>To enable other modules, append <code class="code">--enable-$MODULE</code>
+        to the autogenargs string, where <code class="code">$MODULE</code> is one
+        of the module names from
+        <GTKDOCLINK HREF="developers-extending-building-grilo-plugins">this
+        list</GTKDOCLINK>.</p>
+<p>It's also possible to disable a plugin. You might want to
+        do this if a plugin is causing Media Explorer to crash (as the
+        YouTube plugin has done on occasion in the past). To do this,
+        just pass <code class="code">--disable-$MODULE</code> as an autogen argument.
+        For example, to enable upnp and vimeo but disable youtube:</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3</pre></td>
+        <td class="listing_code"><pre class="programlisting">module_autogenargs<span class="gtkdoc opt">[</span><span class="string">'grilo-plugins'</span><span class="gtkdoc opt">] =</span> <span class="string">'--enable-upnp \</span>
+<span class="string">                                       --enable-vimeo \</span>
+<span class="string">                                       --disable-youtube'</span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="developers-extending-building-whitelisting"></a>Whitelisting Grilo plugins</h4></div></div></div>
+<p>Once a Grilo plugin has been enabled, the next step is
+        to allow Media Explorer to use it as a content source. Once
+        you've done this, any searches made through the Media Explorer
+        interface will also search the enabled content
+        sources (as well as the local filesystem and UPnP via the
+        grilo-tracker plugin).</p>
+<p>To enable a Grilo plugin as a Media Explorer content
+        source, modify your <code class="filename">$HOME/.config/mex/mex.conf</code>
+        configuration file (create this file if it doesn't exist). Here's
+        an example:</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="gtkdoc opt">[</span>grilo<span class="gtkdoc opt">-</span>plugins<span class="gtkdoc opt">]</span>
+enabled<span class="gtkdoc opt">=</span>grl<span class="gtkdoc opt">-</span>tracker<span class="gtkdoc opt">;</span>grl<span class="gtkdoc opt">-</span>vimeo<span class="gtkdoc opt">;</span>grl<span class="gtkdoc opt">-</span>flickr<span class="gtkdoc opt">;</span>grl<span class="gtkdoc opt">-</span>jamendo</pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Note that the plugin ID is a name shown in
+        <a class="link" href="developers-extending.html#developers-extending-building-enabling-grilo-list">the
+        previous list</a>, prefixed with <code class="code">grl</code>. You
+        can enable more plugins by appending a semi-colon and a plugin
+        ID to the value for <code class="varname">enabled</code>.</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>
+<p>Once you've enabled new plugins in Grilo and whitelisted
+          them, you may still need to configure them by following
+          <a class="link" href="users-content-sources.html" title="Configuring extra content sources">these
+          instructions</a>.</p>
+</div>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="developers-extending-building-checking"></a>Checking which Grilo plugins are enabled</h4></div></div></div>
+<p>You can test which Grilo plugins are available
+        by running <span class="command"><strong>mex</strong></span> from inside a jhbuild-mex
+        shell, with Grilo registry debugging turned on. Use the
+        <code class="envar">GRL_DEBUG</code> environment variable to control
+        which messages Grilo displays, and at which log levels.
+        Full debugging for the plugin registry is enabled like this:</p>
+<div class="informalexample"><pre class="screen">
+<code class="prompt">$</code> <span class="command"><strong>GRL_DEBUG=plugin-registry:debug mex</strong></span>
+          </pre></div>
+<p>A plugin logs a message like this if it loads
+        successfully:</p>
+<div class="informalexample"><pre class="screen">
+
+(mex:31977): Grilo-DEBUG: [plugin-registry] grl-plugin-registry.c:173: Plugin rank 'grl-jamendo' : 0
+(mex:31977): Grilo-DEBUG: [plugin-registry] grl-plugin-registry.c:370: New source available: 'grl-jamendo'
+(mex:31977): Grilo-DEBUG: [plugin-registry] grl-plugin-registry.c:577: Loaded plugin 'grl-jamendo' from '/home/ell/mex/install/lib/grilo-0.1/libgrljamendo.so'
+
+          </pre></div>
+<p>Make sure you have
+        <GTKDOCLINK HREF="users-grilo-configuration">configured the
+        plugins</GTKDOCLINK> first: any plugins which require configuration
+        but don't have it report a failure like this:</p>
+<div class="informalexample"><pre class="screen">
+
+(mex:31866): Grilo-DEBUG: [plugin-registry] grl-plugin-registry.c:173: \
+  Plugin rank 'grl-vimeo' : 0
+
+(mex:31866): Grilo-WARNING **: [vimeo] grl-vimeo.c:103: Missing configuration
+
+(mex:31866): Grilo-WARNING **: [plugin-registry] grl-plugin-registry.c:551: \
+  Failed to initialize plugin: './../lib/grilo-0.1/libgrlvimeo.so'
+
+          </pre></div>
+<p>Finally, confirm that the Grilo plugin is supplying
+        content to Media Explorer by performing a search. Check that
+        the search results contain columns for the plugins you've enabled.
+        For example,
+        <a class="link" href="developers-extending.html#developers-extending-building-checking-screenshot">this
+        screenshot</a> shows results being returned from Jamendo,
+        Flickr, Tracker (local filesystem and UPnP), and Vimeo:</p>
+<div class="screenshot"><div class="mediaobject"><img src="search-results.png"></div></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>mex-online</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch12.html" title="Notifications">
+<link rel="prev" href="mex-MexNetworkNotificationSource.html" title="MexNetworkNotificationSource">
+<link rel="next" href="ch13.html" title="Utility classes">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="mex-MexNetworkNotificationSource.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch12.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="ch13.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-mex-online.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-mex-online.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-mex-online"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-mex-online.top_of_page"></a>mex-online</span></h2>
+<p>mex-online</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-mex-online.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="mex-mex-online.html#mex-is-online" title="mex_is_online ()">mex_is_online</a>                       (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">void</span>                (<a class="link" href="mex-mex-online.html#MexOnlineNotify" title="MexOnlineNotify ()">*MexOnlineNotify</a>)                  (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> online</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-online.html#mex-online-add-notify" title="mex_online_add_notify ()">mex_online_add_notify</a>               (<em class="parameter"><code><a class="link" href="mex-mex-online.html#MexOnlineNotify" title="MexOnlineNotify ()"><span class="type">MexOnlineNotify</span></a> callback</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-online.html#mex-online-remove-notify" title="mex_online_remove_notify ()">mex_online_remove_notify</a>            (<em class="parameter"><code><a class="link" href="mex-mex-online.html#MexOnlineNotify" title="MexOnlineNotify ()"><span class="type">MexOnlineNotify</span></a> callback</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-mex-online.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="mex-mex-online.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="mex-is-online"></a><h3>mex_is_online ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            mex_is_online                       (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexOnlineNotify"></a><h3>MexOnlineNotify ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                (*MexOnlineNotify)                  (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> online</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-online-add-notify"></a><h3>mex_online_add_notify ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_online_add_notify               (<em class="parameter"><code><a class="link" href="mex-mex-online.html#MexOnlineNotify" title="MexOnlineNotify ()"><span class="type">MexOnlineNotify</span></a> callback</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-online-remove-notify"></a><h3>mex_online_remove_notify ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_online_remove_notify            (<em class="parameter"><code><a class="link" href="mex-mex-online.html#MexOnlineNotify" title="MexOnlineNotify ()"><span class="type">MexOnlineNotify</span></a> callback</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

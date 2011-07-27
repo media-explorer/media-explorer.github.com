@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexNotificationSource</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch12.html" title="Notifications">
+<link rel="prev" href="ch12.html" title="Notifications">
+<link rel="next" href="mex-MexGenericNotificationSource.html" title="MexGenericNotificationSource">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ch12.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch12.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="mex-MexGenericNotificationSource.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-MexNotificationSource.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-MexNotificationSource.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-MexNotificationSource"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-MexNotificationSource.top_of_page"></a>MexNotificationSource</span></h2>
+<p>MexNotificationSource</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-MexNotificationSource.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="mex-MexNotificationSource.html#MexNotificationSource" title="struct MexNotificationSource">MexNotificationSource</a>;
+struct              <a class="link" href="mex-MexNotificationSource.html#MexNotificationSourceClass" title="struct MexNotificationSourceClass">MexNotificationSourceClass</a>;
+<a class="link" href="mex-MexNotificationSource.html#MexNotificationSource" title="struct MexNotificationSource"><span class="returnvalue">MexNotificationSource</span></a> * <a class="link" href="mex-MexNotificationSource.html#mex-notification-source-new" title="mex_notification_source_new ()">mex_notification_source_new</a>     (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">MexNotification</span> *   <a class="link" href="mex-MexNotificationSource.html#mex-notification-source-new-notification" title="mex_notification_source_new_notification ()">mex_notification_source_new_notification</a>
+                                                        (<em class="parameter"><code><a class="link" href="mex-MexNotificationSource.html#MexNotificationSource" title="struct MexNotificationSource"><span class="type">MexNotificationSource</span></a> *source</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *message</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *icon</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> duration</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexNotificationSource.html#mex-notification-source-emit-notification-added" title="mex_notification_source_emit_notification_added ()">mex_notification_source_emit_notification_added</a>
+                                                        (<em class="parameter"><code><a class="link" href="mex-MexNotificationSource.html#MexNotificationSource" title="struct MexNotificationSource"><span class="type">MexNotificationSource</span></a> *source</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexNotification</span> *notification</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexNotificationSource.html#mex-notification-source-emit-notification-remove" title="mex_notification_source_emit_notification_remove ()">mex_notification_source_emit_notification_remove</a>
+                                                        (<em class="parameter"><code><a class="link" href="mex-MexNotificationSource.html#MexNotificationSource" title="struct MexNotificationSource"><span class="type">MexNotificationSource</span></a> *source</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexNotification</span> *notification</code></em>);
+<a href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="returnvalue">GType</span></a>               <a class="link" href="mex-MexNotificationSource.html#mex-notification-get-type" title="mex_notification_get_type ()">mex_notification_get_type</a>           (<em class="parameter"><code><span class="type">void</span></code></em>);
+#define             <a class="link" href="mex-MexNotificationSource.html#MEX-TYPE-NOTIFICATION:CAPS" title="MEX_TYPE_NOTIFICATION">MEX_TYPE_NOTIFICATION</a>
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexNotificationSource.html#mex-notification-free" title="mex_notification_free ()">mex_notification_free</a>               (<em class="parameter"><code><span class="type">MexNotification</span> *notification</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-MexNotificationSource.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="mex-MexNotificationSource.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexNotificationSource"></a><h3>struct MexNotificationSource</h3>
+<pre class="programlisting">struct MexNotificationSource {
+  GObject parent;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexNotificationSourceClass"></a><h3>struct MexNotificationSourceClass</h3>
+<pre class="programlisting">struct MexNotificationSourceClass {
+  GObjectClass parent_class;
+  void (*notification_added) (MexNotificationSource *source, MexNotification *notification);
+  void (*notification_removed) (MexNotificationSource *source, MexNotification *notification);
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-notification-source-new"></a><h3>mex_notification_source_new ()</h3>
+<pre class="programlisting"><a class="link" href="mex-MexNotificationSource.html#MexNotificationSource" title="struct MexNotificationSource"><span class="returnvalue">MexNotificationSource</span></a> * mex_notification_source_new     (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-notification-source-new-notification"></a><h3>mex_notification_source_new_notification ()</h3>
+<pre class="programlisting"><span class="returnvalue">MexNotification</span> *   mex_notification_source_new_notification
+                                                        (<em class="parameter"><code><a class="link" href="mex-MexNotificationSource.html#MexNotificationSource" title="struct MexNotificationSource"><span class="type">MexNotificationSource</span></a> *source</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *message</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *icon</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> duration</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-notification-source-emit-notification-added"></a><h3>mex_notification_source_emit_notification_added ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_notification_source_emit_notification_added
+                                                        (<em class="parameter"><code><a class="link" href="mex-MexNotificationSource.html#MexNotificationSource" title="struct MexNotificationSource"><span class="type">MexNotificationSource</span></a> *source</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexNotification</span> *notification</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-notification-source-emit-notification-remove"></a><h3>mex_notification_source_emit_notification_remove ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_notification_source_emit_notification_remove
+                                                        (<em class="parameter"><code><a class="link" href="mex-MexNotificationSource.html#MexNotificationSource" title="struct MexNotificationSource"><span class="type">MexNotificationSource</span></a> *source</code></em>,
+                                                         <em class="parameter"><code><span class="type">MexNotification</span> *notification</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-notification-get-type"></a><h3>mex_notification_get_type ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="returnvalue">GType</span></a>               mex_notification_get_type           (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MEX-TYPE-NOTIFICATION:CAPS"></a><h3>MEX_TYPE_NOTIFICATION</h3>
+<pre class="programlisting">#define MEX_TYPE_NOTIFICATION mex_notification_get_type ()
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-notification-free"></a><h3>mex_notification_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_notification_free               (<em class="parameter"><code><span class="type">MexNotification</span> *notification</code></em>);</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

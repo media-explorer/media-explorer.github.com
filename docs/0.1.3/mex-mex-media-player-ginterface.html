@@ -1,0 +1,1086 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>mex-media-player-ginterface</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch04.html" title="Abstract classes and interfaces">
+<link rel="prev" href="mex-MexGenericProxy.html" title="MexGenericProxy">
+<link rel="next" href="mex-MexModel.html" title="MexModel">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="mex-MexGenericProxy.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch04.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="mex-MexModel.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-mex-media-player-ginterface.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-mex-media-player-ginterface.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-mex-media-player-ginterface"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-mex-media-player-ginterface.top_of_page"></a>mex-media-player-ginterface</span></h2>
+<p>mex-media-player-ginterface</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-mex-media-player-ginterface.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis"><span class="returnvalue">void</span>                (<a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-set-audio-volume-impl" title="mex_media_player_iface_set_audio_volume_impl ()">*mex_media_player_iface_set_audio_volume_impl</a>)
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIface" title="MexMediaPlayerIface"><span class="type">MexMediaPlayerIface</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> in_volume</code></em>,
+                                                         <em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-implement-set-audio-volume" title="mex_media_player_iface_implement_set_audio_volume ()">mex_media_player_iface_implement_set_audio_volume</a>
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIfaceClass" title="MexMediaPlayerIfaceClass"><span class="type">MexMediaPlayerIfaceClass</span></a> *klass</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-set-audio-volume-impl" title="mex_media_player_iface_set_audio_volume_impl ()"><span class="type">mex_media_player_iface_set_audio_volume_impl</span></a> impl</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-return-from-set-audio-volume" title="mex_media_player_iface_return_from_set_audio_volume ()">mex_media_player_iface_return_from_set_audio_volume</a>
+                                                        (<em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>);
+<span class="returnvalue">void</span>                (<a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-get-audio-volume-impl" title="mex_media_player_iface_get_audio_volume_impl ()">*mex_media_player_iface_get_audio_volume_impl</a>)
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIface" title="MexMediaPlayerIface"><span class="type">MexMediaPlayerIface</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-implement-get-audio-volume" title="mex_media_player_iface_implement_get_audio_volume ()">mex_media_player_iface_implement_get_audio_volume</a>
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIfaceClass" title="MexMediaPlayerIfaceClass"><span class="type">MexMediaPlayerIfaceClass</span></a> *klass</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-get-audio-volume-impl" title="mex_media_player_iface_get_audio_volume_impl ()"><span class="type">mex_media_player_iface_get_audio_volume_impl</span></a> impl</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-return-from-get-audio-volume" title="mex_media_player_iface_return_from_get_audio_volume ()">mex_media_player_iface_return_from_get_audio_volume</a>
+                                                        (<em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> out_volume</code></em>);
+<span class="returnvalue">void</span>                (<a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-set-uri-impl" title="mex_media_player_iface_set_uri_impl ()">*mex_media_player_iface_set_uri_impl</a>)
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIface" title="MexMediaPlayerIface"><span class="type">MexMediaPlayerIface</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *in_uri</code></em>,
+                                                         <em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-implement-set-uri" title="mex_media_player_iface_implement_set_uri ()">mex_media_player_iface_implement_set_uri</a>
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIfaceClass" title="MexMediaPlayerIfaceClass"><span class="type">MexMediaPlayerIfaceClass</span></a> *klass</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-set-uri-impl" title="mex_media_player_iface_set_uri_impl ()"><span class="type">mex_media_player_iface_set_uri_impl</span></a> impl</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-return-from-set-uri" title="mex_media_player_iface_return_from_set_uri ()">mex_media_player_iface_return_from_set_uri</a>
+                                                        (<em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>);
+<span class="returnvalue">void</span>                (<a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-get-uri-impl" title="mex_media_player_iface_get_uri_impl ()">*mex_media_player_iface_get_uri_impl</a>)
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIface" title="MexMediaPlayerIface"><span class="type">MexMediaPlayerIface</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-implement-get-uri" title="mex_media_player_iface_implement_get_uri ()">mex_media_player_iface_implement_get_uri</a>
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIfaceClass" title="MexMediaPlayerIfaceClass"><span class="type">MexMediaPlayerIfaceClass</span></a> *klass</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-get-uri-impl" title="mex_media_player_iface_get_uri_impl ()"><span class="type">mex_media_player_iface_get_uri_impl</span></a> impl</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-return-from-get-uri" title="mex_media_player_iface_return_from_get_uri ()">mex_media_player_iface_return_from_get_uri</a>
+                                                        (<em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *out_uri</code></em>);
+<span class="returnvalue">void</span>                (<a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-set-playing-impl" title="mex_media_player_iface_set_playing_impl ()">*mex_media_player_iface_set_playing_impl</a>)
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIface" title="MexMediaPlayerIface"><span class="type">MexMediaPlayerIface</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> in_playing</code></em>,
+                                                         <em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-implement-set-playing" title="mex_media_player_iface_implement_set_playing ()">mex_media_player_iface_implement_set_playing</a>
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIfaceClass" title="MexMediaPlayerIfaceClass"><span class="type">MexMediaPlayerIfaceClass</span></a> *klass</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-set-playing-impl" title="mex_media_player_iface_set_playing_impl ()"><span class="type">mex_media_player_iface_set_playing_impl</span></a> impl</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-return-from-set-playing" title="mex_media_player_iface_return_from_set_playing ()">mex_media_player_iface_return_from_set_playing</a>
+                                                        (<em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>);
+<span class="returnvalue">void</span>                (<a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-get-playing-impl" title="mex_media_player_iface_get_playing_impl ()">*mex_media_player_iface_get_playing_impl</a>)
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIface" title="MexMediaPlayerIface"><span class="type">MexMediaPlayerIface</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-implement-get-playing" title="mex_media_player_iface_implement_get_playing ()">mex_media_player_iface_implement_get_playing</a>
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIfaceClass" title="MexMediaPlayerIfaceClass"><span class="type">MexMediaPlayerIfaceClass</span></a> *klass</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-get-playing-impl" title="mex_media_player_iface_get_playing_impl ()"><span class="type">mex_media_player_iface_get_playing_impl</span></a> impl</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-return-from-get-playing" title="mex_media_player_iface_return_from_get_playing ()">mex_media_player_iface_return_from_get_playing</a>
+                                                        (<em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> out_playing</code></em>);
+<span class="returnvalue">void</span>                (<a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-set-progress-impl" title="mex_media_player_iface_set_progress_impl ()">*mex_media_player_iface_set_progress_impl</a>)
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIface" title="MexMediaPlayerIface"><span class="type">MexMediaPlayerIface</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> in_progress</code></em>,
+                                                         <em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-implement-set-progress" title="mex_media_player_iface_implement_set_progress ()">mex_media_player_iface_implement_set_progress</a>
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIfaceClass" title="MexMediaPlayerIfaceClass"><span class="type">MexMediaPlayerIfaceClass</span></a> *klass</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-set-progress-impl" title="mex_media_player_iface_set_progress_impl ()"><span class="type">mex_media_player_iface_set_progress_impl</span></a> impl</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-return-from-set-progress" title="mex_media_player_iface_return_from_set_progress ()">mex_media_player_iface_return_from_set_progress</a>
+                                                        (<em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>);
+<span class="returnvalue">void</span>                (<a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-get-progress-impl" title="mex_media_player_iface_get_progress_impl ()">*mex_media_player_iface_get_progress_impl</a>)
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIface" title="MexMediaPlayerIface"><span class="type">MexMediaPlayerIface</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-implement-get-progress" title="mex_media_player_iface_implement_get_progress ()">mex_media_player_iface_implement_get_progress</a>
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIfaceClass" title="MexMediaPlayerIfaceClass"><span class="type">MexMediaPlayerIfaceClass</span></a> *klass</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-get-progress-impl" title="mex_media_player_iface_get_progress_impl ()"><span class="type">mex_media_player_iface_get_progress_impl</span></a> impl</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-return-from-get-progress" title="mex_media_player_iface_return_from_get_progress ()">mex_media_player_iface_return_from_get_progress</a>
+                                                        (<em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> out_progress</code></em>);
+<span class="returnvalue">void</span>                (<a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-get-duration-impl" title="mex_media_player_iface_get_duration_impl ()">*mex_media_player_iface_get_duration_impl</a>)
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIface" title="MexMediaPlayerIface"><span class="type">MexMediaPlayerIface</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-implement-get-duration" title="mex_media_player_iface_implement_get_duration ()">mex_media_player_iface_implement_get_duration</a>
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIfaceClass" title="MexMediaPlayerIfaceClass"><span class="type">MexMediaPlayerIfaceClass</span></a> *klass</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-get-duration-impl" title="mex_media_player_iface_get_duration_impl ()"><span class="type">mex_media_player_iface_get_duration_impl</span></a> impl</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-return-from-get-duration" title="mex_media_player_iface_return_from_get_duration ()">mex_media_player_iface_return_from_get_duration</a>
+                                                        (<em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> out_duration</code></em>);
+<span class="returnvalue">void</span>                (<a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-get-can-seek-impl" title="mex_media_player_iface_get_can_seek_impl ()">*mex_media_player_iface_get_can_seek_impl</a>)
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIface" title="MexMediaPlayerIface"><span class="type">MexMediaPlayerIface</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-implement-get-can-seek" title="mex_media_player_iface_implement_get_can_seek ()">mex_media_player_iface_implement_get_can_seek</a>
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIfaceClass" title="MexMediaPlayerIfaceClass"><span class="type">MexMediaPlayerIfaceClass</span></a> *klass</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-get-can-seek-impl" title="mex_media_player_iface_get_can_seek_impl ()"><span class="type">mex_media_player_iface_get_can_seek_impl</span></a> impl</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-return-from-get-can-seek" title="mex_media_player_iface_return_from_get_can_seek ()">mex_media_player_iface_return_from_get_can_seek</a>
+                                                        (<em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> out_seekable</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-emit-audio-volume-changed" title="mex_media_player_iface_emit_audio_volume_changed ()">mex_media_player_iface_emit_audio_volume_changed</a>
+                                                        (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> instance</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> arg_volume</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-emit-playing-changed" title="mex_media_player_iface_emit_playing_changed ()">mex_media_player_iface_emit_playing_changed</a>
+                                                        (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> instance</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> arg_playing</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-emit-progress-changed" title="mex_media_player_iface_emit_progress_changed ()">mex_media_player_iface_emit_progress_changed</a>
+                                                        (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> instance</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> arg_progress</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-emit-duration-changed" title="mex_media_player_iface_emit_duration_changed ()">mex_media_player_iface_emit_duration_changed</a>
+                                                        (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> instance</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> arg_duration</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-emit-error" title="mex_media_player_iface_emit_error ()">mex_media_player_iface_emit_error</a>   (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> instance</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *arg_error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-emit-buffer-fill-changed" title="mex_media_player_iface_emit_buffer_fill_changed ()">mex_media_player_iface_emit_buffer_fill_changed</a>
+                                                        (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> instance</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> arg_buffer</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-emit-can-seek-changed" title="mex_media_player_iface_emit_can_seek_changed ()">mex_media_player_iface_emit_can_seek_changed</a>
+                                                        (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> instance</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> arg_seekable</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-emit-eos" title="mex_media_player_iface_emit_eos ()">mex_media_player_iface_emit_eos</a>     (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> instance</code></em>);
+                    <a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIface" title="MexMediaPlayerIface">MexMediaPlayerIface</a>;
+                    <a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIfaceClass" title="MexMediaPlayerIfaceClass">MexMediaPlayerIfaceClass</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-mex-media-player-ginterface.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="mex-mex-media-player-ginterface.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="mex-media-player-iface-set-audio-volume-impl"></a><h3>mex_media_player_iface_set_audio_volume_impl ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                (*mex_media_player_iface_set_audio_volume_impl)
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIface" title="MexMediaPlayerIface"><span class="type">MexMediaPlayerIface</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> in_volume</code></em>,
+                                                         <em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>);</pre>
+<p>
+The signature of an implementation of the D-Bus method
+SetAudioVolume on interface com.meego.mex.MediaPlayer.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The object implementing this interface</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>in_volume</code></em> :</span></p></td>
+<td>gdouble  (FIXME, generate documentation)</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>context</code></em> :</span></p></td>
+<td>Used to return values or throw an error</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-implement-set-audio-volume"></a><h3>mex_media_player_iface_implement_set_audio_volume ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_player_iface_implement_set_audio_volume
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIfaceClass" title="MexMediaPlayerIfaceClass"><span class="type">MexMediaPlayerIfaceClass</span></a> *klass</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-set-audio-volume-impl" title="mex_media_player_iface_set_audio_volume_impl ()"><span class="type">mex_media_player_iface_set_audio_volume_impl</span></a> impl</code></em>);</pre>
+<p>
+Register an implementation for the SetAudioVolume method in the vtable
+of an implementation of this interface. To be called from
+the interface init function.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>klass</code></em> :</span></p></td>
+<td>A class whose instances implement this interface</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>impl</code></em> :</span></p></td>
+<td>A callback used to implement the SetAudioVolume D-Bus method</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-return-from-set-audio-volume"></a><h3>mex_media_player_iface_return_from_set_audio_volume ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_player_iface_return_from_set_audio_volume
+                                                        (<em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>);</pre>
+<p>
+Return successfully by calling <code class="function">dbus_g_method_return()</code>.
+This inline function exists only to provide type-safety.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>context</code></em> :</span></p></td>
+<td>The D-Bus method invocation context</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-get-audio-volume-impl"></a><h3>mex_media_player_iface_get_audio_volume_impl ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                (*mex_media_player_iface_get_audio_volume_impl)
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIface" title="MexMediaPlayerIface"><span class="type">MexMediaPlayerIface</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>);</pre>
+<p>
+The signature of an implementation of the D-Bus method
+GetAudioVolume on interface com.meego.mex.MediaPlayer.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The object implementing this interface</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>context</code></em> :</span></p></td>
+<td>Used to return values or throw an error</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-implement-get-audio-volume"></a><h3>mex_media_player_iface_implement_get_audio_volume ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_player_iface_implement_get_audio_volume
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIfaceClass" title="MexMediaPlayerIfaceClass"><span class="type">MexMediaPlayerIfaceClass</span></a> *klass</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-get-audio-volume-impl" title="mex_media_player_iface_get_audio_volume_impl ()"><span class="type">mex_media_player_iface_get_audio_volume_impl</span></a> impl</code></em>);</pre>
+<p>
+Register an implementation for the GetAudioVolume method in the vtable
+of an implementation of this interface. To be called from
+the interface init function.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>klass</code></em> :</span></p></td>
+<td>A class whose instances implement this interface</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>impl</code></em> :</span></p></td>
+<td>A callback used to implement the GetAudioVolume D-Bus method</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-return-from-get-audio-volume"></a><h3>mex_media_player_iface_return_from_get_audio_volume ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_player_iface_return_from_get_audio_volume
+                                                        (<em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> out_volume</code></em>);</pre>
+<p>
+Return successfully by calling <code class="function">dbus_g_method_return()</code>.
+This inline function exists only to provide type-safety.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>context</code></em> :</span></p></td>
+<td>The D-Bus method invocation context</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>out_volume</code></em> :</span></p></td>
+<td>gdouble  (FIXME, generate documentation)</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-set-uri-impl"></a><h3>mex_media_player_iface_set_uri_impl ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                (*mex_media_player_iface_set_uri_impl)
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIface" title="MexMediaPlayerIface"><span class="type">MexMediaPlayerIface</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *in_uri</code></em>,
+                                                         <em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>);</pre>
+<p>
+The signature of an implementation of the D-Bus method
+SetUri on interface com.meego.mex.MediaPlayer.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The object implementing this interface</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>in_uri</code></em> :</span></p></td>
+<td>const gchar * (FIXME, generate documentation)</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>context</code></em> :</span></p></td>
+<td>Used to return values or throw an error</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-implement-set-uri"></a><h3>mex_media_player_iface_implement_set_uri ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_player_iface_implement_set_uri
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIfaceClass" title="MexMediaPlayerIfaceClass"><span class="type">MexMediaPlayerIfaceClass</span></a> *klass</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-set-uri-impl" title="mex_media_player_iface_set_uri_impl ()"><span class="type">mex_media_player_iface_set_uri_impl</span></a> impl</code></em>);</pre>
+<p>
+Register an implementation for the SetUri method in the vtable
+of an implementation of this interface. To be called from
+the interface init function.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>klass</code></em> :</span></p></td>
+<td>A class whose instances implement this interface</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>impl</code></em> :</span></p></td>
+<td>A callback used to implement the SetUri D-Bus method</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-return-from-set-uri"></a><h3>mex_media_player_iface_return_from_set_uri ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_player_iface_return_from_set_uri
+                                                        (<em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>);</pre>
+<p>
+Return successfully by calling <code class="function">dbus_g_method_return()</code>.
+This inline function exists only to provide type-safety.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>context</code></em> :</span></p></td>
+<td>The D-Bus method invocation context</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-get-uri-impl"></a><h3>mex_media_player_iface_get_uri_impl ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                (*mex_media_player_iface_get_uri_impl)
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIface" title="MexMediaPlayerIface"><span class="type">MexMediaPlayerIface</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>);</pre>
+<p>
+The signature of an implementation of the D-Bus method
+GetUri on interface com.meego.mex.MediaPlayer.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The object implementing this interface</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>context</code></em> :</span></p></td>
+<td>Used to return values or throw an error</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-implement-get-uri"></a><h3>mex_media_player_iface_implement_get_uri ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_player_iface_implement_get_uri
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIfaceClass" title="MexMediaPlayerIfaceClass"><span class="type">MexMediaPlayerIfaceClass</span></a> *klass</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-get-uri-impl" title="mex_media_player_iface_get_uri_impl ()"><span class="type">mex_media_player_iface_get_uri_impl</span></a> impl</code></em>);</pre>
+<p>
+Register an implementation for the GetUri method in the vtable
+of an implementation of this interface. To be called from
+the interface init function.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>klass</code></em> :</span></p></td>
+<td>A class whose instances implement this interface</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>impl</code></em> :</span></p></td>
+<td>A callback used to implement the GetUri D-Bus method</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-return-from-get-uri"></a><h3>mex_media_player_iface_return_from_get_uri ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_player_iface_return_from_get_uri
+                                                        (<em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *out_uri</code></em>);</pre>
+<p>
+Return successfully by calling <code class="function">dbus_g_method_return()</code>.
+This inline function exists only to provide type-safety.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>context</code></em> :</span></p></td>
+<td>The D-Bus method invocation context</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>out_uri</code></em> :</span></p></td>
+<td>const gchar * (FIXME, generate documentation)</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-set-playing-impl"></a><h3>mex_media_player_iface_set_playing_impl ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                (*mex_media_player_iface_set_playing_impl)
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIface" title="MexMediaPlayerIface"><span class="type">MexMediaPlayerIface</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> in_playing</code></em>,
+                                                         <em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>);</pre>
+<p>
+The signature of an implementation of the D-Bus method
+SetPlaying on interface com.meego.mex.MediaPlayer.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The object implementing this interface</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>in_playing</code></em> :</span></p></td>
+<td>gboolean  (FIXME, generate documentation)</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>context</code></em> :</span></p></td>
+<td>Used to return values or throw an error</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-implement-set-playing"></a><h3>mex_media_player_iface_implement_set_playing ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_player_iface_implement_set_playing
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIfaceClass" title="MexMediaPlayerIfaceClass"><span class="type">MexMediaPlayerIfaceClass</span></a> *klass</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-set-playing-impl" title="mex_media_player_iface_set_playing_impl ()"><span class="type">mex_media_player_iface_set_playing_impl</span></a> impl</code></em>);</pre>
+<p>
+Register an implementation for the SetPlaying method in the vtable
+of an implementation of this interface. To be called from
+the interface init function.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>klass</code></em> :</span></p></td>
+<td>A class whose instances implement this interface</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>impl</code></em> :</span></p></td>
+<td>A callback used to implement the SetPlaying D-Bus method</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-return-from-set-playing"></a><h3>mex_media_player_iface_return_from_set_playing ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_player_iface_return_from_set_playing
+                                                        (<em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>);</pre>
+<p>
+Return successfully by calling <code class="function">dbus_g_method_return()</code>.
+This inline function exists only to provide type-safety.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>context</code></em> :</span></p></td>
+<td>The D-Bus method invocation context</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-get-playing-impl"></a><h3>mex_media_player_iface_get_playing_impl ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                (*mex_media_player_iface_get_playing_impl)
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIface" title="MexMediaPlayerIface"><span class="type">MexMediaPlayerIface</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>);</pre>
+<p>
+The signature of an implementation of the D-Bus method
+GetPlaying on interface com.meego.mex.MediaPlayer.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The object implementing this interface</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>context</code></em> :</span></p></td>
+<td>Used to return values or throw an error</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-implement-get-playing"></a><h3>mex_media_player_iface_implement_get_playing ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_player_iface_implement_get_playing
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIfaceClass" title="MexMediaPlayerIfaceClass"><span class="type">MexMediaPlayerIfaceClass</span></a> *klass</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-get-playing-impl" title="mex_media_player_iface_get_playing_impl ()"><span class="type">mex_media_player_iface_get_playing_impl</span></a> impl</code></em>);</pre>
+<p>
+Register an implementation for the GetPlaying method in the vtable
+of an implementation of this interface. To be called from
+the interface init function.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>klass</code></em> :</span></p></td>
+<td>A class whose instances implement this interface</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>impl</code></em> :</span></p></td>
+<td>A callback used to implement the GetPlaying D-Bus method</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-return-from-get-playing"></a><h3>mex_media_player_iface_return_from_get_playing ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_player_iface_return_from_get_playing
+                                                        (<em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> out_playing</code></em>);</pre>
+<p>
+Return successfully by calling <code class="function">dbus_g_method_return()</code>.
+This inline function exists only to provide type-safety.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>context</code></em> :</span></p></td>
+<td>The D-Bus method invocation context</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>out_playing</code></em> :</span></p></td>
+<td>gboolean  (FIXME, generate documentation)</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-set-progress-impl"></a><h3>mex_media_player_iface_set_progress_impl ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                (*mex_media_player_iface_set_progress_impl)
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIface" title="MexMediaPlayerIface"><span class="type">MexMediaPlayerIface</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> in_progress</code></em>,
+                                                         <em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>);</pre>
+<p>
+The signature of an implementation of the D-Bus method
+SetProgress on interface com.meego.mex.MediaPlayer.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The object implementing this interface</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>in_progress</code></em> :</span></p></td>
+<td>gdouble  (FIXME, generate documentation)</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>context</code></em> :</span></p></td>
+<td>Used to return values or throw an error</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-implement-set-progress"></a><h3>mex_media_player_iface_implement_set_progress ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_player_iface_implement_set_progress
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIfaceClass" title="MexMediaPlayerIfaceClass"><span class="type">MexMediaPlayerIfaceClass</span></a> *klass</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-set-progress-impl" title="mex_media_player_iface_set_progress_impl ()"><span class="type">mex_media_player_iface_set_progress_impl</span></a> impl</code></em>);</pre>
+<p>
+Register an implementation for the SetProgress method in the vtable
+of an implementation of this interface. To be called from
+the interface init function.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>klass</code></em> :</span></p></td>
+<td>A class whose instances implement this interface</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>impl</code></em> :</span></p></td>
+<td>A callback used to implement the SetProgress D-Bus method</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-return-from-set-progress"></a><h3>mex_media_player_iface_return_from_set_progress ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_player_iface_return_from_set_progress
+                                                        (<em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>);</pre>
+<p>
+Return successfully by calling <code class="function">dbus_g_method_return()</code>.
+This inline function exists only to provide type-safety.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>context</code></em> :</span></p></td>
+<td>The D-Bus method invocation context</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-get-progress-impl"></a><h3>mex_media_player_iface_get_progress_impl ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                (*mex_media_player_iface_get_progress_impl)
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIface" title="MexMediaPlayerIface"><span class="type">MexMediaPlayerIface</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>);</pre>
+<p>
+The signature of an implementation of the D-Bus method
+GetProgress on interface com.meego.mex.MediaPlayer.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The object implementing this interface</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>context</code></em> :</span></p></td>
+<td>Used to return values or throw an error</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-implement-get-progress"></a><h3>mex_media_player_iface_implement_get_progress ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_player_iface_implement_get_progress
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIfaceClass" title="MexMediaPlayerIfaceClass"><span class="type">MexMediaPlayerIfaceClass</span></a> *klass</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-get-progress-impl" title="mex_media_player_iface_get_progress_impl ()"><span class="type">mex_media_player_iface_get_progress_impl</span></a> impl</code></em>);</pre>
+<p>
+Register an implementation for the GetProgress method in the vtable
+of an implementation of this interface. To be called from
+the interface init function.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>klass</code></em> :</span></p></td>
+<td>A class whose instances implement this interface</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>impl</code></em> :</span></p></td>
+<td>A callback used to implement the GetProgress D-Bus method</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-return-from-get-progress"></a><h3>mex_media_player_iface_return_from_get_progress ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_player_iface_return_from_get_progress
+                                                        (<em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> out_progress</code></em>);</pre>
+<p>
+Return successfully by calling <code class="function">dbus_g_method_return()</code>.
+This inline function exists only to provide type-safety.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>context</code></em> :</span></p></td>
+<td>The D-Bus method invocation context</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>out_progress</code></em> :</span></p></td>
+<td>gdouble  (FIXME, generate documentation)</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-get-duration-impl"></a><h3>mex_media_player_iface_get_duration_impl ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                (*mex_media_player_iface_get_duration_impl)
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIface" title="MexMediaPlayerIface"><span class="type">MexMediaPlayerIface</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>);</pre>
+<p>
+The signature of an implementation of the D-Bus method
+GetDuration on interface com.meego.mex.MediaPlayer.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The object implementing this interface</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>context</code></em> :</span></p></td>
+<td>Used to return values or throw an error</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-implement-get-duration"></a><h3>mex_media_player_iface_implement_get_duration ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_player_iface_implement_get_duration
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIfaceClass" title="MexMediaPlayerIfaceClass"><span class="type">MexMediaPlayerIfaceClass</span></a> *klass</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-get-duration-impl" title="mex_media_player_iface_get_duration_impl ()"><span class="type">mex_media_player_iface_get_duration_impl</span></a> impl</code></em>);</pre>
+<p>
+Register an implementation for the GetDuration method in the vtable
+of an implementation of this interface. To be called from
+the interface init function.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>klass</code></em> :</span></p></td>
+<td>A class whose instances implement this interface</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>impl</code></em> :</span></p></td>
+<td>A callback used to implement the GetDuration D-Bus method</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-return-from-get-duration"></a><h3>mex_media_player_iface_return_from_get_duration ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_player_iface_return_from_get_duration
+                                                        (<em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> out_duration</code></em>);</pre>
+<p>
+Return successfully by calling <code class="function">dbus_g_method_return()</code>.
+This inline function exists only to provide type-safety.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>context</code></em> :</span></p></td>
+<td>The D-Bus method invocation context</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>out_duration</code></em> :</span></p></td>
+<td>gdouble  (FIXME, generate documentation)</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-get-can-seek-impl"></a><h3>mex_media_player_iface_get_can_seek_impl ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                (*mex_media_player_iface_get_can_seek_impl)
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIface" title="MexMediaPlayerIface"><span class="type">MexMediaPlayerIface</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>);</pre>
+<p>
+The signature of an implementation of the D-Bus method
+GetCanSeek on interface com.meego.mex.MediaPlayer.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The object implementing this interface</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>context</code></em> :</span></p></td>
+<td>Used to return values or throw an error</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-implement-get-can-seek"></a><h3>mex_media_player_iface_implement_get_can_seek ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_player_iface_implement_get_can_seek
+                                                        (<em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#MexMediaPlayerIfaceClass" title="MexMediaPlayerIfaceClass"><span class="type">MexMediaPlayerIfaceClass</span></a> *klass</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="mex-mex-media-player-ginterface.html#mex-media-player-iface-get-can-seek-impl" title="mex_media_player_iface_get_can_seek_impl ()"><span class="type">mex_media_player_iface_get_can_seek_impl</span></a> impl</code></em>);</pre>
+<p>
+Register an implementation for the GetCanSeek method in the vtable
+of an implementation of this interface. To be called from
+the interface init function.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>klass</code></em> :</span></p></td>
+<td>A class whose instances implement this interface</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>impl</code></em> :</span></p></td>
+<td>A callback used to implement the GetCanSeek D-Bus method</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-return-from-get-can-seek"></a><h3>mex_media_player_iface_return_from_get_can_seek ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_player_iface_return_from_get_can_seek
+                                                        (<em class="parameter"><code><span class="type">DBusGMethodInvocation</span> *context</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> out_seekable</code></em>);</pre>
+<p>
+Return successfully by calling <code class="function">dbus_g_method_return()</code>.
+This inline function exists only to provide type-safety.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>context</code></em> :</span></p></td>
+<td>The D-Bus method invocation context</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>out_seekable</code></em> :</span></p></td>
+<td>gboolean  (FIXME, generate documentation)</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-emit-audio-volume-changed"></a><h3>mex_media_player_iface_emit_audio_volume_changed ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_player_iface_emit_audio_volume_changed
+                                                        (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> instance</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> arg_volume</code></em>);</pre>
+<p>
+Type-safe wrapper around g_signal_emit to emit the
+AudioVolumeChanged signal on interface com.meego.mex.MediaPlayer.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>instance</code></em> :</span></p></td>
+<td>The object implementing this interface</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg_volume</code></em> :</span></p></td>
+<td>gdouble  (FIXME, generate documentation)</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-emit-playing-changed"></a><h3>mex_media_player_iface_emit_playing_changed ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_player_iface_emit_playing_changed
+                                                        (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> instance</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> arg_playing</code></em>);</pre>
+<p>
+Type-safe wrapper around g_signal_emit to emit the
+PlayingChanged signal on interface com.meego.mex.MediaPlayer.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>instance</code></em> :</span></p></td>
+<td>The object implementing this interface</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg_playing</code></em> :</span></p></td>
+<td>gboolean  (FIXME, generate documentation)</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-emit-progress-changed"></a><h3>mex_media_player_iface_emit_progress_changed ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_player_iface_emit_progress_changed
+                                                        (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> instance</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> arg_progress</code></em>);</pre>
+<p>
+Type-safe wrapper around g_signal_emit to emit the
+ProgressChanged signal on interface com.meego.mex.MediaPlayer.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>instance</code></em> :</span></p></td>
+<td>The object implementing this interface</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg_progress</code></em> :</span></p></td>
+<td>gdouble  (FIXME, generate documentation)</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-emit-duration-changed"></a><h3>mex_media_player_iface_emit_duration_changed ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_player_iface_emit_duration_changed
+                                                        (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> instance</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> arg_duration</code></em>);</pre>
+<p>
+Type-safe wrapper around g_signal_emit to emit the
+DurationChanged signal on interface com.meego.mex.MediaPlayer.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>instance</code></em> :</span></p></td>
+<td>The object implementing this interface</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg_duration</code></em> :</span></p></td>
+<td>gdouble  (FIXME, generate documentation)</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-emit-error"></a><h3>mex_media_player_iface_emit_error ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_player_iface_emit_error   (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> instance</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *arg_error</code></em>);</pre>
+<p>
+Type-safe wrapper around g_signal_emit to emit the
+Error signal on interface com.meego.mex.MediaPlayer.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>instance</code></em> :</span></p></td>
+<td>The object implementing this interface</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg_error</code></em> :</span></p></td>
+<td>const gchar * (FIXME, generate documentation)</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-emit-buffer-fill-changed"></a><h3>mex_media_player_iface_emit_buffer_fill_changed ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_player_iface_emit_buffer_fill_changed
+                                                        (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> instance</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> arg_buffer</code></em>);</pre>
+<p>
+Type-safe wrapper around g_signal_emit to emit the
+BufferFillChanged signal on interface com.meego.mex.MediaPlayer.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>instance</code></em> :</span></p></td>
+<td>The object implementing this interface</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg_buffer</code></em> :</span></p></td>
+<td>gdouble  (FIXME, generate documentation)</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-emit-can-seek-changed"></a><h3>mex_media_player_iface_emit_can_seek_changed ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_player_iface_emit_can_seek_changed
+                                                        (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> instance</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> arg_seekable</code></em>);</pre>
+<p>
+Type-safe wrapper around g_signal_emit to emit the
+CanSeekChanged signal on interface com.meego.mex.MediaPlayer.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>instance</code></em> :</span></p></td>
+<td>The object implementing this interface</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg_seekable</code></em> :</span></p></td>
+<td>gboolean  (FIXME, generate documentation)</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-media-player-iface-emit-eos"></a><h3>mex_media_player_iface_emit_eos ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_media_player_iface_emit_eos     (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> instance</code></em>);</pre>
+<p>
+Type-safe wrapper around g_signal_emit to emit the
+EOS signal on interface com.meego.mex.MediaPlayer.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>instance</code></em> :</span></p></td>
+<td>The object implementing this interface</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexMediaPlayerIface"></a><h3>MexMediaPlayerIface</h3>
+<pre class="programlisting">typedef struct _MexMediaPlayerIface MexMediaPlayerIface;</pre>
+<p>
+Dummy typedef representing any implementation of this interface.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexMediaPlayerIfaceClass"></a><h3>MexMediaPlayerIfaceClass</h3>
+<pre class="programlisting">typedef struct _MexMediaPlayerIfaceClass MexMediaPlayerIfaceClass;</pre>
+<p>
+The class of MexMediaPlayerIface.
+</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

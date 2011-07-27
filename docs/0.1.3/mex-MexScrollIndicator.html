@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexScrollIndicator</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch09.html" title="Basic widgets">
+<link rel="prev" href="mex-MexQueueButton.html" title="MexQueueButton">
+<link rel="next" href="mex-MexShadow.html" title="MexShadow">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="mex-MexQueueButton.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch09.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="mex-MexShadow.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-MexScrollIndicator.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-MexScrollIndicator.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-MexScrollIndicator"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-MexScrollIndicator.top_of_page"></a>MexScrollIndicator</span></h2>
+<p>MexScrollIndicator</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-MexScrollIndicator.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="mex-MexScrollIndicator.html#MexScrollIndicator" title="struct MexScrollIndicator">MexScrollIndicator</a>;
+struct              <a class="link" href="mex-MexScrollIndicator.html#MexScrollIndicatorClass" title="struct MexScrollIndicatorClass">MexScrollIndicatorClass</a>;
+<a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      <a class="link" href="mex-MexScrollIndicator.html#mex-scroll-indicator-new" title="mex_scroll_indicator_new ()">mex_scroll_indicator_new</a>            (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="mex-MexScrollIndicator.html#mex-scroll-indicator-set-adjustment" title="mex_scroll_indicator_set_adjustment ()">mex_scroll_indicator_set_adjustment</a> (<em class="parameter"><code><a class="link" href="mex-MexScrollIndicator.html#MexScrollIndicator" title="struct MexScrollIndicator"><span class="type">MexScrollIndicator</span></a> *scroll</code></em>,
+                                                         <em class="parameter"><code><a href="../mx/MxAdjustment.html"><span class="type">MxAdjustment</span></a> *adjustment</code></em>);
+<a href="../mx/MxAdjustment.html"><span class="returnvalue">MxAdjustment</span></a> *      <a class="link" href="mex-MexScrollIndicator.html#mex-scroll-indicator-get-adjustment" title="mex_scroll_indicator_get_adjustment ()">mex_scroll_indicator_get_adjustment</a> (<em class="parameter"><code><a class="link" href="mex-MexScrollIndicator.html#MexScrollIndicator" title="struct MexScrollIndicator"><span class="type">MexScrollIndicator</span></a> *scroll</code></em>);
+                    <a class="link" href="mex-MexScrollIndicator.html#MexScrollIndicatorPrivate" title="MexScrollIndicatorPrivate">MexScrollIndicatorPrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-MexScrollIndicator.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="mex-MexScrollIndicator.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MexScrollIndicator"></a><h3>struct MexScrollIndicator</h3>
+<pre class="programlisting">struct MexScrollIndicator {
+  MxWidget parent;
+
+  MexScrollIndicatorPrivate *priv;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexScrollIndicatorClass"></a><h3>struct MexScrollIndicatorClass</h3>
+<pre class="programlisting">struct MexScrollIndicatorClass {
+  MxWidgetClass parent_class;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-scroll-indicator-new"></a><h3>mex_scroll_indicator_new ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/clutter/ClutterActor.html"><span class="returnvalue">ClutterActor</span></a> *      mex_scroll_indicator_new            (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-scroll-indicator-set-adjustment"></a><h3>mex_scroll_indicator_set_adjustment ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                mex_scroll_indicator_set_adjustment (<em class="parameter"><code><a class="link" href="mex-MexScrollIndicator.html#MexScrollIndicator" title="struct MexScrollIndicator"><span class="type">MexScrollIndicator</span></a> *scroll</code></em>,
+                                                         <em class="parameter"><code><a href="../mx/MxAdjustment.html"><span class="type">MxAdjustment</span></a> *adjustment</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-scroll-indicator-get-adjustment"></a><h3>mex_scroll_indicator_get_adjustment ()</h3>
+<pre class="programlisting"><a href="../mx/MxAdjustment.html"><span class="returnvalue">MxAdjustment</span></a> *      mex_scroll_indicator_get_adjustment (<em class="parameter"><code><a class="link" href="mex-MexScrollIndicator.html#MexScrollIndicator" title="struct MexScrollIndicator"><span class="type">MexScrollIndicator</span></a> *scroll</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexScrollIndicatorPrivate"></a><h3>MexScrollIndicatorPrivate</h3>
+<pre class="programlisting">typedef struct _MexScrollIndicatorPrivate MexScrollIndicatorPrivate;</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MexGenericModel</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="Mex Reference Manual">
+<link rel="up" href="ch04.html" title="Abstract classes and interfaces">
+<link rel="prev" href="mex-MexGenericContent.html" title="MexGenericContent">
+<link rel="next" href="mex-MexGenericProxy.html" title="MexGenericProxy">
+<meta name="generator" content="GTK-Doc V1.17 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="mex-MexGenericContent.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch04.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Mex Reference Manual</th>
+<td><a accesskey="n" href="mex-MexGenericProxy.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mex-MexGenericModel.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mex-MexGenericModel.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mex-MexGenericModel"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mex-MexGenericModel.top_of_page"></a>MexGenericModel</span></h2>
+<p>MexGenericModel</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mex-MexGenericModel.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">#define             <a class="link" href="mex-MexGenericModel.html#MEX-TYPE-GENERIC-MODEL:CAPS" title="MEX_TYPE_GENERIC_MODEL">MEX_TYPE_GENERIC_MODEL</a>
+#define             <a class="link" href="mex-MexGenericModel.html#MEX-GENERIC-MODEL:CAPS" title="MEX_GENERIC_MODEL()">MEX_GENERIC_MODEL</a>                   (obj)
+#define             <a class="link" href="mex-MexGenericModel.html#MEX-GENERIC-MODEL-CLASS:CAPS" title="MEX_GENERIC_MODEL_CLASS()">MEX_GENERIC_MODEL_CLASS</a>             (klass)
+#define             <a class="link" href="mex-MexGenericModel.html#IS-MEX-GENERIC-MODEL:CAPS" title="IS_MEX_GENERIC_MODEL()">IS_MEX_GENERIC_MODEL</a>                (obj)
+#define             <a class="link" href="mex-MexGenericModel.html#IS-MEX-GENERIC-MODEL-CLASS:CAPS" title="IS_MEX_GENERIC_MODEL_CLASS()">IS_MEX_GENERIC_MODEL_CLASS</a>          (klass)
+#define             <a class="link" href="mex-MexGenericModel.html#MEX-GENERIC-MODEL-GET-CLASS:CAPS" title="MEX_GENERIC_MODEL_GET_CLASS()">MEX_GENERIC_MODEL_GET_CLASS</a>         (obj)
+struct              <a class="link" href="mex-MexGenericModel.html#MexGenericModel" title="struct MexGenericModel">MexGenericModel</a>;
+struct              <a class="link" href="mex-MexGenericModel.html#MexGenericModelClass" title="struct MexGenericModelClass">MexGenericModelClass</a>;
+<a href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="returnvalue">GType</span></a>               <a class="link" href="mex-MexGenericModel.html#mex-generic-model-get-type" title="mex_generic_model_get_type ()">mex_generic_model_get_type</a>          (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">MexModel</span> *          <a class="link" href="mex-MexGenericModel.html#mex-generic-model-new" title="mex_generic_model_new ()">mex_generic_model_new</a>               (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *title</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *icon_name</code></em>);
+                    <a class="link" href="mex-MexGenericModel.html#MexGenericModelPrivate" title="MexGenericModelPrivate">MexGenericModelPrivate</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="mex-MexGenericModel.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="mex-MexGenericModel.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MEX-TYPE-GENERIC-MODEL:CAPS"></a><h3>MEX_TYPE_GENERIC_MODEL</h3>
+<pre class="programlisting">#define             MEX_TYPE_GENERIC_MODEL</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MEX-GENERIC-MODEL:CAPS"></a><h3>MEX_GENERIC_MODEL()</h3>
+<pre class="programlisting">#define             MEX_GENERIC_MODEL(obj)</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MEX-GENERIC-MODEL-CLASS:CAPS"></a><h3>MEX_GENERIC_MODEL_CLASS()</h3>
+<pre class="programlisting">#define             MEX_GENERIC_MODEL_CLASS(klass)</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="IS-MEX-GENERIC-MODEL:CAPS"></a><h3>IS_MEX_GENERIC_MODEL()</h3>
+<pre class="programlisting">#define             IS_MEX_GENERIC_MODEL(obj)</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="IS-MEX-GENERIC-MODEL-CLASS:CAPS"></a><h3>IS_MEX_GENERIC_MODEL_CLASS()</h3>
+<pre class="programlisting">#define             IS_MEX_GENERIC_MODEL_CLASS(klass)</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MEX-GENERIC-MODEL-GET-CLASS:CAPS"></a><h3>MEX_GENERIC_MODEL_GET_CLASS()</h3>
+<pre class="programlisting">#define             MEX_GENERIC_MODEL_GET_CLASS(obj)</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexGenericModel"></a><h3>struct MexGenericModel</h3>
+<pre class="programlisting">struct MexGenericModel {
+  GObject parent;
+
+  MexGenericModelPrivate *priv;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexGenericModelClass"></a><h3>struct MexGenericModelClass</h3>
+<pre class="programlisting">struct MexGenericModelClass {
+  GObjectClass parent_class;
+};
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-generic-model-get-type"></a><h3>mex_generic_model_get_type ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="returnvalue">GType</span></a>               mex_generic_model_get_type          (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mex-generic-model-new"></a><h3>mex_generic_model_new ()</h3>
+<pre class="programlisting"><span class="returnvalue">MexModel</span> *          mex_generic_model_new               (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *title</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *icon_name</code></em>);</pre>
+<p>
+Creates an empty <a class="link" href="mex-MexGenericModel.html#MexGenericModel" title="struct MexGenericModel"><span class="type">MexGenericModel</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>title</code></em> :</span></p></td>
+<td>String containing the title.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>icon_name</code></em> :</span></p></td>
+<td>String containing the icon name.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="mex-MexGenericModel.html#MexGenericModel" title="struct MexGenericModel"><span class="type">MexGenericModel</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MexGenericModelPrivate"></a><h3>MexGenericModelPrivate</h3>
+<pre class="programlisting">typedef struct _MexGenericModelPrivate MexGenericModelPrivate;</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17</div>
+</body>
+</html>
